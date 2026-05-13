@@ -1,11 +1,13 @@
 """Main entry point: fetch data → compute → send Telegram."""
 
+import os
 import sys
 import traceback
 
+import pandas as pd
+
 from data import (
     daily_returns,
-    fetch_kr_recent_volume,
     fetch_kr_universe,
     fetch_us_and_kr_prices,
     latest_trading_day_kr,
@@ -22,8 +24,11 @@ def main():
         meta = fetch_kr_universe(as_of)
         print(f"[run] KR universe size: {len(meta)}")
 
-        us_prices, kr_prices = fetch_us_and_kr_prices(meta["yf_ticker"].tolist())
-        print(f"[run] US prices: {us_prices.shape}, KR prices: {kr_prices.shape}")
+        us_prices, kr_prices, kr_volume = fetch_us_and_kr_prices(meta["yf_ticker"].tolist())
+        print(
+            f"[run] US prices: {us_prices.shape}, "
+            f"KR prices: {kr_prices.shape}, KR volume: {kr_volume.shape}"
+        )
 
         if us_prices.empty or kr_prices.empty:
             raise RuntimeError("Price fetch failed (empty US or KR)")
@@ -31,7 +36,7 @@ def main():
         us_ret = daily_returns(us_prices)
         kr_ret = daily_returns(kr_prices)
 
-        # keep only KR yf tickers we have prices for
+        # keep only KR yf tickers we actually have prices for
         meta = meta[meta["yf_ticker"].isin(kr_prices.columns)]
         print(f"[run] KR universe with prices: {len(meta)}")
 
@@ -39,12 +44,15 @@ def main():
         print(f"[run] computed betas for {len(betas)} KR stocks")
 
         last_us = last_us_moves(us_ret)
-        print(f"[run] last US session: {len(last_us)} tickers")
+        print(f"[run] last US session: {len(last_us)} drivers with returns")
 
-        recent_volume = fetch_kr_recent_volume(meta.index.tolist(), as_of)
-        print(f"[run] recent volume panel: {recent_volume.shape}")
+        # Remap KR volume from yf_ticker columns to 6-digit code columns for model.score_universe
+        yf_to_code = {row.yf_ticker: code for code, row in meta.iterrows()}
+        vol_by_code = kr_volume.rename(columns=yf_to_code)
+        # Keep only mapped columns
+        vol_by_code = vol_by_code[[c for c in vol_by_code.columns if c in meta.index]]
 
-        picks = score_universe(betas, last_us, meta, recent_volume)
+        picks = score_universe(betas, last_us, meta, vol_by_code)
         print(f"[run] picks: {len(picks)}")
 
         msg = format_message(picks, last_us, kst_today_str())
@@ -56,10 +64,10 @@ def main():
         print(f"[run] telegram ok: message_id={result['result']['message_id']}")
     except Exception as e:
         traceback.print_exc()
-        # Best effort: try sending a failure notice
         try:
             send_telegram(
-                f"⚠️ [{kst_today_str()}] 단타 스크리닝 실패\n\n{type(e).__name__}: {e}\n\n로그 확인 필요"
+                f"⚠️ [{kst_today_str()}] 단타 스크리닝 실패\n\n"
+                f"{type(e).__name__}: {e}\n\n로그 확인 필요"
             )
         except Exception:
             pass
