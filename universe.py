@@ -20,8 +20,8 @@ US_DRIVERS = [
     "EWY",   # MSCI Korea ETF
 ]
 
-KR_UNIVERSE_SIZE = 200
-KR_MIN_MARKET_CAP_KRW = 100_000_000_000  # 1,000억
+KR_UNIVERSE_SIZE = None          # None = no cap; take everything above KR_MIN_MARKET_CAP_KRW
+KR_MIN_MARKET_CAP_KRW = 100_000_000_000  # 1,000억 (picking universe floor)
 
 HISTORY_DAYS = 400               # calendar days of history to fetch (~270 trading days)
 ROLLING_WINDOW_DAYS = 250        # trading days for beta estimation
@@ -53,4 +53,4 @@ SECTORS = [
 ]
 
 FINVIZ_SECTOR_URL = "https://finviz.com/groups.ashx?g=sector&v=210&o=name"
-FINVIZ_MAP_URL = "https://finviz.com/map.ashx?t=sec"
+FINVIZ_MAP_URL = "https://finviz.com/map"

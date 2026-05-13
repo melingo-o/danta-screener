@@ -6,10 +6,13 @@ on:
     - cron: "30 23 * * 0-4"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -29,3 +32,15 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TZ: Asia/Seoul
         run: python run.py
+
+      - name: Commit universe snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ || true
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update KRX universe snapshot ($(TZ=Asia/Seoul date +%Y-%m-%d))"
+            git push
+          else
+            echo "no snapshot changes"
+          fi

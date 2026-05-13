@@ -39,45 +39,65 @@ def latest_trading_day_kr() -> date:
     return df.index[-1].date()
 
 
-def fetch_kr_universe(as_of: date) -> pd.DataFrame:
-    """Get all KRX listed stocks with market cap, return top N above the cap floor.
-    Returns DataFrame indexed by 6-digit code with columns: market, name, market_cap, volume, yf_ticker.
+def fetch_kr_full_listing() -> pd.DataFrame:
+    """Fetch the ENTIRE KOSPI+KOSDAQ listing from FDR — all listed stocks regardless of market cap.
+    Returned DataFrame is indexed by 6-digit Code; columns preserved as FDR returns them
+    (typically: Name, Market, Marcap, Volume, Close, Changes, etc.).
     """
     listing = _retry(lambda: fdr.StockListing("KRX"))
-    # Expected columns include: Code, Name, Market, Marcap, Volume, Close, etc.
-    if "Marcap" not in listing.columns:
-        raise RuntimeError(f"FDR StockListing missing 'Marcap'. Got: {list(listing.columns)}")
-    listing = listing.dropna(subset=["Marcap", "Code", "Market"])
-    listing = listing[listing["Marcap"] >= KR_MIN_MARKET_CAP_KRW]
-    # Exclude ETF/ETN/SPAC where possible (Market is KOSPI/KOSDAQ; ETFs often KONEX or named accordingly)
-    listing = listing[listing["Market"].isin(["KOSPI", "KOSDAQ"])]
-    listing = listing.sort_values("Marcap", ascending=False).head(KR_UNIVERSE_SIZE)
+    if "Code" not in listing.columns:
+        raise RuntimeError(f"FDR StockListing missing 'Code'. Got: {list(listing.columns)}")
+    listing = listing.dropna(subset=["Code"])
+    # Normalize Code as 6-digit string
+    listing["Code"] = listing["Code"].astype(str).str.zfill(6)
+    # Keep only KOSPI/KOSDAQ (drop KONEX, ETFs etc.)
+    if "Market" in listing.columns:
+        listing = listing[listing["Market"].isin(["KOSPI", "KOSDAQ"])]
+    listing = listing.drop_duplicates(subset=["Code"]).set_index("Code")
+    listing.index.name = "code"
+    if "Marcap" in listing.columns:
+        listing = listing.sort_values("Marcap", ascending=False)
+    return listing
+
+
+def filter_to_picking_universe(full_listing: pd.DataFrame) -> pd.DataFrame:
+    """Apply 시총 floor (and optional size cap) to derive the picking universe.
+    Returns DataFrame indexed by code with columns: market, name, market_cap, volume, yf_ticker.
+    """
+    df = full_listing.copy()
+    if "Marcap" not in df.columns:
+        raise RuntimeError("Full listing has no Marcap column")
+    df = df.dropna(subset=["Marcap"])
+    df = df[df["Marcap"] >= KR_MIN_MARKET_CAP_KRW]
+    df = df.sort_values("Marcap", ascending=False)
+    if KR_UNIVERSE_SIZE is not None:
+        df = df.head(KR_UNIVERSE_SIZE)
 
     def _yft(code, market):
         suffix = "KS" if market == "KOSPI" else "KQ"
         return f"{code}.{suffix}"
 
-    yf_tickers = [_yft(c, m) for c, m in zip(listing["Code"], listing["Market"])]
-    result = pd.DataFrame(
+    yf_tickers = [_yft(c, m) for c, m in zip(df.index, df["Market"])]
+    out = pd.DataFrame(
         {
-            "market": listing["Market"].values,
-            "name": listing["Name"].values,
-            "market_cap": listing["Marcap"].astype(float).values,
-            "volume": listing.get("Volume", pd.Series(np.nan, index=listing.index)).values,
+            "market": df["Market"].values,
+            "name": df["Name"].values,
+            "market_cap": df["Marcap"].astype(float).values,
+            "volume": df.get("Volume", pd.Series(np.nan, index=df.index)).values,
             "yf_ticker": yf_tickers,
         },
-        index=listing["Code"].values,
+        index=df.index,
     )
-    result.index.name = "code"
-    return result
+    out.index.name = "code"
+    return out
 
 
-def fetch_prices(tickers, days: int = HISTORY_DAYS, with_volume: bool = False):
-    """Yahoo Finance bulk download. Returns close_df, or (close_df, volume_df) if with_volume."""
-    if not tickers:
-        empty = pd.DataFrame()
-        return (empty, empty) if with_volume else empty
+def fetch_kr_universe(as_of: date) -> pd.DataFrame:
+    """Backward-compatible helper: full listing → picking universe."""
+    return filter_to_picking_universe(fetch_kr_full_listing())
 
+
+def _fetch_prices_one_chunk(tickers, days: int):
     end = date.today() + timedelta(days=1)
     start = end - timedelta(days=days)
     raw = _retry(
@@ -92,22 +112,47 @@ def fetch_prices(tickers, days: int = HISTORY_DAYS, with_volume: bool = False):
         ),
         tries=2,
     )
-
     if isinstance(raw.columns, pd.MultiIndex):
         level0 = list(raw.columns.levels[0])
         present = [t for t in tickers if t in level0]
-        close = pd.concat({t: raw[t]["Close"] for t in present}, axis=1)
-        volume = pd.concat({t: raw[t]["Volume"] for t in present}, axis=1)
+        close = pd.concat({t: raw[t]["Close"] for t in present}, axis=1) if present else pd.DataFrame()
+        volume = pd.concat({t: raw[t]["Volume"] for t in present}, axis=1) if present else pd.DataFrame()
     else:
-        close = raw[["Close"]].rename(columns={"Close": tickers[0]})
-        volume = raw[["Volume"]].rename(columns={"Volume": tickers[0]})
+        # Single ticker case
+        close = raw[["Close"]].rename(columns={"Close": tickers[0]}) if "Close" in raw.columns else pd.DataFrame()
+        volume = raw[["Volume"]].rename(columns={"Volume": tickers[0]}) if "Volume" in raw.columns else pd.DataFrame()
+    for df in (close, volume):
+        if not df.empty:
+            df.index = pd.to_datetime(df.index).tz_localize(None).normalize()
+    return close, volume
 
+
+def fetch_prices(tickers, days: int = HISTORY_DAYS, with_volume: bool = False, chunk_size: int = 100):
+    """Yahoo Finance bulk download with chunking. Returns close_df, or (close_df, volume_df) if with_volume."""
+    if not tickers:
+        empty = pd.DataFrame()
+        return (empty, empty) if with_volume else empty
+
+    tickers = list(tickers)
+    close_parts, volume_parts = [], []
+    for i in range(0, len(tickers), chunk_size):
+        chunk = tickers[i : i + chunk_size]
+        try:
+            c, v = _fetch_prices_one_chunk(chunk, days)
+            if not c.empty:
+                close_parts.append(c)
+            if not v.empty:
+                volume_parts.append(v)
+        except Exception as e:
+            print(f"[fetch_prices] chunk {i // chunk_size} failed: {e}")
+            continue
+
+    close = pd.concat(close_parts, axis=1).sort_index() if close_parts else pd.DataFrame()
+    volume = pd.concat(volume_parts, axis=1).sort_index() if volume_parts else pd.DataFrame()
+    close = close.loc[:, ~close.columns.duplicated()]
+    volume = volume.loc[:, ~volume.columns.duplicated()]
     close = close.dropna(axis=1, how="all")
     volume = volume.dropna(axis=1, how="all")
-    close.index = pd.to_datetime(close.index).tz_localize(None).normalize()
-    volume.index = pd.to_datetime(volume.index).tz_localize(None).normalize()
-    close = close.sort_index()
-    volume = volume.sort_index()
     return (close, volume) if with_volume else close
 
 
