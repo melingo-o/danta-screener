@@ -21,7 +21,7 @@ US_DRIVERS = [
 ]
 
 KR_UNIVERSE_SIZE = None          # None = no cap; take everything above KR_MIN_MARKET_CAP_KRW
-KR_MIN_MARKET_CAP_KRW = 500_000_000_000  # 5,000억 (raised for data quality + liquidity)
+KR_MIN_MARKET_CAP_KRW = 100_000_000_000  # 1,000억 (user preference; Tier 1 filters handle noise)
 
 HISTORY_DAYS = 600               # ~400 trading days — enough for walk-forward backtest with 250-day train window
 ROLLING_WINDOW_DAYS = 250        # trading days for beta estimation

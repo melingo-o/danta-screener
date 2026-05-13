@@ -242,7 +242,8 @@ def main():
     full = fetch_kr_full_listing()
     print(f"  full listing: {len(full)} stocks")
     meta = filter_to_picking_universe(full)
-    print(f"  picking universe (시총 ≥ 5000억): {len(meta)} stocks")
+    from universe import KR_MIN_MARKET_CAP_KRW as _CAP
+    print(f"  picking universe (시총 ≥ {_CAP / 1e8:,.0f}억): {len(meta)} stocks")
 
     us = fetch_ohlcv(US_DRIVERS)
     kr = fetch_ohlcv(meta["yf_ticker"].tolist())
