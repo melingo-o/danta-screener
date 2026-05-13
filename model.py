@@ -59,7 +59,14 @@ def compute_betas(
     min_obs: int = MIN_OBSERVATIONS,
     min_corr: float = MIN_CORR_THRESHOLD,
 ) -> Dict[str, pd.DataFrame]:
-    """Univariate OLS per (KR stock, US driver). Filters by min_obs and min_corr."""
+    """Vectorized univariate OLS per (KR stock, US driver). Filters by min_obs and min_corr.
+
+    Same math as the original loop but uses numpy matrix ops:
+      corr  = pandas pairwise-complete corr (handles NaN correctly)
+      σ_y, σ_x = full-column std (good approximation when NaN patterns are sparse)
+      β = corr × σ_y / σ_x
+      n = pairwise non-NaN count
+    """
     _, kr, us_lag = align_lead_lag(us_returns, kr_returns)
     common = kr.index.intersection(us_lag.index)
     if rolling_window and len(common) > rolling_window:
@@ -67,36 +74,55 @@ def compute_betas(
     kr = kr.loc[common]
     us_lag = us_lag.loc[common]
 
-    out: Dict[str, pd.DataFrame] = {}
-    us_cols = us_lag.columns.tolist()
+    if kr.empty or us_lag.empty:
+        return {}
 
-    for kr_t in kr.columns:
-        kr_s = kr[kr_t]
-        valid = kr_s.notna()
-        if valid.sum() < min_obs:
-            continue
-        rows = []
-        for us_t in us_cols:
-            us_s = us_lag[us_t]
-            mask = valid & us_s.notna()
-            n = int(mask.sum())
-            if n < min_obs:
-                continue
-            x = us_s[mask].values
-            y = kr_s[mask].values
-            xv = x.var()
-            if xv == 0:
-                continue
-            cov = np.cov(x, y, ddof=0)[0, 1]
-            beta = cov / xv
-            yv = y.var()
-            corr = (cov / np.sqrt(xv * yv)) if yv > 0 else 0.0
-            if abs(corr) < min_corr:
-                continue
-            rows.append({"us": us_t, "beta": float(beta), "corr": float(corr), "n": n})
-        if rows:
-            df = pd.DataFrame(rows).set_index("us")
-            out[kr_t] = df
+    M = kr.shape[1]
+    K = us_lag.shape[1]
+    kr_cols = list(kr.columns)
+    us_cols = list(us_lag.columns)
+
+    # Pairwise non-NaN counts (M, K)
+    valid_kr = kr.notna().values
+    valid_us = us_lag.notna().values
+    ns_mat = (valid_kr[:, :, None] & valid_us[:, None, :]).sum(axis=0).astype(np.int32)
+
+    # Cross-correlation matrix kr × us_lag (pairwise complete)
+    combined = pd.concat([kr, us_lag], axis=1)
+    corr_full = combined.corr().values
+    cross_corr = corr_full[:M, M:]  # (M, K)
+
+    # Standard deviations
+    sigma_y = kr.std(ddof=0).values  # (M,)
+    sigma_x = us_lag.std(ddof=0).values  # (K,)
+
+    with np.errstate(invalid="ignore", divide="ignore"):
+        betas_mat = cross_corr * (sigma_y[:, None] / np.where(sigma_x[None, :] > 0, sigma_x[None, :], np.nan))
+
+    abs_corr = np.abs(cross_corr)
+    valid_pair = (
+        (ns_mat >= min_obs)
+        & (abs_corr >= min_corr)
+        & ~np.isnan(betas_mat)
+        & ~np.isnan(cross_corr)
+    )
+
+    if not valid_pair.any():
+        return {}
+
+    # Build long-format DataFrame, then groupby
+    ii, jj = np.where(valid_pair)
+    long_df = pd.DataFrame({
+        "kr_t": [kr_cols[i] for i in ii],
+        "us": [us_cols[j] for j in jj],
+        "beta": betas_mat[ii, jj],
+        "corr": cross_corr[ii, jj],
+        "n": ns_mat[ii, jj],
+    })
+
+    out: Dict[str, pd.DataFrame] = {}
+    for kr_t, sub in long_df.groupby("kr_t", sort=False):
+        out[kr_t] = sub.drop(columns="kr_t").set_index("us")
     return out
 
 
