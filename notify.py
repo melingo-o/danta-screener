@@ -109,7 +109,8 @@ def format_message(picks: List[Pick], last_us: pd.Series, kst_date: str) -> str:
         lines.append("🎯 후보:")
         lines.append("오늘은 통계적 신호가 약함. 관망 추천.")
     else:
-        lines.append("🎯 후보 (예상 익일 수익률 + 근거):")
+        lines.append("🎯 후보 (예상 시초가 갭 + 근거):")
+        lines.append("   ※ 시초가 갭 = 어제 종가 → 오늘 9:00 시가 변동률")
         for i, p in enumerate(picks, 1):
             cap_s = _fmt_cap(p.market_cap)
             vol_s = _fmt_vol_ratio(p.volume_ratio)
@@ -118,10 +119,11 @@ def format_message(picks: List[Pick], last_us: pd.Series, kst_date: str) -> str:
                 f"{us}(β={beta:+.2f}, 기여 {contrib * 100:+.2f}%p)"
                 for us, beta, contrib in p.drivers
             )
-            lines.append(f"   예상 {_fmt_pct(p.expected_return)} | 드라이버: {drivers_str}")
+            lines.append(f"   예상 갭 {_fmt_pct(p.expected_return)} | 드라이버: {drivers_str}")
     lines.append("")
 
     lines.append("⚠️ 통계 모델 스크리닝. 매매 추천 아님. 호가/뉴스 직접 확인 필수.")
+    lines.append("    9:00 시가 갭 예측이라 9:00~9:30 단타에 최적화됨.")
     return "\n".join(lines)
 
 

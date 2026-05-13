@@ -1,8 +1,8 @@
-"""Fetch price + metadata. Universe via FinanceDataReader; prices/volume via yfinance."""
+"""Fetch price + metadata. Universe via FinanceDataReader; OHLCV via yfinance."""
 
 import time
 from datetime import date, timedelta
-from typing import Tuple
+from typing import Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -15,6 +15,9 @@ from universe import (
     US_DRIVERS,
     HISTORY_DAYS,
 )
+
+
+OHLCV_FIELDS = ("Open", "High", "Low", "Close", "Volume")
 
 
 def _retry(fn, tries=3, delay=2):
@@ -40,17 +43,14 @@ def latest_trading_day_kr() -> date:
 
 
 def fetch_kr_full_listing() -> pd.DataFrame:
-    """Fetch the ENTIRE KOSPI+KOSDAQ listing from FDR — all listed stocks regardless of market cap.
-    Returned DataFrame is indexed by 6-digit Code; columns preserved as FDR returns them
-    (typically: Name, Market, Marcap, Volume, Close, Changes, etc.).
+    """Fetch the entire KOSPI+KOSDAQ listing (~2700 stocks) from FDR.
+    Indexed by 6-digit Code. Columns include Name, Market, Marcap, Volume, Close, etc.
     """
     listing = _retry(lambda: fdr.StockListing("KRX"))
     if "Code" not in listing.columns:
         raise RuntimeError(f"FDR StockListing missing 'Code'. Got: {list(listing.columns)}")
     listing = listing.dropna(subset=["Code"])
-    # Normalize Code as 6-digit string
     listing["Code"] = listing["Code"].astype(str).str.zfill(6)
-    # Keep only KOSPI/KOSDAQ (drop KONEX, ETFs etc.)
     if "Market" in listing.columns:
         listing = listing[listing["Market"].isin(["KOSPI", "KOSDAQ"])]
     listing = listing.drop_duplicates(subset=["Code"]).set_index("Code")
@@ -61,9 +61,7 @@ def fetch_kr_full_listing() -> pd.DataFrame:
 
 
 def filter_to_picking_universe(full_listing: pd.DataFrame) -> pd.DataFrame:
-    """Apply 시총 floor (and optional size cap) to derive the picking universe.
-    Returns DataFrame indexed by code with columns: market, name, market_cap, volume, yf_ticker.
-    """
+    """Apply 시총 floor (and optional size cap) to derive the picking universe."""
     df = full_listing.copy()
     if "Marcap" not in df.columns:
         raise RuntimeError("Full listing has no Marcap column")
@@ -92,19 +90,13 @@ def filter_to_picking_universe(full_listing: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def fetch_kr_universe(as_of: date) -> pd.DataFrame:
-    """Backward-compatible helper: full listing → picking universe."""
-    return filter_to_picking_universe(fetch_kr_full_listing())
-
-
-def _fetch_prices_one_chunk(tickers, days: int):
-    end = date.today() + timedelta(days=1)
-    start = end - timedelta(days=days)
+def _fetch_chunk(tickers, start: str, end: str) -> Dict[str, pd.DataFrame]:
+    """Fetch one yfinance batch. Returns dict of {field: DataFrame}."""
     raw = _retry(
         lambda: yf.download(
             tickers,
-            start=start.strftime("%Y-%m-%d"),
-            end=end.strftime("%Y-%m-%d"),
+            start=start,
+            end=end,
             progress=False,
             auto_adjust=True,
             group_by="ticker",
@@ -112,56 +104,73 @@ def _fetch_prices_one_chunk(tickers, days: int):
         ),
         tries=2,
     )
+    out = {f: pd.DataFrame() for f in OHLCV_FIELDS}
     if isinstance(raw.columns, pd.MultiIndex):
         level0 = list(raw.columns.levels[0])
         present = [t for t in tickers if t in level0]
-        close = pd.concat({t: raw[t]["Close"] for t in present}, axis=1) if present else pd.DataFrame()
-        volume = pd.concat({t: raw[t]["Volume"] for t in present}, axis=1) if present else pd.DataFrame()
+        if not present:
+            return out
+        for f in OHLCV_FIELDS:
+            try:
+                out[f] = pd.concat({t: raw[t][f] for t in present}, axis=1)
+            except KeyError:
+                pass
     else:
-        # Single ticker case
-        close = raw[["Close"]].rename(columns={"Close": tickers[0]}) if "Close" in raw.columns else pd.DataFrame()
-        volume = raw[["Volume"]].rename(columns={"Volume": tickers[0]}) if "Volume" in raw.columns else pd.DataFrame()
-    for df in (close, volume):
-        if not df.empty:
-            df.index = pd.to_datetime(df.index).tz_localize(None).normalize()
-    return close, volume
+        for f in OHLCV_FIELDS:
+            if f in raw.columns:
+                out[f] = raw[[f]].rename(columns={f: tickers[0]})
+    return out
 
 
-def fetch_prices(tickers, days: int = HISTORY_DAYS, with_volume: bool = False, chunk_size: int = 100):
-    """Yahoo Finance bulk download with chunking. Returns close_df, or (close_df, volume_df) if with_volume."""
+def fetch_ohlcv(tickers, days: int = HISTORY_DAYS, chunk_size: int = 100) -> Dict[str, pd.DataFrame]:
+    """Bulk yfinance OHLCV download with chunking.
+    Returns dict {Open, High, Low, Close, Volume}, each a DataFrame indexed by date with ticker cols.
+    """
     if not tickers:
-        empty = pd.DataFrame()
-        return (empty, empty) if with_volume else empty
+        return {f: pd.DataFrame() for f in OHLCV_FIELDS}
 
     tickers = list(tickers)
-    close_parts, volume_parts = [], []
+    end = (date.today() + timedelta(days=1)).strftime("%Y-%m-%d")
+    start = (date.today() - timedelta(days=days)).strftime("%Y-%m-%d")
+
+    parts = {f: [] for f in OHLCV_FIELDS}
     for i in range(0, len(tickers), chunk_size):
         chunk = tickers[i : i + chunk_size]
         try:
-            c, v = _fetch_prices_one_chunk(chunk, days)
-            if not c.empty:
-                close_parts.append(c)
-            if not v.empty:
-                volume_parts.append(v)
+            chunk_data = _fetch_chunk(chunk, start, end)
+            for f in OHLCV_FIELDS:
+                if not chunk_data[f].empty:
+                    parts[f].append(chunk_data[f])
         except Exception as e:
-            print(f"[fetch_prices] chunk {i // chunk_size} failed: {e}")
+            print(f"[fetch_ohlcv] chunk {i // chunk_size} failed: {e}")
             continue
 
-    close = pd.concat(close_parts, axis=1).sort_index() if close_parts else pd.DataFrame()
-    volume = pd.concat(volume_parts, axis=1).sort_index() if volume_parts else pd.DataFrame()
-    close = close.loc[:, ~close.columns.duplicated()]
-    volume = volume.loc[:, ~volume.columns.duplicated()]
-    close = close.dropna(axis=1, how="all")
-    volume = volume.dropna(axis=1, how="all")
-    return (close, volume) if with_volume else close
+    out = {}
+    for f, lst in parts.items():
+        if not lst:
+            out[f] = pd.DataFrame()
+            continue
+        df = pd.concat(lst, axis=1)
+        df = df.loc[:, ~df.columns.duplicated()]
+        df = df.dropna(axis=1, how="all")
+        df.index = pd.to_datetime(df.index).tz_localize(None).normalize()
+        out[f] = df.sort_index()
+    return out
 
 
-def daily_returns(prices: pd.DataFrame) -> pd.DataFrame:
-    return prices.pct_change().dropna(how="all")
+def daily_returns(close: pd.DataFrame) -> pd.DataFrame:
+    """Standard close-to-close pct change."""
+    return close.pct_change().dropna(how="all")
 
 
-def fetch_us_and_kr_prices(kr_yf_tickers) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    """Returns (us_close, kr_close, kr_volume)."""
-    us_close = fetch_prices(US_DRIVERS)
-    kr_close, kr_volume = fetch_prices(list(kr_yf_tickers), with_volume=True)
-    return us_close, kr_close, kr_volume
+def gap_returns(open_df: pd.DataFrame, close_df: pd.DataFrame) -> pd.DataFrame:
+    """Overnight gap: (Open[t] - Close[t-1]) / Close[t-1]. Indexed by the open's date t.
+    This is the target most relevant for 9:00 AM trading — captures the prev-close → open jump
+    that overnight news (US session) drives.
+    """
+    cols = open_df.columns.intersection(close_df.columns)
+    o = open_df[cols]
+    c_prev = close_df[cols].shift(1)
+    gap = (o - c_prev) / c_prev
+    gap = gap.replace([np.inf, -np.inf], np.nan)
+    return gap.dropna(how="all")
