@@ -111,6 +111,7 @@ def format_message(picks: List[Pick], last_us: pd.Series, kst_date: str) -> str:
     else:
         lines.append("🎯 후보 (예상 시초가 갭 + 근거):")
         lines.append("   ※ 시초가 갭 = 어제 종가 → 오늘 9:00 시가 변동률")
+        lines.append("   ※ 순(net) = 0.5% 단타 비용(슬리피지+수수료+세) 차감 후")
         for i, p in enumerate(picks, 1):
             cap_s = _fmt_cap(p.market_cap)
             vol_s = _fmt_vol_ratio(p.volume_ratio)
@@ -119,7 +120,10 @@ def format_message(picks: List[Pick], last_us: pd.Series, kst_date: str) -> str:
                 f"{us}(β={beta:+.2f}, 기여 {contrib * 100:+.2f}%p)"
                 for us, beta, contrib in p.drivers
             )
-            lines.append(f"   예상 갭 {_fmt_pct(p.expected_return)} | 드라이버: {drivers_str}")
+            lines.append(
+                f"   예상 갭 {_fmt_pct(p.expected_return)} "
+                f"(순 {_fmt_pct(p.expected_return_net)}) | 드라이버: {drivers_str}"
+            )
     lines.append("")
 
     lines.append("⚠️ 통계 모델 스크리닝. 매매 추천 아님. 호가/뉴스 직접 확인 필수.")

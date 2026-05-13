@@ -1,0 +1,41 @@
+name: backtest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run backtest
+        env:
+          TZ: Asia/Seoul
+        run: python backtest.py
+
+      - name: Commit backtest artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/backtest_*.csv data/universe.csv data/picking_universe.csv || true
+          if ! git diff --cached --quiet; then
+            git commit -m "data: backtest run ($(TZ=Asia/Seoul date +%Y-%m-%d-%H%M))"
+            git push
+          else
+            echo "no backtest artifacts to commit"
+          fi

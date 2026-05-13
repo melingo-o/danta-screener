@@ -21,14 +21,21 @@ US_DRIVERS = [
 ]
 
 KR_UNIVERSE_SIZE = None          # None = no cap; take everything above KR_MIN_MARKET_CAP_KRW
-KR_MIN_MARKET_CAP_KRW = 100_000_000_000  # 1,000억 (picking universe floor)
+KR_MIN_MARKET_CAP_KRW = 500_000_000_000  # 5,000억 (raised for data quality + liquidity)
 
-HISTORY_DAYS = 400               # calendar days of history to fetch (~270 trading days)
+HISTORY_DAYS = 600               # ~400 trading days — enough for walk-forward backtest with 250-day train window
 ROLLING_WINDOW_DAYS = 250        # trading days for beta estimation
 US_MOVE_THRESHOLD_PCT = 1.5      # ignore US moves smaller than this in scoring
 MIN_VOLUME_RATIO = 1.5           # require recent vol >= 1.5x 20-day median
+MAX_VOLUME_RATIO_CAP = 10.0      # exclude event-driven outliers (>10x normal volume = abnormal event)
 TOP_K_PICKS = 3
 TOP_K_DRIVERS_PER_STOCK = 3      # use top-3 most-correlated US drivers per KR stock
+
+# Tier 1 filters
+MIN_CORR_THRESHOLD = 0.15        # ignore (US driver, KR stock) pairs with weaker relationship
+MIN_OBSERVATIONS = 120           # require ≥ 120 trading days of paired returns
+TRANSACTION_COST_PCT = 0.5       # round-trip slippage + fees + tax for KR day-trading
+SECTOR_DIVERSIFY = True          # don't allow 2 picks sharing the same primary US driver
 
 # Korean market broad index (used for regime detection — strong EWY move = risk-off signal)
 KR_MARKET_PROXY = "EWY"
