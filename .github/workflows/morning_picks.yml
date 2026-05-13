@@ -2,9 +2,11 @@ name: morning-picks
 
 on:
   schedule:
-    # 23:30 UTC Sun-Thu = 08:30 KST Mon-Fri
-    - cron: "30 23 * * 0-4"
+    # 22:30 UTC Sun-Thu = 07:30 KST Mon-Fri (before pre-market open)
+    - cron: "30 22 * * 0-4"
   workflow_dispatch:
+  repository_dispatch:
+    types: [morning-picks-trigger]
 
 permissions:
   contents: write
