@@ -1,0 +1,2 @@
+﻿date,rank,ticker6,name,predicted_gap,predicted_gap_net,actual_gap,actual_open_to_930,actual_high_pct,actual_low_pct,hit_gross,hit_net,tradeable_30m
+2026-05-14,2,025560,미래산업,0.01778,0.01278,0.0,0.08009,0.17391,0.0,False,False,True
