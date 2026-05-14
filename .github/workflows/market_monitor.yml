@@ -1,0 +1,54 @@
+name: market-monitor
+
+on:
+  schedule:
+    # KR pre-market & early ATS (08:00-08:55 KST = 23:00-23:55 UTC prev day, Sun-Thu)
+    - cron: "*/5 23 * * 0-4"
+    # KR regular session (09:00-15:55 KST = 00:00-06:55 UTC, Mon-Fri)
+    - cron: "*/5 0-6 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-monitor
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install minimal deps
+        run: pip install pytz
+
+      - name: Run market monitor
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          KIS_APP_KEY: ${{ secrets.KIS_APP_KEY }}
+          KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
+          KIS_ACCOUNT: ${{ secrets.KIS_ACCOUNT }}
+          TZ: Asia/Seoul
+        run: python market_monitor.py
+
+      - name: Commit state if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase || true
+          git add data/market_state.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "data: market_state $(TZ=Asia/Seoul date +%H:%M)"
+            git push || (git pull --rebase && git push)
+          else
+            echo "no state change"
+          fi

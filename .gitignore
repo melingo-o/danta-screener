@@ -6,3 +6,4 @@ venv/
 .DS_Store
 *.parquet
 .ipynb_checkpoints/
+data/.kis_token.json

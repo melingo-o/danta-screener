@@ -1,8 +1,5 @@
 """Format and send Telegram messages."""
 
-import json
-import os
-import urllib.request
 from datetime import datetime
 from typing import List
 
@@ -10,6 +7,7 @@ import pandas as pd
 import pytz
 
 from model import Pick
+from telegram_client import send_telegram
 from universe import (
     FINVIZ_MAP_URL,
     FINVIZ_SECTOR_URL,
@@ -129,24 +127,6 @@ def format_message(picks: List[Pick], last_us: pd.Series, kst_date: str) -> str:
     lines.append("⚠️ 통계 모델 스크리닝. 매매 추천 아님. 호가/뉴스 직접 확인 필수.")
     lines.append("    9:00 시가 갭 예측이라 9:00~9:30 단타에 최적화됨.")
     return "\n".join(lines)
-
-
-def send_telegram(text: str) -> dict:
-    token = os.environ["TELEGRAM_BOT_TOKEN"]
-    chat_id = os.environ["TELEGRAM_CHAT_ID"]
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    data = json.dumps(
-        {"chat_id": chat_id, "text": text, "disable_web_page_preview": True}
-    ).encode("utf-8")
-    req = urllib.request.Request(
-        url, data=data, headers={"Content-Type": "application/json"}
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        body = resp.read().decode()
-    parsed = json.loads(body)
-    if not parsed.get("ok"):
-        raise RuntimeError(f"Telegram send failed: {body}")
-    return parsed
 
 
 def kst_today_str() -> str:
