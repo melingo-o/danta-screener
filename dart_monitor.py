@@ -28,30 +28,67 @@ DART_VIEWER = "https://dart.fss.or.kr/dsaf001/main.do?rcpNo="
 STATE_FILE = Path("data/dart_state.json")
 UNIVERSE_CSV = Path("data/universe.csv")
 
-# Keywords that historically correlate with short-term price spikes
+# Actionable disclosures that historically move price short-term.
+# Each entry is matched as substring in 'report_nm' (title).
 BULLISH_KEYWORDS = [
-    "수주", "공급계약", "단일판매·공급계약", "공급 계약",
-    "자기주식취득", "자사주매입", "자사주 매입",
-    "무상증자", "주식분할",
-    "합병", "분할", "주식교환",
-    "신주인수권", "전환사채",
-    "흑자전환", "잠정실적", "매출액 또는 손익구조",
-    "신약", "임상", "품목허가", "FDA",
-    "특허", "기술이전", "라이센스",
-    "MOU", "양해각서", "협력",
-    "투자", "유상증자",
-    "최대주주변경", "경영권",
+    "단일판매ㆍ공급계약체결",
+    "단일판매·공급계약체결",
+    "공급계약체결",
+    "수주", "수주공시",
+    "매출액또는손익구조",          # large change disclosure
+    "잠정실적",                    # earnings flash
+    "흑자전환",
+    "자기주식취득결정",
+    "자기주식취득신탁계약체결",
+    "자사주매입",
+    "무상증자결정",
+    "주식분할결정",
+    "주식병합결정",
+    "합병결정", "흡수합병",
+    "분할결정", "물적분할", "인적분할",
+    "주식교환·이전",
+    "영업양수", "영업양도",
+    "임상", "품목허가", "신약",
+    "최대주주변경",
+    "경영권",
+    "유상증자결정",
+    "신주인수권부사채권",
+    "기술이전계약",
+    "특허권취득",
 ]
 
-# Bearish-but-noteworthy
+# Bearish but worth knowing
 BEARISH_KEYWORDS = [
-    "감자", "상장폐지", "관리종목",
+    "감자결정",
+    "상장폐지",
+    "관리종목지정",
+    "거래정지",
     "횡령", "배임",
-    "주식발행한도",
+    "주식발행한도초과",
+    "자기주식처분결정",
+    "유상증자",  # mixed signal, often bearish for short-term
+]
+
+# Skip these (routine regulatory filings, no price impact)
+EXCLUDE_PATTERNS = [
+    "투자설명서",
+    "분기보고서", "반기보고서", "사업보고서",
+    "감사보고서", "검토보고서",
+    "정정신고서",
+    "임원·주요주주", "임원ㆍ주요주주",
+    "주식등의대량보유",
+    "기업지배구조보고서",
+    "보수",
+    "정기주주총회",
+    "공정공시 - ",       # 자율 공정공시 (보통 routine)
+    "결산실적공시예고",
+    "기업설명회",
+    "조회공시 답변", "조회공시답변",
+    "기재정정",
 ]
 
 ALL_KEYWORDS = BULLISH_KEYWORDS + BEARISH_KEYWORDS
-MIN_MARKET_CAP_KRW = 100_000_000_000  # 1000억 (relax for early-stage news)
+MIN_MARKET_CAP_KRW = 100_000_000_000  # 1000억
 
 
 def kst_now():
@@ -129,6 +166,10 @@ def fetch_filings(api_key: str, bgn_de: str, end_de: str, max_pages: int = 3) ->
 
 
 def match_keywords(title: str) -> List[str]:
+    # Skip routine regulatory filings even if they happen to contain a keyword
+    for ex in EXCLUDE_PATTERNS:
+        if ex in title:
+            return []
     return [kw for kw in ALL_KEYWORDS if kw in title]
 
 
