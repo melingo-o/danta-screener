@@ -1,9 +1,6 @@
 name: intraday-scanner
 
 on:
-  schedule:
-    # KR regular session, every 10 min (09:00-15:55 KST = 00:00-06:55 UTC, Mon-Fri)
-    - cron: "*/10 0-6 * * 1-5"
   workflow_dispatch:
 
 permissions:

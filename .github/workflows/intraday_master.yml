@@ -1,19 +1,21 @@
-name: market-monitor
+name: intraday-master
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [intraday-tick]
 
 permissions:
   contents: write
 
 concurrency:
-  group: market-monitor
+  group: intraday-master
   cancel-in-progress: false
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
 
@@ -25,25 +27,26 @@ jobs:
       - name: Install minimal deps
         run: pip install pytz
 
-      - name: Run market monitor
+      - name: Run all intraday tasks
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           KIS_APP_KEY: ${{ secrets.KIS_APP_KEY }}
           KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
           KIS_ACCOUNT: ${{ secrets.KIS_ACCOUNT }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
           TZ: Asia/Seoul
-        run: python market_monitor.py
+        run: python intraday_master.py
 
-      - name: Commit state if changed
+      - name: Commit any state changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase || true
-          git add data/market_state.json || true
+          git add data/market_state.json data/scanner_state.json data/dart_state.json || true
           if ! git diff --cached --quiet; then
-            git commit -m "data: market_state $(TZ=Asia/Seoul date +%H:%M)"
+            git commit -m "data: intraday tick $(TZ=Asia/Seoul date +%H:%M)"
             git push || (git pull --rebase && git push)
           else
-            echo "no state change"
+            echo "no state changes"
           fi

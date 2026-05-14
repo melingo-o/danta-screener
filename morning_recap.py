@@ -152,6 +152,12 @@ def main():
     if target != today:
         print(f"[recap] latest pick date is {target}, not today ({today}). Likely weekend/holiday.")
 
+    # Idempotency: skip if already recapped today
+    existing = read_all_results()
+    if any(r.get("date") == target for r in existing):
+        print(f"[recap] {target} already recapped — skipping")
+        return
+
     picks_rows = read_picks_for_date(target)
     if not picks_rows:
         print(f"[recap] no picks rows for {target}")
