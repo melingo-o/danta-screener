@@ -1,16 +1,8 @@
-"""Intraday scanner — every 10 min during market hours.
+"""Intraday scanner — every 5-10 min during market hours.
 
-For a focused universe (시총 ≥ 3,000억 ~ 600 stocks): fetch current snapshot via KIS
-and detect signals:
-  - MA breakout: previous close < SMA20 < current price (today bullish cross of 20-day SMA)
-  - RSI oversold exit: yesterday's RSI < 35 and today's close > yesterday close × 1.01
-  - Volume + price surge: current volume ratio vs 20-day median > 2.5× AND price > open by ≥ 3%
-  - 20-day high breakout: current price > 20-day high
-
-Uses pre-computed daily indicators saved as data/daily_indicators.csv (built by morning_picks),
-so this scanner stays light (no historical fetch per stock).
-
-State (already-alerted today) in data/scanner_state.json.
+Pre-filters by simple breakout/MA/volume signals from cached daily indicators,
+then for each candidate runs the recommender (composite scoring + conviction tier).
+Sends only ⚡ MODERATE or 🔥 STRONG picks to Telegram (👀 WATCH logged only).
 """
 
 import csv
@@ -24,17 +16,24 @@ from typing import Dict, List, Optional
 
 import pytz
 
-from kis import KISClient
+from kis import KISClient, KOSPI
+from recommender import (
+    CONVICTION_MODERATE,
+    CONVICTION_STRONG,
+    CONVICTION_WATCH,
+    format_recommendation,
+    score_candidate,
+)
 from telegram_client import send_telegram
 
 INDICATORS_CSV = Path("data/daily_indicators.csv")
 STATE_FILE = Path("data/scanner_state.json")
 
-# Tunable
-VOL_SURGE_RATIO = 2.5      # today vol vs 20-day median
-PRICE_SURGE_PCT = 3.0      # % from today's open
+VOL_SURGE_RATIO = 2.0
+PRICE_SURGE_PCT = 2.5
 MIN_MARKET_CAP_KRW = 300_000_000_000  # 3,000억
-MAX_ALERTS_PER_RUN = 10    # avoid spamming
+MAX_DEEP_ANALYSIS = 15   # cap deep-analysis calls per tick (KIS API budget)
+MAX_ALERTS_PER_RUN = 8
 
 
 def kst_now():
@@ -56,13 +55,12 @@ def save_state(state: dict):
 
 
 def load_indicators() -> Dict[str, dict]:
-    """Return dict keyed by ticker6 → indicators dict (sma20, rsi14, vol_median20, prev_close, etc.)."""
     if not INDICATORS_CSV.exists():
         return {}
     out = {}
     with INDICATORS_CSV.open("r", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
-            t = row.get("ticker6", "")
+            t = (row.get("ticker6") or "").strip()
             if not t:
                 continue
             try:
@@ -80,31 +78,26 @@ def load_indicators() -> Dict[str, dict]:
     return out
 
 
-def detect_signals(ind: dict, snap: dict) -> List[str]:
-    """Compare today's snapshot to indicators. Return list of triggered signal labels."""
+def detect_initial_triggers(ind: dict, snap: dict) -> List[str]:
+    """Cheap pre-filter — just enough to short-list candidates for deep analysis."""
     triggers = []
     cur = snap["current"]
     open_p = snap["open"]
     vol = snap["volume"]
 
-    # MA breakout: cross above SMA20 today
     if ind["sma20"] > 0 and ind["prev_close"] > 0:
         if ind["prev_close"] < ind["sma20"] <= cur:
             triggers.append("20일선↑돌파")
 
-    # RSI oversold exit
     if 0 < ind["rsi14"] < 35 and cur > ind["prev_close"] * 1.01:
         triggers.append(f"RSI탈출({ind['rsi14']:.0f})")
 
-    # Volume + price surge
-    if ind["vol_median20"] > 0:
+    if ind["vol_median20"] > 0 and open_p > 0:
         vol_ratio = vol / ind["vol_median20"]
-        if open_p > 0:
-            price_chg = (cur - open_p) / open_p * 100
-            if vol_ratio >= VOL_SURGE_RATIO and price_chg >= PRICE_SURGE_PCT:
-                triggers.append(f"거래량×{vol_ratio:.1f}+{price_chg:+.1f}%")
+        price_chg = (cur - open_p) / open_p * 100
+        if vol_ratio >= VOL_SURGE_RATIO and price_chg >= PRICE_SURGE_PCT:
+            triggers.append(f"거래량×{vol_ratio:.1f}+{price_chg:+.1f}%")
 
-    # 20-day high breakout
     if ind["high20"] > 0 and cur > ind["high20"]:
         triggers.append("20일고가↑돌파")
 
@@ -131,8 +124,43 @@ def fetch_snapshot(client: KISClient, ticker6: str) -> Optional[dict]:
         return None
 
 
-def fmt_price(p: float) -> str:
-    return f"{int(p):,}원" if p >= 1000 else f"{p:.0f}원"
+def fetch_1min_bars(client: KISClient, ticker6: str) -> List[dict]:
+    now = kst_now()
+    hhmmss = now.strftime("%H%M%S")
+    try:
+        raw_bars = client.get_intraday_bars(ticker6, end_hhmmss=hhmmss)
+    except Exception as e:
+        print(f"  [{ticker6}] bars fetch failed: {e}")
+        return []
+    bars = []
+    for b in raw_bars:
+        try:
+            t = b.get("stck_cntg_hour", "")
+            if not t or len(t) < 4:
+                continue
+            bars.append({
+                "hhmm": int(t[:4]),
+                "open": float(b["stck_oprc"]),
+                "high": float(b["stck_hgpr"]),
+                "low": float(b["stck_lwpr"]),
+                "close": float(b["stck_prpr"]),
+                "vol": float(b.get("cntg_vol", 0) or 0),
+            })
+        except Exception:
+            continue
+    bars.sort(key=lambda x: x["hhmm"])
+    return bars
+
+
+def fetch_market_regime(client: KISClient) -> float:
+    """Return KOSPI % change from today's open."""
+    try:
+        out = client.get_index_price(KOSPI)
+        cur = float(out["bstp_nmix_prpr"])
+        op = float(out["bstp_nmix_oprc"])
+        return (cur - op) / op * 100 if op > 0 else 0
+    except Exception:
+        return 0.0
 
 
 def main():
@@ -141,7 +169,6 @@ def main():
         print("[scanner] no daily indicators yet — skipping (run morning_picks first)")
         return
 
-    # Filter to candidates by market cap
     candidates = {t: ind for t, ind in indicators.items() if ind["market_cap"] >= MIN_MARKET_CAP_KRW}
     print(f"[scanner] universe: {len(candidates)} stocks (시총 ≥ {MIN_MARKET_CAP_KRW/1e8:,.0f}억)")
 
@@ -152,62 +179,86 @@ def main():
     alerted = set(state.get("alerted", []))
 
     client = KISClient()
-    alerts = []
+    regime = fetch_market_regime(client)
+    print(f"[scanner] market regime: KOSPI 시가대비 {regime:+.2f}%")
 
+    pre_filtered = []
     for ticker6, ind in candidates.items():
-        # Skip if already alerted today
         if ticker6 in alerted:
             continue
         snap = fetch_snapshot(client, ticker6)
         if not snap:
             continue
-        triggers = detect_signals(ind, snap)
+        triggers = detect_initial_triggers(ind, snap)
         if not triggers:
             continue
-        alerts.append({
-            "ticker6": ticker6,
-            "name": ind["name"],
-            "snap": snap,
-            "triggers": triggers,
-            "market_cap": ind["market_cap"],
-        })
-        alerted.add(ticker6)
+        pre_filtered.append({"ticker6": ticker6, "name": ind["name"], "ind": ind,
+                              "snap": snap, "triggers": triggers})
+        time.sleep(0.05)
+        if len(pre_filtered) >= MAX_DEEP_ANALYSIS:
+            break
+
+    print(f"[scanner] pre-filtered: {len(pre_filtered)}")
+
+    deep_recs = []
+    for c in pre_filtered:
+        ticker6 = c["ticker6"]
+        bars = fetch_1min_bars(client, ticker6)
+        orderbook = None
+        try:
+            orderbook = client.get_orderbook(ticker6)
+        except Exception:
+            pass
+
+        rec = score_candidate(
+            ticker6=ticker6,
+            snap=c["snap"],
+            indicators=c["ind"],
+            bars_1min=bars,
+            market_regime_pct=regime,
+            initial_triggers=c["triggers"],
+            orderbook=orderbook,
+        )
+        rec["name"] = c["name"]
+        rec["market_cap"] = c["ind"]["market_cap"]
+        rec["snap"] = c["snap"]
+        deep_recs.append(rec)
+        time.sleep(0.05)
+
+    # Rank by score
+    deep_recs.sort(key=lambda r: -r["score"])
+    print(f"[scanner] scored {len(deep_recs)}; top scores: " +
+          ", ".join(f"{r['ticker6']}({r['score']:.0f})" for r in deep_recs[:5]))
+
+    # Build alerts: only STRONG + MODERATE
+    alerts = []
+    for rec in deep_recs:
+        if rec["conviction"] in (CONVICTION_STRONG, CONVICTION_MODERATE):
+            alerts.append(rec)
+            alerted.add(rec["ticker6"])
         if len(alerts) >= MAX_ALERTS_PER_RUN:
             break
-        # KIS rate limit ~20 req/sec; small sleep is safe
-        time.sleep(0.05)
 
     state["alerted"] = sorted(alerted)
     save_state(state)
 
     if not alerts:
-        print("[scanner] no new signals")
+        print("[scanner] no STRONG/MODERATE recommendations")
         return
 
-    # Sort alerts by # triggers desc, then by intraday %
-    def sort_key(a):
-        return (-len(a["triggers"]), -a["snap"]["prdy_diff_pct"])
-    alerts.sort(key=sort_key)
-
     now_str = kst_now().strftime("%H:%M")
-    lines = [f"📡 장중 스캐너 [{now_str} KST] — {len(alerts)}개 신호\n"]
-    for a in alerts:
-        cap = a["market_cap"]
-        cap_s = f"{cap/1e12:.1f}조" if cap >= 1e12 else f"{cap/1e8:,.0f}억"
-        snap = a["snap"]
-        open_p = snap["open"]
-        cur = snap["current"]
-        from_open = (cur - open_p) / open_p * 100 if open_p > 0 else 0.0
-        lines.append(
-            f"• {a['name']} ({a['ticker6']}) {fmt_price(cur)} "
-            f"(전일 {snap['prdy_diff_pct']:+.2f}%, 시가대비 {from_open:+.2f}%, 시총 {cap_s})\n"
-            f"   ➡️ {' / '.join(a['triggers'])}"
-        )
+    n_strong = sum(1 for r in alerts if r["conviction"] == CONVICTION_STRONG)
+    header = (
+        f"📡 장중 추천 [{now_str} KST]  "
+        f"강력매수 {n_strong}건 / 매수후보 {len(alerts)-n_strong}건\n"
+        f"코스피 시가대비 {regime:+.2f}%\n"
+    )
+    blocks = [format_recommendation(rec, rec["name"], rec["market_cap"], rec["snap"]) for rec in alerts]
+    msg = header + "\n" + "\n\n".join(blocks) + "\n\n⚠️ 통계 추천. 호가창 두께와 뉴스 직접 확인 후 진입. 손절가 지킬 것."
 
-    msg = "\n".join(lines)
-    print("--- scanner alert ---")
+    print("--- recommendation alert ---")
     print(msg)
-    print("---------------------")
+    print("----------------------------")
     send_telegram(msg)
 
 

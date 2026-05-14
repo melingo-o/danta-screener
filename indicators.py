@@ -29,6 +29,24 @@ def rsi(close: pd.Series, period: int = 14) -> float:
     return float(val) if val == val else float("nan")
 
 
+def macd_state(close: pd.Series) -> str:
+    """Return 'bullish' if MACD > signal at last bar, 'bearish' otherwise; empty if insufficient."""
+    if len(close.dropna()) < 35:
+        return ""
+    ema12 = close.ewm(span=12, adjust=False).mean()
+    ema26 = close.ewm(span=26, adjust=False).mean()
+    macd = ema12 - ema26
+    signal = macd.ewm(span=9, adjust=False).mean()
+    if macd.iloc[-1] != macd.iloc[-1] or signal.iloc[-1] != signal.iloc[-1]:
+        return ""
+    if macd.iloc[-1] > signal.iloc[-1]:
+        # Distinguish fresh cross (yesterday below, today above)
+        if len(macd) >= 2 and macd.iloc[-2] <= signal.iloc[-2]:
+            return "golden_cross"
+        return "bullish"
+    return "bearish"
+
+
 def build_indicators(meta: pd.DataFrame, kr_close: pd.DataFrame, kr_volume: pd.DataFrame) -> pd.DataFrame:
     """Compute per-stock indicators. Returns DataFrame indexed by ticker6.
 
@@ -53,21 +71,30 @@ def build_indicators(meta: pd.DataFrame, kr_close: pd.DataFrame, kr_volume: pd.D
         if len(close) < 21:
             continue
 
+        sma5 = close.tail(5).mean()
         sma20 = close.tail(20).mean()
+        sma60 = close.tail(60).mean() if len(close) >= 60 else float("nan")
         high20 = close.tail(20).max()
         prev_close = close.iloc[-1]
         rsi14 = rsi(close, 14)
         vol_median20 = float(vol.tail(20).median()) if len(vol) >= 5 else float("nan")
+        macd = macd_state(close)
+        # 5-day return (momentum)
+        chg5d = (close.iloc[-1] / close.iloc[-6] - 1) * 100 if len(close) >= 6 else float("nan")
 
         rows.append({
             "ticker6": code,
             "name": meta.loc[code, "name"],
             "market_cap": float(meta.loc[code, "market_cap"]),
+            "sma5": round(float(sma5), 2),
             "sma20": round(float(sma20), 2),
+            "sma60": round(float(sma60), 2) if sma60 == sma60 else "",
             "high20": round(float(high20), 2),
             "prev_close": round(float(prev_close), 2),
             "rsi14": round(float(rsi14), 2) if rsi14 == rsi14 else "",
             "vol_median20": round(vol_median20, 0) if vol_median20 == vol_median20 else "",
+            "macd_state": macd,
+            "chg5d_pct": round(float(chg5d), 2) if chg5d == chg5d else "",
         })
 
     df = pd.DataFrame(rows)

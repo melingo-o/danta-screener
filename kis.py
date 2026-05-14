@@ -149,6 +149,20 @@ class KISClient:
             raise KISError(f"Intraday bars API error: {resp}")
         return resp.get("output2", [])
 
+    def get_orderbook(self, ticker6: str) -> Dict:
+        """Bid/ask snapshot (호가) + recent trade flow.
+        Returns 'output1' (호가 10단계) and 'output2' (체결 정보).
+        """
+        resp = self._request(
+            "GET",
+            "/uapi/domestic-stock/v1/quotations/inquire-asking-price-exp-ccn",
+            headers=self._data_headers("FHKST01010200"),
+            params={"FID_COND_MRKT_DIV_CODE": "J", "FID_INPUT_ISCD": ticker6},
+        )
+        if resp.get("rt_cd") != "0":
+            raise KISError(f"Orderbook API error: {resp}")
+        return resp
+
     def get_daily_bars(self, ticker6: str, period: str = "D") -> list:
         """Daily candles. period='D' daily, 'W' weekly, 'M' monthly. Returns ~100 bars."""
         from datetime import date, timedelta
