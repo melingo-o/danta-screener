@@ -36,7 +36,7 @@ CONVICTION_MODERATE = "⚡ 매수후보"
 CONVICTION_WATCH = "👀 관찰"
 
 WEIGHTS = {
-    # bullish
+    # bullish — chart/momentum
     "above_vwap_30m": 1.5,
     "near_today_high": 1.5,
     "volume_burn_ahead": 2.5,
@@ -49,6 +49,11 @@ WEIGHTS = {
     "rsi_sweet_spot": 1.0,
     "rsi_oversold_exit": 1.5,
     "above_today_open": 1.0,
+    # bullish — flow/supply-demand (added)
+    "trade_strength_strong": 2.0,      # 체결강도 ≥ 120
+    "orderbook_buy_dominance": 1.5,    # 호가 매수잔량/매도잔량 ≥ 1.5
+    "last_bar_volume_spike": 1.5,      # 직전 1분봉 거래량 ≥ 직전 5봉 평균 ×3
+    "near_52w_high": 1.5,              # 52주 고가의 95%↑ (매물대 적음)
     # bearish
     "below_vwap_30m": -2.0,
     "rsi_overbought": -2.0,
@@ -57,7 +62,22 @@ WEIGHTS = {
     "volume_exhausted_late": -1.5,
     "market_regime_down": -1.5,
     "wide_bid_ask_spread": -1.0,
+    # bearish — flow/liquidity (added)
+    "trade_strength_weak": -1.5,        # 체결강도 ≤ 80
+    "orderbook_sell_dominance": -1.5,   # 호가 매수/매도 ≤ 0.7
+    "low_liquidity": -2.0,              # 거래대금 < 50억
 }
+
+# 강력매수 등급을 막는 부정 요인 (한 개라도 있으면 매수후보로 강등)
+STRONG_TIER_BLOCKERS = {
+    "below_today_open",
+    "low_liquidity",
+    "trade_strength_weak",
+    "orderbook_sell_dominance",
+    "rsi_overbought",
+}
+
+LIQUIDITY_MIN_KRW = 5_000_000_000  # 50억 — 미만이면 슬리피지 리스크
 
 # Sum of all positive weights for normalization
 MAX_BULL = sum(w for w in WEIGHTS.values() if w > 0)
@@ -229,7 +249,7 @@ def score_candidate(
     if "20일선↑돌파" in initial_triggers:
         pos.append(("ma20_cross", WEIGHTS["ma20_cross"], "20일선 골든크로스"))
 
-    # Orderbook (optional): wide spread = bad liquidity
+    # Orderbook: spread + 10단계 잔량 비율
     if orderbook:
         try:
             o1 = orderbook.get("output1", {})
@@ -240,8 +260,50 @@ def score_candidate(
                 if spread_pct > 0.3:
                     neg.append(("wide_bid_ask_spread", WEIGHTS["wide_bid_ask_spread"],
                                f"호가 spread {spread_pct:.2f}%"))
+            total_bid = float(o1.get("total_bidp_rsqn", 0))
+            total_ask = float(o1.get("total_askp_rsqn", 0))
+            if total_bid > 0 and total_ask > 0:
+                depth_ratio = total_bid / total_ask
+                if depth_ratio >= 1.5:
+                    pos.append(("orderbook_buy_dominance", WEIGHTS["orderbook_buy_dominance"],
+                                f"호가 잔량비 {depth_ratio:.2f} (매수우세)"))
+                elif depth_ratio <= 0.7:
+                    neg.append(("orderbook_sell_dominance", WEIGHTS["orderbook_sell_dominance"],
+                                f"호가 잔량비 {depth_ratio:.2f} (매도우세)"))
         except Exception:
             pass
+
+    # 체결강도 (cttr) — 100 기준, 120↑ 매수세 압도, 80↓ 매도세 우세
+    cttr = snap.get("cttr", 0)
+    if cttr >= 120:
+        pos.append(("trade_strength_strong", WEIGHTS["trade_strength_strong"],
+                    f"체결강도 {cttr:.0f} (매수세 압도)"))
+    elif 0 < cttr <= 80:
+        neg.append(("trade_strength_weak", WEIGHTS["trade_strength_weak"],
+                    f"체결강도 {cttr:.0f} (매도세 우세)"))
+
+    # 직전 1분봉 거래량 스파이크 (진입 타이밍 신호)
+    if len(bars_1min) >= 6:
+        last_vol = bars_1min[-1]["vol"]
+        prior_avg = sum(b["vol"] for b in bars_1min[-6:-1]) / 5
+        if prior_avg > 0:
+            spike = last_vol / prior_avg
+            if spike >= 3.0:
+                pos.append(("last_bar_volume_spike", WEIGHTS["last_bar_volume_spike"],
+                            f"직전 1분봉 거래량 ×{spike:.1f}"))
+
+    # 52주 고가 근접 (매물대 적음 → 추세 가속)
+    w52_high = snap.get("w52_high", 0)
+    if w52_high > 0 and current >= w52_high * 0.95:
+        prox = current / w52_high * 100
+        pos.append(("near_52w_high", WEIGHTS["near_52w_high"],
+                    f"52주 고가 {prox:.0f}% (매물대 희박)"))
+
+    # 거래대금 유동성 체크 (슬리피지 가드)
+    trade_value = snap.get("trade_value", 0)
+    if 0 < trade_value < LIQUIDITY_MIN_KRW:
+        neg.append(("low_liquidity", WEIGHTS["low_liquidity"],
+                    f"거래대금 {trade_value/1e8:.0f}억 (유동성 부족)"))
 
     # --- Compute composite score (normalize to 0-100) ---
     bull_total = sum(w for _, w, _ in pos)
@@ -251,7 +313,8 @@ def score_candidate(
     bull_count = len(pos)
 
     # --- Conviction tiering ---
-    if score >= 70 and bull_count >= 5 and not any(t == "below_today_open" for t, *_ in neg):
+    has_blocker = any(t in STRONG_TIER_BLOCKERS for t, *_ in neg)
+    if score >= 70 and bull_count >= 5 and not has_blocker:
         conviction = CONVICTION_STRONG
     elif score >= 50 and bull_count >= 3:
         conviction = CONVICTION_MODERATE

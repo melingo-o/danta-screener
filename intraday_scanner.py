@@ -146,7 +146,10 @@ def fetch_snapshot(client: KISClient, ticker6: str) -> Optional[dict]:
             "per": _f("per"),
             "pbr": _f("pbr"),
             "vol_tnrt": _f("vol_tnrt"),
+            "cttr": _f("cttr"),                  # 체결강도 (100기준)
             "ssts_yn": (out.get("ssts_yn") or "").strip(),
+            "mrkt_warn_cls_code": (out.get("mrkt_warn_cls_code") or "").strip(),
+            "invt_caful_yn": (out.get("invt_caful_yn") or "").strip(),
         }
     except Exception as e:
         print(f"  [{ticker6}] parse failed: {e}")
@@ -212,11 +215,17 @@ def main():
     print(f"[scanner] market regime: KOSPI 시가대비 {regime:+.2f}%")
 
     pre_filtered = []
+    skipped_caution = 0
     for ticker6, ind in candidates.items():
         if ticker6 in alerted:
             continue
         snap = fetch_snapshot(client, ticker6)
         if not snap:
+            continue
+        # 시장경고(02=경고, 03=위험) / 투자유의 / 공매도과열 → 강제 제외
+        warn = snap.get("mrkt_warn_cls_code", "")
+        if warn in ("02", "03") or snap.get("invt_caful_yn") == "Y" or snap.get("ssts_yn") == "Y":
+            skipped_caution += 1
             continue
         triggers = detect_initial_triggers(ind, snap)
         if not triggers:
@@ -227,7 +236,7 @@ def main():
         if len(pre_filtered) >= MAX_DEEP_ANALYSIS:
             break
 
-    print(f"[scanner] pre-filtered: {len(pre_filtered)}")
+    print(f"[scanner] pre-filtered: {len(pre_filtered)} (skipped {skipped_caution} 관리·위험·공매도과열)")
 
     deep_recs = []
     for c in pre_filtered:
