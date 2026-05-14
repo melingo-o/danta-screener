@@ -8,11 +8,12 @@ Two CSVs in data/journal/:
 import csv
 from datetime import datetime
 from pathlib import Path
-from typing import Iterable, List
+from typing import TYPE_CHECKING, Iterable, List
 
 import pytz
 
-from model import Pick
+if TYPE_CHECKING:
+    from model import Pick  # noqa: F401  (type hints only)
 
 JOURNAL_DIR = Path(__file__).parent / "data" / "journal"
 PICKS_CSV = JOURNAL_DIR / "picks.csv"
@@ -48,7 +49,7 @@ def _write_rows(path: Path, fields: List[str], rows: Iterable[dict]) -> None:
             w.writerow({k: row.get(k, "") for k in fields})
 
 
-def append_picks(picks: List[Pick], date_str: str = None) -> None:
+def append_picks(picks: "List[Pick]", date_str: str = None) -> None:
     date_str = date_str or _today_kst()
     rows = []
     for i, p in enumerate(picks, 1):
