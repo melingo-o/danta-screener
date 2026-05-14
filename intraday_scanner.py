@@ -54,6 +54,16 @@ def save_state(state: dict):
     STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def _ff(v, default=0.0):
+    try:
+        s = (v or "").strip() if isinstance(v, str) else v
+        if s in ("", None, "nan"):
+            return default
+        return float(s)
+    except Exception:
+        return default
+
+
 def load_indicators() -> Dict[str, dict]:
     if not INDICATORS_CSV.exists():
         return {}
@@ -66,12 +76,16 @@ def load_indicators() -> Dict[str, dict]:
             try:
                 out[t] = {
                     "name": row.get("name", ""),
-                    "market_cap": float(row.get("market_cap", 0) or 0),
-                    "sma20": float(row.get("sma20", 0) or 0),
-                    "rsi14": float(row.get("rsi14", 0) or 0),
-                    "vol_median20": float(row.get("vol_median20", 0) or 0),
-                    "prev_close": float(row.get("prev_close", 0) or 0),
-                    "high20": float(row.get("high20", 0) or 0),
+                    "market_cap": _ff(row.get("market_cap")),
+                    "sma5": _ff(row.get("sma5")),
+                    "sma20": _ff(row.get("sma20")),
+                    "sma60": _ff(row.get("sma60")),
+                    "rsi14": _ff(row.get("rsi14")),
+                    "vol_median20": _ff(row.get("vol_median20")),
+                    "prev_close": _ff(row.get("prev_close")),
+                    "high20": _ff(row.get("high20")),
+                    "macd_state": (row.get("macd_state") or "").strip(),
+                    "chg5d_pct": _ff(row.get("chg5d_pct")),
                 }
             except Exception:
                 continue
@@ -110,14 +124,29 @@ def fetch_snapshot(client: KISClient, ticker6: str) -> Optional[dict]:
     except Exception as e:
         print(f"  [{ticker6}] price fetch failed: {e}")
         return None
+
+    def _f(k, default=0.0):
+        try:
+            v = out.get(k, default)
+            return float(v) if v not in (None, "") else default
+        except Exception:
+            return default
+
     try:
         return {
-            "current": float(out["stck_prpr"]),
-            "open": float(out["stck_oprc"]),
-            "high": float(out["stck_hgpr"]),
-            "low": float(out["stck_lwpr"]),
-            "volume": float(out.get("acml_vol", 0) or 0),
-            "prdy_diff_pct": float(out.get("prdy_ctrt", 0) or 0),
+            "current": _f("stck_prpr"),
+            "open": _f("stck_oprc"),
+            "high": _f("stck_hgpr"),
+            "low": _f("stck_lwpr"),
+            "volume": _f("acml_vol"),
+            "trade_value": _f("acml_tr_pbmn"),   # 누적 거래대금 (원)
+            "prdy_diff_pct": _f("prdy_ctrt"),
+            "w52_high": _f("w52_hgpr"),
+            "w52_low": _f("w52_lwpr"),
+            "per": _f("per"),
+            "pbr": _f("pbr"),
+            "vol_tnrt": _f("vol_tnrt"),
+            "ssts_yn": (out.get("ssts_yn") or "").strip(),
         }
     except Exception as e:
         print(f"  [{ticker6}] parse failed: {e}")
