@@ -18,6 +18,8 @@ from data import (
     gap_returns,
     latest_trading_day_kr,
 )
+from indicators import build_indicators, save_indicators
+from journal import append_picks
 from model import compute_betas, last_us_moves, score_universe
 from notify import format_message, kst_today_str, send_telegram
 from universe import US_DRIVERS
@@ -65,6 +67,13 @@ def main():
         meta = meta[meta["yf_ticker"].isin(kr["Close"].columns)]
         print(f"[run] KR universe with prices: {len(meta)}")
 
+        # Build daily indicators (SMA20/RSI14/vol_median) for intraday scanner
+        try:
+            ind_df = build_indicators(meta, kr["Close"], kr["Volume"])
+            save_indicators(ind_df)
+        except Exception as e:
+            print(f"[run] indicator build failed (non-fatal): {e}")
+
         betas = compute_betas(kr_gap, us_ret)
         print(f"[run] computed gap betas for {len(betas)} KR stocks")
 
@@ -77,6 +86,10 @@ def main():
 
         picks = score_universe(betas, last_us, meta, vol_by_code)
         print(f"[run] picks: {len(picks)}")
+
+        # Persist picks to journal for next-day recap
+        if picks:
+            append_picks(picks, kst_today_str())
 
         msg = format_message(picks, last_us, kst_today_str())
         print("------ message ------")

@@ -1,20 +1,24 @@
-name: morning-picks
+name: dart-monitor
 
 on:
   schedule:
-    # 22:30 UTC Sun-Thu = 07:30 KST Mon-Fri (before pre-market open)
-    - cron: "30 22 * * 0-4"
+    # Every 10 min during KR market + post-market disclosure window
+    # 08:00-18:00 KST = 23:00-08:59 UTC (covers heaviest disclosure flow)
+    - cron: "*/10 23 * * 0-4"
+    - cron: "*/10 0-8 * * 1-5"
   workflow_dispatch:
-  repository_dispatch:
-    types: [morning-picks-trigger]
 
 permissions:
   contents: write
 
+concurrency:
+  group: dart-monitor
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
@@ -23,27 +27,26 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Install deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - name: Install minimal deps
+        run: pip install pytz
 
-      - name: Run screening + Telegram
+      - name: Run DART monitor
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
           TZ: Asia/Seoul
-        run: python run.py
+        run: python dart_monitor.py
 
-      - name: Commit snapshot + journal
+      - name: Commit dart state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase || true
-          git add data/ || true
+          git add data/dart_state.json || true
           if ! git diff --cached --quiet; then
-            git commit -m "data: morning picks $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            git commit -m "data: dart_state $(TZ=Asia/Seoul date +%H:%M)"
             git push || (git pull --rebase && git push)
           else
-            echo "no changes"
+            echo "no state change"
           fi

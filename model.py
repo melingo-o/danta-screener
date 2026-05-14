@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 
 from universe import (
+    MAX_ABS_BETA,
     MAX_VOLUME_RATIO_CAP,
     MIN_CORR_THRESHOLD,
     MIN_OBSERVATIONS,
@@ -58,6 +59,7 @@ def compute_betas(
     rolling_window: int = ROLLING_WINDOW_DAYS,
     min_obs: int = MIN_OBSERVATIONS,
     min_corr: float = MIN_CORR_THRESHOLD,
+    max_abs_beta: float = MAX_ABS_BETA,
 ) -> Dict[str, pd.DataFrame]:
     """Vectorized univariate OLS per (KR stock, US driver). Filters by min_obs and min_corr.
 
@@ -100,9 +102,11 @@ def compute_betas(
         betas_mat = cross_corr * (sigma_y[:, None] / np.where(sigma_x[None, :] > 0, sigma_x[None, :], np.nan))
 
     abs_corr = np.abs(cross_corr)
+    abs_beta = np.abs(betas_mat)
     valid_pair = (
         (ns_mat >= min_obs)
         & (abs_corr >= min_corr)
+        & (abs_beta <= max_abs_beta)
         & ~np.isnan(betas_mat)
         & ~np.isnan(cross_corr)
     )

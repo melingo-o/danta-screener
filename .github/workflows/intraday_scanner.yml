@@ -1,20 +1,22 @@
-name: morning-picks
+name: intraday-scanner
 
 on:
   schedule:
-    # 22:30 UTC Sun-Thu = 07:30 KST Mon-Fri (before pre-market open)
-    - cron: "30 22 * * 0-4"
+    # KR regular session, every 10 min (09:00-15:55 KST = 00:00-06:55 UTC, Mon-Fri)
+    - cron: "*/10 0-6 * * 1-5"
   workflow_dispatch:
-  repository_dispatch:
-    types: [morning-picks-trigger]
 
 permissions:
   contents: write
 
+concurrency:
+  group: intraday-scanner
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
 
@@ -23,27 +25,28 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Install deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - name: Install minimal deps
+        run: pip install pytz
 
-      - name: Run screening + Telegram
+      - name: Run intraday scanner
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          KIS_APP_KEY: ${{ secrets.KIS_APP_KEY }}
+          KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
+          KIS_ACCOUNT: ${{ secrets.KIS_ACCOUNT }}
           TZ: Asia/Seoul
-        run: python run.py
+        run: python intraday_scanner.py
 
-      - name: Commit snapshot + journal
+      - name: Commit scanner state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase || true
-          git add data/ || true
+          git add data/scanner_state.json || true
           if ! git diff --cached --quiet; then
-            git commit -m "data: morning picks $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            git commit -m "data: scanner_state $(TZ=Asia/Seoul date +%H:%M)"
             git push || (git pull --rebase && git push)
           else
-            echo "no changes"
+            echo "no state change"
           fi

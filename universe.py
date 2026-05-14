@@ -34,6 +34,7 @@ TOP_K_DRIVERS_PER_STOCK = 3      # use top-3 most-correlated US drivers per KR s
 # Tier 1 filters
 MIN_CORR_THRESHOLD = 0.15        # ignore (US driver, KR stock) pairs with weaker relationship
 MIN_OBSERVATIONS = 120           # require ≥ 120 trading days of paired returns
+MAX_ABS_BETA = 3.0               # cap |β| to filter spurious correlations (e.g. small-cap × big driver = β=-9 noise)
 TRANSACTION_COST_PCT = 0.5       # round-trip slippage + fees + tax for KR day-trading
 SECTOR_DIVERSIFY = True          # don't allow 2 picks sharing the same primary US driver
 

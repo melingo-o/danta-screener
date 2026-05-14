@@ -127,3 +127,46 @@ class KISClient:
         if resp.get("rt_cd") != "0":
             raise KISError(f"Stock price API error: {resp}")
         return resp["output"]
+
+    def get_intraday_bars(self, ticker6: str, end_hhmmss: str = "093000") -> list:
+        """Fetch today's 1-min bars up to end_hhmmss. Returns list of dict bars (newest first per KIS).
+        Each bar has fields like: stck_bsop_date, stck_cntg_hour (HHMMSS), stck_prpr (close), stck_oprc, stck_hgpr, stck_lwpr, cntg_vol.
+        Use FHKST03010200 (당일분봉조회) — returns up to 30 bars (~30 minutes of 1-min bars).
+        """
+        resp = self._request(
+            "GET",
+            "/uapi/domestic-stock/v1/quotations/inquire-time-itemchartprice",
+            headers=self._data_headers("FHKST03010200"),
+            params={
+                "FID_ETC_CLS_CODE": "",
+                "FID_COND_MRKT_DIV_CODE": "J",
+                "FID_INPUT_ISCD": ticker6,
+                "FID_INPUT_HOUR_1": end_hhmmss,
+                "FID_PW_DATA_INCU_YN": "N",
+            },
+        )
+        if resp.get("rt_cd") != "0":
+            raise KISError(f"Intraday bars API error: {resp}")
+        return resp.get("output2", [])
+
+    def get_daily_bars(self, ticker6: str, period: str = "D") -> list:
+        """Daily candles. period='D' daily, 'W' weekly, 'M' monthly. Returns ~100 bars."""
+        from datetime import date, timedelta
+        end = date.today().strftime("%Y%m%d")
+        start = (date.today() - timedelta(days=200)).strftime("%Y%m%d")
+        resp = self._request(
+            "GET",
+            "/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice",
+            headers=self._data_headers("FHKST03010100"),
+            params={
+                "FID_COND_MRKT_DIV_CODE": "J",
+                "FID_INPUT_ISCD": ticker6,
+                "FID_INPUT_DATE_1": start,
+                "FID_INPUT_DATE_2": end,
+                "FID_PERIOD_DIV_CODE": period,
+                "FID_ORG_ADJ_PRC": "0",
+            },
+        )
+        if resp.get("rt_cd") != "0":
+            raise KISError(f"Daily bars API error: {resp}")
+        return resp.get("output2", [])
