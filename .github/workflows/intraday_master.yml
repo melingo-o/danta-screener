@@ -1,6 +1,11 @@
 name: intraday-master
 
 on:
+  schedule:
+    # KST 08:00–08:55 (UTC 23 Sun–Thu) — pre-market news/DART window
+    - cron: "*/5 23 * * 0-4"
+    # KST 09:00–17:55 (UTC 00-08 Mon–Fri) — covers scanner (9-16) + news/DART (8-17) + recap (9:35)
+    - cron: "*/5 0-8 * * 1-5"
   workflow_dispatch:
   repository_dispatch:
     types: [intraday-tick]
