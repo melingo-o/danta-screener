@@ -17,6 +17,7 @@ TASKS = [
     ("market_monitor", "📊 KOSPI/KOSDAQ regime"),
     ("intraday_scanner", "📡 stock scanner"),
     ("dart_monitor", "📋 DART"),
+    ("news_monitor", "📰 news"),
     ("morning_recap", "📈 morning recap"),
 ]
 
@@ -46,6 +47,11 @@ def main():
         if mod_name in ("market_monitor", "intraday_scanner"):
             if not (9 <= now.hour < 16):
                 print(f"[master] skipping {label} (outside 09-16)")
+                continue
+        if mod_name == "news_monitor":
+            # News matters from pre-market through close; broader window than scanner
+            if not (8 <= now.hour < 17):
+                print(f"[master] skipping {label} (outside 08-17)")
                 continue
         if mod_name == "morning_recap":
             # Run only in 09:35-09:55 window; idempotency guard inside script ensures one-shot

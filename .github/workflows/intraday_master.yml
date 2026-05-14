@@ -43,7 +43,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase || true
-          git add data/market_state.json data/scanner_state.json data/dart_state.json || true
+          git add data/market_state.json data/scanner_state.json data/dart_state.json data/news_state.json || true
           if ! git diff --cached --quiet; then
             git commit -m "data: intraday tick $(TZ=Asia/Seoul date +%H:%M)"
             git push || (git pull --rebase && git push)
