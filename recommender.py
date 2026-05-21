@@ -314,11 +314,11 @@ def score_candidate(
 
     # --- Conviction tiering ---
     has_blocker = any(t in STRONG_TIER_BLOCKERS for t, *_ in neg)
-    if score >= 70 and bull_count >= 5 and not has_blocker:
+    if score >= 65 and bull_count >= 5 and not has_blocker:
         conviction = CONVICTION_STRONG
-    elif score >= 50 and bull_count >= 3:
+    elif score >= 40 and bull_count >= 3:
         conviction = CONVICTION_MODERATE
-    elif score >= 30:
+    elif score >= 25:
         conviction = CONVICTION_WATCH
     else:
         conviction = None  # skip

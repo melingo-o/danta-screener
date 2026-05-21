@@ -31,7 +31,7 @@ STATE_FILE = Path("data/scanner_state.json")
 
 VOL_SURGE_RATIO = 2.0
 PRICE_SURGE_PCT = 2.5
-MIN_MARKET_CAP_KRW = 300_000_000_000  # 3,000억
+MIN_MARKET_CAP_KRW = 100_000_000_000  # 1,000억
 MAX_DEEP_ANALYSIS = 15   # cap deep-analysis calls per tick (KIS API budget)
 MAX_ALERTS_PER_RUN = 8
 
