@@ -92,6 +92,16 @@ def main():
             append_picks(picks, kst_today_str())
 
         msg = format_message(picks, last_us, kst_today_str())
+
+        # Append narrow-theme strength block (양자/SMR/휴머노이드/비만 등) — non-fatal
+        try:
+            from theme_scanner import evaluate_themes, format_themes_block
+            themes_block = format_themes_block(evaluate_themes())
+            if themes_block:
+                msg += "\n" + themes_block
+        except Exception as e:
+            print(f"[run] theme scanner failed (non-fatal): {e}")
+
         print("------ message ------")
         print(msg)
         print("---------------------")
