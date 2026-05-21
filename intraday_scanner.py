@@ -222,9 +222,10 @@ def main():
         snap = fetch_snapshot(client, ticker6)
         if not snap:
             continue
-        # 시장경고(02=경고, 03=위험) / 투자유의 / 공매도과열 → 강제 제외
+        # 시장경고(02=경고, 03=위험) / 투자유의 → 강제 제외
+        # ssts_yn은 KIS에서 "공매도 거래 가능 여부"라 정상 종목 대부분이 Y → 필터에서 제거
         warn = snap.get("mrkt_warn_cls_code", "")
-        if warn in ("02", "03") or snap.get("invt_caful_yn") == "Y" or snap.get("ssts_yn") == "Y":
+        if warn in ("02", "03") or snap.get("invt_caful_yn") == "Y":
             skipped_caution += 1
             continue
         triggers = detect_initial_triggers(ind, snap)
