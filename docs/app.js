@@ -287,6 +287,232 @@ function renderPicksTable(picks, results) {
   }).join("") || `<tr><td colspan="8" class="text-center py-6 text-slate-400">데이터 없음</td></tr>`;
 }
 
+// ====================================================================
+// LONG-TERM SCREENER TAB
+// ====================================================================
+
+let ltAll = [];
+let ltMeta = {};
+let ltLoaded = false;
+
+async function loadLongTerm() {
+  if (ltLoaded) return;
+  ltLoaded = true;
+
+  let data;
+  try {
+    data = await fetchJSON("data/long_term_scores.json");
+  } catch (e) {
+    $("lt-status").innerHTML =
+      `<span class="text-amber-700">데이터 파일 없음.</span> ` +
+      `<a class="underline" href="https://github.com/melingo-o/danta-screener/actions/workflows/long_term_screener.yml" target="_blank">` +
+      `GitHub Actions에서 long-term-screener 워크플로우 한 번 수동 실행</a> 후 새로고침.`;
+    ltLoaded = false;  // allow retry
+    return;
+  }
+
+  ltAll = data.stocks || [];
+  ltMeta = data;
+
+  $("lt-status").textContent = `${ltAll.length}개 종목 평가 완료 (KR ${data.kr_scored || 0} · US ${data.us_scored || 0})`;
+  $("lt-updated").textContent = data.updated_at || "—";
+
+  $("lt-stat-total").textContent = ltAll.length;
+  $("lt-stat-perfect").textContent = ltAll.filter(s => s.score === 7).length;
+  $("lt-stat-6plus").textContent = ltAll.filter(s => s.score >= 6).length;
+
+  ["lt-market", "lt-min-score", "lt-sort", "lt-search"].forEach(id => {
+    const evt = id === "lt-search" ? "input" : "change";
+    $(id).addEventListener(evt, renderLongTermTable);
+  });
+
+  renderLongTermTable();
+}
+
+function renderLongTermTable() {
+  const market = $("lt-market").value;
+  const minScore = parseInt($("lt-min-score").value, 10);
+  const sort = $("lt-sort").value;
+  const search = ($("lt-search").value || "").toLowerCase().trim();
+
+  let rows = ltAll.filter(s => {
+    if (market !== "all" && s.market !== market) return false;
+    if (s.score < minScore) return false;
+    if (search && !(`${s.name} ${s.ticker}`.toLowerCase().includes(search))) return false;
+    return true;
+  });
+
+  const sortKey = {
+    score: s => -(s.score || 0),
+    roe: s => -(s.metrics?.roe ?? -999),
+    per: s => (s.metrics?.per ?? 9999),
+    peg: s => (s.metrics?.peg ?? 9999),
+    market_cap: s => -(s.metrics?.market_cap ?? 0),
+  };
+  rows.sort((a, b) => sortKey[sort](a) - sortKey[sort](b));
+
+  $("lt-stat-filtered").textContent = rows.length;
+
+  const fmtPct = v => (v == null || isNaN(v)) ? "—" : `${(v * 100).toFixed(1)}%`;
+  const fmtNum = (v, d = 1) => (v == null || isNaN(v)) ? "—" : Number(v).toFixed(d);
+  const fmtCap = v => {
+    if (v == null) return "—";
+    if (v >= 1e12) return `${(v / 1e12).toFixed(1)}T`;
+    if (v >= 1e9) return `${(v / 1e9).toFixed(1)}B`;
+    if (v >= 1e6) return `${(v / 1e6).toFixed(0)}M`;
+    return v.toString();
+  };
+  const scoreClass = sc =>
+    sc >= 6 ? "bg-green-100 text-green-700"
+    : sc >= 4 ? "bg-blue-100 text-blue-700"
+    : "bg-slate-100 text-slate-600";
+  const cellClass = pass => pass === true ? "text-green-600 font-medium"
+                          : pass === false ? "text-slate-400"
+                          : "text-slate-400";
+
+  const top = rows.slice(0, 200);
+  $("lt-tbody").innerHTML = top.map(s => {
+    const m = s.metrics || {};
+    const p = s.passes || {};
+    return `<tr class="hover:bg-slate-50 cursor-pointer" data-ticker="${s.ticker}">
+      <td class="px-3 py-2"><span class="${scoreClass(s.score)} px-2 py-0.5 rounded font-mono text-xs">${s.score}/7</span></td>
+      <td class="px-3 py-2 text-xs">${s.market === "KR" ? "🇰🇷" : "🇺🇸"}</td>
+      <td class="px-3 py-2">
+        <div class="font-medium">${s.name}</div>
+        <div class="text-xs text-slate-500 font-mono">${s.ticker}</div>
+      </td>
+      <td class="px-3 py-2 text-xs text-slate-600">${s.sector || "—"}</td>
+      <td class="px-3 py-2 text-right text-xs">${fmtCap(m.market_cap)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.roe_15)}">${fmtPct(m.roe)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.fcf_positive)}">${m.fcf == null ? "—" : (m.fcf > 0 ? "✓" : "✗")}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.debt_safe)}">${fmtNum(m.debt_equity, 0)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.per_reasonable)}">${fmtNum(m.per, 1)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.peg_attractive)}">${fmtNum(m.peg, 2)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.revenue_growing)}">${fmtPct(m.revenue_growth)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.margin_healthy)}">${fmtPct(m.operating_margin)}</td>
+    </tr>`;
+  }).join("") || `<tr><td colspan="12" class="text-center py-6 text-slate-400">조건에 맞는 종목 없음</td></tr>`;
+
+  // Wire row click
+  $("lt-tbody").querySelectorAll("tr[data-ticker]").forEach(tr => {
+    tr.addEventListener("click", () => openLtDetail(tr.dataset.ticker));
+  });
+}
+
+function openLtDetail(ticker) {
+  const s = ltAll.find(x => x.ticker === ticker);
+  if (!s) return;
+  const m = s.metrics || {};
+  const p = s.passes || {};
+  const labels = ltMeta.checklist_labels_kr || {
+    roe_15: "ROE ≥ 15%",
+    fcf_positive: "FCF > 0",
+    debt_safe: "부채비율 ≤ 100%",
+    per_reasonable: "PER 합리적 (0~30)",
+    peg_attractive: "PEG ≤ 1.5",
+    revenue_growing: "매출 성장 (YoY)",
+    margin_healthy: "영업이익률 ≥ 5%",
+  };
+  const fmtPctD = (v) => v != null ? `${(v * 100).toFixed(2)}%` : "—";
+  const fmtNumD = (v, d = 1) => v != null ? Number(v).toFixed(d) : "—";
+
+  const scoreColor = s.score >= 6 ? "text-green-600" : s.score >= 4 ? "text-blue-600" : "text-slate-400";
+
+  $("lt-detail-body").innerHTML = `
+    <div class="flex items-start justify-between mb-4 gap-4">
+      <div>
+        <h2 class="text-xl font-bold">${s.market === "KR" ? "🇰🇷" : "🇺🇸"} ${s.name}</h2>
+        <p class="text-sm text-slate-500 font-mono mt-1">${s.ticker}${s.yf_ticker !== s.ticker ? ` (${s.yf_ticker})` : ""}</p>
+        <p class="text-xs text-slate-500 mt-1">${s.sector || ""} ${s.industry ? "· " + s.industry : ""}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-3xl font-bold ${scoreColor}">${s.score}/7</div>
+        <div class="text-xs text-slate-500">정량 점수</div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="text-sm font-semibold mb-2 text-slate-700">✅ 정량 체크리스트</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        ${Object.entries(labels).map(([k, label]) => `
+          <div class="flex items-center gap-2 text-sm ${p[k] ? "" : "text-slate-400"}">
+            <span class="text-lg">${p[k] ? "✅" : "⬜"}</span>
+            <span>${label}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="text-sm font-semibold mb-2 text-slate-700">📊 주요 지표</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm">
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">ROE</div>
+          <div class="font-semibold">${fmtPctD(m.roe)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">PER</div>
+          <div class="font-semibold">${fmtNumD(m.per, 1)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">PEG</div>
+          <div class="font-semibold">${fmtNumD(m.peg, 2)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">D/E</div>
+          <div class="font-semibold">${fmtNumD(m.debt_equity, 0)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">매출성장</div>
+          <div class="font-semibold">${fmtPctD(m.revenue_growth)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">영업이익률</div>
+          <div class="font-semibold">${fmtPctD(m.operating_margin)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">배당수익률</div>
+          <div class="font-semibold">${fmtPctD(m.dividend_yield)}</div>
+        </div>
+        <div class="bg-slate-50 p-2 rounded">
+          <div class="text-xs text-slate-500">배당성향</div>
+          <div class="font-semibold">${fmtPctD(m.payout_ratio)}</div>
+        </div>
+      </div>
+    </div>
+
+    ${s.summary ? `
+      <div class="mb-4">
+        <h3 class="text-sm font-semibold mb-2 text-slate-700">📝 사업 설명</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">${s.summary}${s.summary.length >= 290 ? "..." : ""}</p>
+      </div>
+    ` : ""}
+
+    <div class="mb-4 p-3 bg-amber-50 border border-amber-200 rounded">
+      <h3 class="text-sm font-semibold mb-2 text-amber-800">⚠️ 정성 평가 (직접 확인)</h3>
+      <ul class="text-sm text-amber-900 space-y-1 list-none">
+        <li>□ 사업을 한 문장으로 설명 가능한가 — 위 사업 설명 참고</li>
+        <li>□ 경제적 해자 — ROE ${fmtPctD(m.roe)}, 영업이익률 ${fmtPctD(m.operating_margin)} (안정성으로 추정)</li>
+        <li>□ CEO 자본배분 — 배당성향 ${fmtPctD(m.payout_ratio)} + 자사주매입 추세 확인</li>
+        <li>□ 하락 이유 일시적 vs 구조적 — 최근 뉴스 직접 확인</li>
+      </ul>
+    </div>
+
+    <div class="flex justify-between items-center mt-6">
+      <div class="text-xs text-slate-400">
+        ${s.website ? `<a href="${s.website}" target="_blank" class="underline">공식 사이트</a>` : ""}
+      </div>
+      <button onclick="document.getElementById('lt-detail').classList.add('hidden')"
+              class="px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded text-sm">닫기</button>
+    </div>
+  `;
+  $("lt-detail").classList.remove("hidden");
+  $("lt-detail").classList.add("flex");
+}
+
+// Lazy-load long-term tab when first opened
+document.querySelector('[data-tab="longterm"]').addEventListener("click", loadLongTerm);
+
 // ---------- Boot ----------
 loadDashboard().catch(e => {
   console.error("Dashboard load failed:", e);

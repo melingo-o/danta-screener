@@ -112,33 +112,116 @@
 
     <!-- Tab: Long Term -->
     <section id="tab-longterm" class="tab-panel hidden">
-      <div class="bg-white rounded-lg shadow p-8 text-center">
-        <div class="text-6xl mb-4">🚧</div>
-        <h2 class="text-2xl font-semibold mb-2">장기투자 종목 발굴</h2>
-        <p class="text-slate-600 mb-6">Phase 2-4에서 단계적으로 구현됩니다.</p>
 
-        <div class="max-w-lg mx-auto text-left">
-          <h3 class="font-semibold mb-3 text-slate-700">📐 점수화 체크리스트 (계획)</h3>
-          <ul class="text-sm text-slate-600 space-y-2 mb-6">
-            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> ROE 5년 평균 ≥15%</li>
-            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> FCF 꾸준한 (+) 추세</li>
-            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> 부채비율 ≤100%, 이자보상배율 ≥5</li>
-            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> PER 자사 5년 평균 대비, PEG ~1</li>
-            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> 매출/영업이익 성장률</li>
-            <li class="flex gap-2"><span class="text-yellow-600 font-bold">⚠️</span> 사업 한 문장 설명 (반자동 — description 표시)</li>
-            <li class="flex gap-2"><span class="text-yellow-600 font-bold">⚠️</span> 경제적 해자 (반자동 — ROE 안정성 추정)</li>
-            <li class="flex gap-2"><span class="text-yellow-600 font-bold">⚠️</span> CEO 자본배분 (반자동 — 자사주매입/배당 추세)</li>
-          </ul>
-
-          <h3 class="font-semibold mb-3 text-slate-700">🗺️ Phase 로드맵</h3>
-          <ol class="text-sm text-slate-600 space-y-1 mb-6">
-            <li><span class="font-mono text-xs bg-green-100 text-green-700 px-1 rounded">DONE</span> Phase 1: 봇 활동 대시보드</li>
-            <li><span class="font-mono text-xs bg-slate-100 text-slate-600 px-1 rounded">NEXT</span> Phase 2: long_term_screener.py 백엔드 (yfinance/DART 펀더멘털 fetch + 점수)</li>
-            <li><span class="font-mono text-xs bg-slate-100 text-slate-600 px-1 rounded">    </span> Phase 3: 장기투자 점수표 · 종목 detail 페이지</li>
-            <li><span class="font-mono text-xs bg-slate-100 text-slate-600 px-1 rounded">    </span> Phase 4: 워치리스트 · 사용자 정성 평가 워크플로우</li>
-          </ol>
+      <!-- Status header -->
+      <div class="bg-white rounded-lg shadow p-4 mb-4 flex items-center justify-between">
+        <div>
+          <h2 class="font-semibold">📈 장기투자 종목 스코어</h2>
+          <p class="text-xs text-slate-500 mt-1" id="lt-status">로딩 중...</p>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-slate-500">갱신</div>
+          <div class="text-xs text-slate-700 font-mono" id="lt-updated">—</div>
         </div>
       </div>
+
+      <!-- Stats cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">전체 평가</div>
+          <div class="text-2xl font-bold mt-1" id="lt-stat-total">—</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">7/7 만점</div>
+          <div class="text-2xl font-bold mt-1 text-green-600" id="lt-stat-perfect">—</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">6+ 통과</div>
+          <div class="text-2xl font-bold mt-1 text-blue-600" id="lt-stat-6plus">—</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">현재 필터</div>
+          <div class="text-2xl font-bold mt-1" id="lt-stat-filtered">—</div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="bg-white rounded-lg shadow p-4 mb-4">
+        <div class="flex flex-wrap gap-3 items-end">
+          <div>
+            <label class="text-xs text-slate-500 block mb-1">시장</label>
+            <select id="lt-market" class="border rounded px-2 py-1 text-sm">
+              <option value="all">전체</option>
+              <option value="KR">🇰🇷 한국</option>
+              <option value="US">🇺🇸 미국</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-slate-500 block mb-1">최소 점수</label>
+            <select id="lt-min-score" class="border rounded px-2 py-1 text-sm">
+              <option value="0">0+</option>
+              <option value="3">3+</option>
+              <option value="5" selected>5+</option>
+              <option value="6">6+</option>
+              <option value="7">7 (만점)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-slate-500 block mb-1">정렬</label>
+            <select id="lt-sort" class="border rounded px-2 py-1 text-sm">
+              <option value="score">점수↓</option>
+              <option value="roe">ROE↓</option>
+              <option value="per">PER↑</option>
+              <option value="peg">PEG↑</option>
+              <option value="market_cap">시총↓</option>
+            </select>
+          </div>
+          <div class="flex-1 min-w-[200px]">
+            <label class="text-xs text-slate-500 block mb-1">검색</label>
+            <input type="text" id="lt-search" placeholder="종목명/티커"
+                   class="border rounded px-2 py-1 text-sm w-full">
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-left text-slate-500 border-b bg-slate-50">
+              <tr>
+                <th class="px-3 py-2">점수</th>
+                <th class="px-3 py-2">시장</th>
+                <th class="px-3 py-2">종목</th>
+                <th class="px-3 py-2">섹터</th>
+                <th class="px-3 py-2 text-right">시총</th>
+                <th class="px-3 py-2 text-right">ROE</th>
+                <th class="px-3 py-2 text-right">FCF</th>
+                <th class="px-3 py-2 text-right">D/E</th>
+                <th class="px-3 py-2 text-right">PER</th>
+                <th class="px-3 py-2 text-right">PEG</th>
+                <th class="px-3 py-2 text-right">매출↑</th>
+                <th class="px-3 py-2 text-right">영업율</th>
+              </tr>
+            </thead>
+            <tbody id="lt-tbody" class="divide-y"></tbody>
+          </table>
+        </div>
+        <div class="px-4 py-2 text-xs text-slate-400 border-t">행 클릭 → 종목 상세 (사업설명·정성 체크리스트)</div>
+      </div>
+
+      <!-- Detail modal -->
+      <div id="lt-detail" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4"
+           onclick="if(event.target===this)this.classList.add('hidden')">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[85vh] overflow-y-auto">
+          <div class="p-6" id="lt-detail-body"></div>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-400 text-center mt-6 mb-4">
+        데이터 소스: yfinance (.info) · 매주 월요일 07:00 KST 자동 갱신.<br>
+        자동 점수는 정량 7개. 정성 평가(해자·경영진·사업 1문장·하락 이유)는 종목 detail에서 직접 체크.
+      </p>
     </section>
 
   </main>
