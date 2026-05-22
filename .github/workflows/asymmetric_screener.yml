@@ -1,0 +1,68 @@
+name: asymmetric-screener
+
+on:
+  schedule:
+    # 매주 일요일 22:30 UTC = 월요일 07:30 KST (long-term-screener 30분 후)
+    - cron: "30 22 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: asymmetric-screener
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install lxml beautifulsoup4
+
+      - name: Run asymmetric screener
+        env:
+          TZ: Asia/Seoul
+        run: python asymmetric_screener.py
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Robust commit pattern: save fresh data, sync to origin, restore, commit.
+          cp data/asymmetric_scores.json /tmp/asym_scores.json 2>/dev/null || true
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/asym_scores.json data/asymmetric_scores.json 2>/dev/null || true
+          git add data/asymmetric_scores.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: asymmetric screener $(TZ=Asia/Seoul date +%Y-%m-%d)"
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+              echo "push attempt $attempt failed, refreshing and retrying"
+              cp data/asymmetric_scores.json /tmp/asym_scores.json
+              git fetch origin main
+              git reset --hard origin/main
+              cp /tmp/asym_scores.json data/asymmetric_scores.json
+              git add data/asymmetric_scores.json
+              git commit -m "data: asymmetric screener $(TZ=Asia/Seoul date +%Y-%m-%d)" || true
+              sleep 3
+            done
+            echo "::error::push failed after 3 attempts"
+            exit 1
+          else
+            echo "no changes"
+          fi

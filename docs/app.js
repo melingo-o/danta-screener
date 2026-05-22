@@ -603,6 +603,266 @@ function openLtDetail(ticker) {
 // Lazy-load long-term tab when first opened
 document.querySelector('[data-tab="longterm"]').addEventListener("click", loadLongTerm);
 
+// ====================================================================
+// ASYMMETRIC (GAME B) TAB
+// ====================================================================
+
+let asymData = null;
+let asymLoaded = false;
+
+async function loadAsymmetric() {
+  if (asymLoaded) return;
+  asymLoaded = true;
+
+  let data;
+  try {
+    data = await fetchJSON("data/asymmetric_scores.json");
+  } catch (e) {
+    $("asym-status").innerHTML =
+      `<span class="text-amber-700">데이터 파일 없음.</span> ` +
+      `<a class="underline" href="https://github.com/melingo-o/danta-screener/actions/workflows/asymmetric_screener.yml" target="_blank">` +
+      `GitHub Actions에서 asymmetric-screener 워크플로우 한 번 수동 실행</a> 후 새로고침.`;
+    asymLoaded = false;
+    return;
+  }
+
+  asymData = data;
+  $("asym-status").textContent = `${data.n_tickers}개 종목 평가 (${data.n_themes}개 테마)`;
+  $("asym-updated").textContent = data.updated_at || "—";
+
+  renderAsymTop();
+  renderAsymThemes();
+  wireAsymSimulator();
+  runAsymSimulator();
+}
+
+function asymFmtCap(v) {
+  if (v == null) return "—";
+  if (v >= 1e12) return `${(v / 1e12).toFixed(1)}T`;
+  if (v >= 1e9) return `${(v / 1e9).toFixed(1)}B`;
+  if (v >= 1e6) return `${(v / 1e6).toFixed(0)}M`;
+  return v.toString();
+}
+const asymFmtPct = v => (v == null || isNaN(v)) ? "—" : `${(v * 100).toFixed(0)}%`;
+const asymScoreClass = sc =>
+  sc >= 70 ? "bg-orange-200 text-orange-900"
+  : sc >= 55 ? "bg-amber-100 text-amber-800"
+  : sc >= 40 ? "bg-blue-100 text-blue-700"
+  : "bg-slate-100 text-slate-600";
+
+function renderAsymTop() {
+  // Flatten all tickers across themes
+  const flat = [];
+  for (const k of asymData.theme_order || Object.keys(asymData.themes)) {
+    const t = asymData.themes[k];
+    if (!t) continue;
+    for (const tk of (t.tickers || [])) flat.push(tk);
+  }
+  flat.sort((a, b) => b.score - a.score);
+  const top = flat.slice(0, 15);
+
+  $("asym-top-tbody").innerHTML = top.map(r => {
+    const m = r.metrics || {};
+    return `<tr class="hover:bg-slate-50 cursor-pointer" data-ticker="${r.ticker}">
+      <td class="px-2 py-2"><span class="${asymScoreClass(r.score)} px-2 py-0.5 rounded font-mono text-xs">${r.score}</span></td>
+      <td class="px-2 py-2 text-xs text-slate-600">${r.theme_label || r.theme}</td>
+      <td class="px-2 py-2"><div class="font-medium">${r.name}</div><div class="text-xs font-mono text-slate-500">${r.ticker}</div></td>
+      <td class="px-2 py-2 text-right text-xs">${asymFmtCap(m.market_cap)}</td>
+      <td class="px-2 py-2 text-right">${asymFmtPct(m.revenue_growth)}</td>
+      <td class="px-2 py-2 text-right">${m.revenue_acceleration != null ? (m.revenue_acceleration >= 0 ? "📈" : "📉") + " " + (m.revenue_acceleration * 100).toFixed(0) + "%" : "—"}</td>
+      <td class="px-2 py-2 text-right">${asymFmtPct(m.operating_margin)}</td>
+    </tr>`;
+  }).join("");
+
+  $("asym-top-tbody").querySelectorAll("tr[data-ticker]").forEach(tr => {
+    tr.addEventListener("click", () => openAsymDetail(tr.dataset.ticker));
+  });
+}
+
+function renderAsymThemes() {
+  const order = asymData.theme_order || Object.keys(asymData.themes);
+  const cards = order.map(k => {
+    const t = asymData.themes[k];
+    if (!t) return "";
+    const tickers = (t.tickers || []).slice(0, 6);
+    const topScore = tickers[0]?.score || 0;
+    const accentClass = topScore >= 60 ? "border-orange-300" : topScore >= 40 ? "border-blue-200" : "border-slate-200";
+    return `
+    <div class="bg-white border ${accentClass} rounded-lg shadow p-4">
+      <div class="flex items-start justify-between mb-2">
+        <div class="flex-1">
+          <h3 class="font-semibold text-base">${t.label}</h3>
+          <p class="text-xs text-slate-600 mt-1">${t.thesis}</p>
+        </div>
+        <div class="text-xs text-slate-400 ml-3">${tickers.length}개</div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-3">
+        ${tickers.map(r => {
+          const m = r.metrics || {};
+          return `<button class="text-left border border-slate-200 hover:border-orange-300 rounded p-2 transition" data-ticker="${r.ticker}">
+            <div class="flex items-center justify-between mb-1">
+              <span class="${asymScoreClass(r.score)} px-2 py-0.5 rounded font-mono text-xs">${r.score}</span>
+              <span class="text-xs font-mono text-slate-500">${r.ticker}</span>
+            </div>
+            <div class="font-medium text-sm">${r.name}</div>
+            <div class="text-xs text-slate-500 mt-1">
+              ${asymFmtCap(m.market_cap)} · 매출 ${asymFmtPct(m.revenue_growth)}
+            </div>
+          </button>`;
+        }).join("")}
+      </div>
+    </div>`;
+  });
+  $("asym-themes").innerHTML = cards.join("");
+
+  // Wire clicks
+  $("asym-themes").querySelectorAll("button[data-ticker]").forEach(b => {
+    b.addEventListener("click", () => openAsymDetail(b.dataset.ticker));
+  });
+}
+
+function openAsymDetail(ticker) {
+  // Find ticker across themes
+  let stock = null, theme = null;
+  for (const k of asymData.theme_order || Object.keys(asymData.themes)) {
+    const t = asymData.themes[k];
+    const found = (t.tickers || []).find(x => x.ticker === ticker);
+    if (found) { stock = found; theme = t; break; }
+  }
+  if (!stock) return;
+
+  const m = stock.metrics || {};
+  const b = stock.breakdown || {};
+  const labels = asymData.score_breakdown_labels || {};
+
+  // Reuse the long-term modal
+  $("lt-detail-body").innerHTML = `
+    <div class="flex items-start justify-between mb-4 gap-4">
+      <div>
+        <div class="text-xs text-orange-700 font-semibold uppercase tracking-wide">${theme.label}</div>
+        <h2 class="text-xl font-bold mt-1">${stock.name}</h2>
+        <p class="text-sm text-slate-500 font-mono mt-1">${stock.ticker}</p>
+        <p class="text-xs text-slate-500 mt-1">${stock.sector || ""} ${stock.industry ? "· " + stock.industry : ""}</p>
+      </div>
+      <div class="text-right">
+        <div class="text-3xl font-bold ${stock.score >= 60 ? "text-orange-600" : stock.score >= 40 ? "text-blue-600" : "text-slate-400"}">${stock.score}</div>
+        <div class="text-xs text-slate-500">Asymmetric Score</div>
+      </div>
+    </div>
+
+    <div class="mb-4 p-3 bg-orange-50 border border-orange-200 rounded">
+      <h3 class="text-sm font-semibold mb-1 text-orange-800">🎯 테마 thesis</h3>
+      <p class="text-sm text-orange-900">${theme.thesis}</p>
+    </div>
+
+    <div class="mb-4">
+      <h3 class="text-sm font-semibold mb-2 text-slate-700">📊 점수 breakdown</h3>
+      <div class="space-y-1">
+        ${Object.entries(b).map(([k, v]) => `
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-slate-600">${labels[k] || k}</span>
+            <span class="font-mono">${v}점</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="mb-4 grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
+      <div class="bg-slate-50 p-2 rounded"><div class="text-xs text-slate-500">시총</div><div class="font-semibold">${asymFmtCap(m.market_cap)}</div></div>
+      <div class="bg-slate-50 p-2 rounded"><div class="text-xs text-slate-500">매출 성장 YoY</div><div class="font-semibold">${asymFmtPct(m.revenue_growth)}</div></div>
+      <div class="bg-slate-50 p-2 rounded"><div class="text-xs text-slate-500">매출 가속</div><div class="font-semibold">${m.revenue_acceleration != null ? (m.revenue_acceleration * 100).toFixed(0) + "%" : "—"}</div></div>
+      <div class="bg-slate-50 p-2 rounded"><div class="text-xs text-slate-500">영업이익률</div><div class="font-semibold">${asymFmtPct(m.operating_margin)}</div></div>
+      <div class="bg-slate-50 p-2 rounded"><div class="text-xs text-slate-500">FCF</div><div class="font-semibold">${m.fcf == null ? "—" : m.fcf > 0 ? "✓ (+)" : "✗ (-)"}</div></div>
+      <div class="bg-slate-50 p-2 rounded"><div class="text-xs text-slate-500">PER</div><div class="font-semibold">${m.trailing_pe ? m.trailing_pe.toFixed(1) : "—"}</div></div>
+    </div>
+
+    ${stock.summary ? `
+      <div class="mb-4">
+        <h3 class="text-sm font-semibold mb-2 text-slate-700">📝 사업 설명</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">${stock.summary}${stock.summary.length >= 390 ? "..." : ""}</p>
+      </div>
+    ` : ""}
+
+    <div class="mb-4 p-3 bg-red-50 border border-red-200 rounded">
+      <h3 class="text-sm font-semibold mb-2 text-red-800">⚠️ 정직한 리스크</h3>
+      <ul class="text-sm text-red-900 space-y-1">
+        <li>• 단일 종목 -50%~-100% 가능. 동일가중 10개 분산 필수.</li>
+        <li>• 5년 시계. 1년 모멘텀 보고 사고 팔면 의미 없음.</li>
+        <li>• Thesis 실패 (산업 변화, 경쟁 도입) 시 회복 불가능.</li>
+        <li>• 본인이 thesis를 한 문장으로 설명 못하면 사지 말 것.</li>
+      </ul>
+    </div>
+
+    <div class="flex justify-between items-center mt-6">
+      <div class="text-xs text-slate-400">
+        ${stock.website ? `<a href="${stock.website}" target="_blank" class="underline">공식 사이트</a>` : ""}
+      </div>
+      <button onclick="document.getElementById('lt-detail').classList.add('hidden')"
+              class="px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded text-sm">닫기</button>
+    </div>
+  `;
+  $("lt-detail").classList.remove("hidden");
+  $("lt-detail").classList.add("flex");
+}
+
+function wireAsymSimulator() {
+  ["asym-sim-amount", "asym-sim-zeros", "asym-sim-winner"].forEach(id => {
+    $(id).addEventListener("input", runAsymSimulator);
+  });
+}
+
+function runAsymSimulator() {
+  const total = parseFloat($("asym-sim-amount").value) || 0;
+  const zeros = Math.max(0, Math.min(10, parseInt($("asym-sim-zeros").value) || 0));
+  const winnerX = Math.max(1, parseFloat($("asym-sim-winner").value) || 1);
+
+  const perPosition = total / 10;
+  const winnerCount = 1;
+  const flatCount = 10 - zeros - winnerCount;
+  if (flatCount < 0) {
+    $("asym-sim-result").innerHTML = `<div class="text-red-600">망함(${zeros}) + winner(1) > 10. 망함 수를 줄이세요.</div>`;
+    return;
+  }
+
+  const zeroValue = 0;
+  const flatValue = perPosition * 1.0;   // 흐지부지 = 0% 수익
+  const winnerValue = perPosition * winnerX;
+
+  const finalValue = (zeros * zeroValue) + (flatCount * flatValue) + (winnerCount * winnerValue);
+  const profit = finalValue - total;
+  const multiple = total > 0 ? finalValue / total : 0;
+  const cagr = total > 0 ? (Math.pow(multiple, 1 / 5) - 1) * 100 : 0;
+
+  const fmt$ = v => "$" + v.toLocaleString(undefined, { maximumFractionDigits: 0 });
+  const profitColor = profit > 0 ? "text-green-600" : "text-red-600";
+
+  $("asym-sim-result").innerHTML = `
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <div class="text-xs text-slate-500 mb-1">가정</div>
+        <ul class="text-xs space-y-0.5">
+          <li>종목당: ${fmt$(perPosition)}</li>
+          <li>망함 ${zeros}개: ${fmt$(0)}</li>
+          <li>흐지부지 ${flatCount}개: ${fmt$(flatValue * flatCount)}</li>
+          <li>Winner 1개 (${winnerX}x): ${fmt$(winnerValue)}</li>
+        </ul>
+      </div>
+      <div class="text-right">
+        <div class="text-xs text-slate-500 mb-1">5년 후 결과</div>
+        <div class="text-2xl font-bold">${fmt$(finalValue)}</div>
+        <div class="${profitColor} font-semibold">${profit >= 0 ? "+" : ""}${fmt$(profit)} (${multiple.toFixed(2)}x)</div>
+        <div class="text-xs text-slate-500 mt-1">CAGR ${cagr >= 0 ? "+" : ""}${cagr.toFixed(1)}%</div>
+      </div>
+    </div>
+    <div class="text-xs text-slate-500 mt-3 pt-3 border-t">
+      ※ 핵심 관찰: 망함 ${zeros}개여도 winner 1개가 ${winnerX}x면 ${multiple.toFixed(1)}x 가능.
+      이게 asymmetric의 수학. 단일 종목이면 winner 못 잡으면 끝.
+    </div>
+  `;
+}
+
+document.querySelector('[data-tab="asymmetric"]').addEventListener("click", loadAsymmetric);
+
 // ---------- Boot ----------
 loadDashboard().catch(e => {
   console.error("Dashboard load failed:", e);
