@@ -1,0 +1,21 @@
+/* Minimal overrides on top of Tailwind CDN */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+               "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+}
+
+/* Cap chart heights so they don't stretch absurdly in wide viewports */
+canvas {
+  max-height: 280px;
+}
+
+/* Active tab override (Tailwind alone leaves slate-500 from base class) */
+.tab-btn.border-blue-500 {
+  color: rgb(15, 23, 42);
+}
+
+/* Subtle table hover */
+tbody tr {
+  transition: background-color 0.1s;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단도리 대시보드</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+  <header class="bg-slate-900 text-white px-6 py-5">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-2xl font-bold">📊 단도리 대시보드</h1>
+      <p class="text-sm text-slate-300 mt-1">단타 봇 활동 이력 + 장기투자 종목 발굴</p>
+    </div>
+  </header>
+
+  <nav class="border-b border-slate-200 bg-white px-6">
+    <div class="max-w-7xl mx-auto flex gap-1">
+      <button data-tab="activity" class="tab-btn px-4 py-3 border-b-2 border-blue-500 font-medium">
+        🤖 봇 활동
+      </button>
+      <button data-tab="longterm" class="tab-btn px-4 py-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
+        📈 장기투자
+      </button>
+    </div>
+  </nav>
+
+  <main class="px-6 py-6 max-w-7xl mx-auto">
+
+    <!-- Tab: Bot Activity -->
+    <section id="tab-activity" class="tab-panel">
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">누적 적중률</div>
+          <div class="text-3xl font-bold mt-1" id="stat-hitrate">—</div>
+          <div class="text-xs text-slate-400 mt-1" id="stat-hitrate-sub">결과 기록 중</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">평균 예측 갭</div>
+          <div class="text-3xl font-bold mt-1" id="stat-pred">—</div>
+          <div class="text-xs text-slate-400 mt-1">picks.csv 누적</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">평균 실제 갭</div>
+          <div class="text-3xl font-bold mt-1" id="stat-actual">—</div>
+          <div class="text-xs text-slate-400 mt-1">results.csv 누적</div>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <div class="text-xs text-slate-500 uppercase tracking-wide">백테스트 Sharpe</div>
+          <div class="text-3xl font-bold mt-1" id="stat-sharpe">—</div>
+          <div class="text-xs text-slate-400 mt-1">tier1, 60일 walk-forward</div>
+        </div>
+      </div>
+
+      <!-- Charts row 1 -->
+      <div class="grid lg:grid-cols-2 gap-4 mb-6">
+        <div class="bg-white rounded-lg shadow p-4">
+          <h2 class="font-semibold mb-3">📈 누적 실현 갭 (results.csv)</h2>
+          <canvas id="chart-cumulative"></canvas>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h2 class="font-semibold mb-3">🧪 백테스트 전략 비교 (누적 %)</h2>
+          <canvas id="chart-strategies"></canvas>
+        </div>
+      </div>
+
+      <!-- Charts row 2 -->
+      <div class="grid lg:grid-cols-2 gap-4 mb-6">
+        <div class="bg-white rounded-lg shadow p-4">
+          <h2 class="font-semibold mb-3">🔗 Primary Driver 분포</h2>
+          <canvas id="chart-drivers"></canvas>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h2 class="font-semibold mb-3">📡 오늘 장중 알람</h2>
+          <div id="today-alerted" class="text-sm text-slate-600">—</div>
+        </div>
+      </div>
+
+      <!-- Recent picks table -->
+      <div class="bg-white rounded-lg shadow p-4 mb-6">
+        <h2 class="font-semibold mb-3">📋 최근 morning picks (예측 vs 실제)</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-left text-slate-500 border-b">
+              <tr>
+                <th class="py-2 pr-3">날짜</th>
+                <th class="pr-3">순위</th>
+                <th class="pr-3">종목</th>
+                <th class="pr-3">티커</th>
+                <th class="pr-3 text-right">예측 갭</th>
+                <th class="pr-3 text-right">실제 갭</th>
+                <th class="pr-3 text-center">Hit</th>
+                <th class="pr-3">Driver</th>
+              </tr>
+            </thead>
+            <tbody id="picks-tbody" class="divide-y"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-400 text-center mt-8 mb-4">
+        데이터 갱신: 봇이 GitHub에 commit할 때마다 자동 (KST 07:30 morning picks · 5분 tick intraday).<br>
+        통계 모델 스크리닝. 매매 추천 아님. 호가/뉴스 직접 확인 필수.
+      </p>
+    </section>
+
+    <!-- Tab: Long Term -->
+    <section id="tab-longterm" class="tab-panel hidden">
+      <div class="bg-white rounded-lg shadow p-8 text-center">
+        <div class="text-6xl mb-4">🚧</div>
+        <h2 class="text-2xl font-semibold mb-2">장기투자 종목 발굴</h2>
+        <p class="text-slate-600 mb-6">Phase 2-4에서 단계적으로 구현됩니다.</p>
+
+        <div class="max-w-lg mx-auto text-left">
+          <h3 class="font-semibold mb-3 text-slate-700">📐 점수화 체크리스트 (계획)</h3>
+          <ul class="text-sm text-slate-600 space-y-2 mb-6">
+            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> ROE 5년 평균 ≥15%</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> FCF 꾸준한 (+) 추세</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> 부채비율 ≤100%, 이자보상배율 ≥5</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> PER 자사 5년 평균 대비, PEG ~1</li>
+            <li class="flex gap-2"><span class="text-green-600 font-bold">✓</span> 매출/영업이익 성장률</li>
+            <li class="flex gap-2"><span class="text-yellow-600 font-bold">⚠️</span> 사업 한 문장 설명 (반자동 — description 표시)</li>
+            <li class="flex gap-2"><span class="text-yellow-600 font-bold">⚠️</span> 경제적 해자 (반자동 — ROE 안정성 추정)</li>
+            <li class="flex gap-2"><span class="text-yellow-600 font-bold">⚠️</span> CEO 자본배분 (반자동 — 자사주매입/배당 추세)</li>
+          </ul>
+
+          <h3 class="font-semibold mb-3 text-slate-700">🗺️ Phase 로드맵</h3>
+          <ol class="text-sm text-slate-600 space-y-1 mb-6">
+            <li><span class="font-mono text-xs bg-green-100 text-green-700 px-1 rounded">DONE</span> Phase 1: 봇 활동 대시보드</li>
+            <li><span class="font-mono text-xs bg-slate-100 text-slate-600 px-1 rounded">NEXT</span> Phase 2: long_term_screener.py 백엔드 (yfinance/DART 펀더멘털 fetch + 점수)</li>
+            <li><span class="font-mono text-xs bg-slate-100 text-slate-600 px-1 rounded">    </span> Phase 3: 장기투자 점수표 · 종목 detail 페이지</li>
+            <li><span class="font-mono text-xs bg-slate-100 text-slate-600 px-1 rounded">    </span> Phase 4: 워치리스트 · 사용자 정성 평가 워크플로우</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
