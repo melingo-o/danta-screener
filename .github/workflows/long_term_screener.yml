@@ -40,11 +40,31 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase || true
-          git add data/long_term_scores.json || true
+          # Robust commit: save new data file, hard-sync to latest origin/main,
+          # restore the saved file, then commit. Avoids merge conflicts when
+          # other commits land during the long fetch.
+          cp data/long_term_scores.json /tmp/lt_scores.json 2>/dev/null || true
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/lt_scores.json data/long_term_scores.json 2>/dev/null || true
+          git add data/long_term_scores.json
           if ! git diff --cached --quiet; then
             git commit -m "data: long-term screener $(TZ=Asia/Seoul date +%Y-%m-%d)"
-            git push || (git pull --rebase && git push)
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+              echo "push attempt $attempt failed, refreshing and retrying"
+              cp data/long_term_scores.json /tmp/lt_scores.json
+              git fetch origin main
+              git reset --hard origin/main
+              cp /tmp/lt_scores.json data/long_term_scores.json
+              git add data/long_term_scores.json
+              git commit -m "data: long-term screener $(TZ=Asia/Seoul date +%Y-%m-%d)" || true
+              sleep 3
+            done
+            echo "::error::push failed after 3 attempts"
+            exit 1
           else
             echo "no changes"
           fi
