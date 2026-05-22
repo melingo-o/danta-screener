@@ -71,6 +71,38 @@ def _sector_blocks(last_us: pd.Series) -> List[str]:
     return blocks
 
 
+def _pick_reason(pick, last_us: pd.Series) -> str:
+    """One-line plain-language reason for why this pick was selected.
+
+    Combines: top-1/2 contributing US driver overnight moves +
+    the sector that primary driver belongs to + primary beta.
+    Helps the user understand intuitively what theme/sector drove the pick
+    without having to parse raw β/contribution numbers.
+    """
+    if not pick.drivers:
+        return ""
+
+    sorted_drivers = sorted(pick.drivers, key=lambda d: abs(d[2]), reverse=True)
+    top = sorted_drivers[:2]
+
+    primary_us, primary_beta, _ = top[0]
+    sector_name = None
+    for sect in SECTORS:
+        if primary_us == sect.get("etf") or primary_us in sect.get("stocks", []):
+            sector_name = sect["name"]
+            break
+
+    moves_str = " · ".join(
+        f"{us} {last_us.get(us, 0) * 100:+.1f}%" for us, _, _ in top
+    )
+    if sector_name:
+        tail = f"{sector_name} 섹터 β{primary_beta:+.2f}로 가장 강하게 동조"
+    else:
+        tail = f"동조 베타 β{primary_beta:+.2f}로 가장 큼"
+
+    return f"{moves_str} → {tail}"
+
+
 def _regime_warning(last_us: pd.Series) -> str | None:
     """Return a warning string if Korea market proxy moved sharply, else None."""
     if KR_MARKET_PROXY not in last_us.index:
@@ -114,14 +146,18 @@ def format_message(picks: List[Pick], last_us: pd.Series, kst_date: str) -> str:
             cap_s = _fmt_cap(p.market_cap)
             vol_s = _fmt_vol_ratio(p.volume_ratio)
             lines.append(f"{i}. {p.name} ({p.ticker6}) — 시총 {cap_s}, {vol_s}")
+            lines.append(
+                f"   📈 예상 갭 {_fmt_pct(p.expected_return)} "
+                f"(순 {_fmt_pct(p.expected_return_net)})"
+            )
+            reason = _pick_reason(p, last_us)
+            if reason:
+                lines.append(f"   💡 {reason}")
             drivers_str = ", ".join(
-                f"{us}(β={beta:+.2f}, 기여 {contrib * 100:+.2f}%p)"
+                f"{us}(β{beta:+.2f}, 기여{contrib * 100:+.2f}%p)"
                 for us, beta, contrib in p.drivers
             )
-            lines.append(
-                f"   예상 갭 {_fmt_pct(p.expected_return)} "
-                f"(순 {_fmt_pct(p.expected_return_net)}) | 드라이버: {drivers_str}"
-            )
+            lines.append(f"   🔧 드라이버 상세: {drivers_str}")
     lines.append("")
 
     lines.append("⚠️ 통계 모델 스크리닝. 매매 추천 아님. 호가/뉴스 직접 확인 필수.")
