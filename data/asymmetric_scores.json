@@ -1,0 +1,1348 @@
+{
+  "updated_at": "2026-05-22T17:22:41+09:00",
+  "started_at": "2026-05-22T17:22:38+09:00",
+  "n_themes": 10,
+  "n_tickers": 45,
+  "theme_order": [
+    "quantum",
+    "smr_nuclear",
+    "humanoid_robotics",
+    "space_economy",
+    "gene_therapy_crispr",
+    "obesity_next_gen",
+    "battery_energy_storage",
+    "synthetic_biology",
+    "ai_infra_picks",
+    "post_quantum_security"
+  ],
+  "themes": {
+    "quantum": {
+      "label": "⚛️ 양자컴퓨팅",
+      "thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+      "tickers": [
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "RGTI",
+          "name": "Rigetti Computing",
+          "score": 80,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 7326070272,
+            "revenue_growth": 1.989,
+            "revenue_acceleration": 1.2674616303654243,
+            "operating_margin": -5.8979497,
+            "fcf": -6209875,
+            "trailing_pe": null,
+            "employees": 162
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
+          "website": "https://www.rigetti.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QUBT",
+          "name": "Quantum Computing Inc",
+          "score": 80,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2573354240,
+            "revenue_growth": 93.641,
+            "revenue_acceleration": 15.849810964308915,
+            "operating_margin": -5.5676003,
+            "fcf": -40361376,
+            "trailing_pe": null,
+            "employees": 72
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "Quantum Computing Inc., an integrated photonics company, provides quantum machines to commercial and government markets in the United States. The company develops thin-film lithium niobate chips for optical devices, such as electro-optical modulators, periodically poled devices for frequency conversion, and micro-ring resonator cavities markets. It is also developing the entropy quantum computer (",
+          "website": "https://www.quantumcomputinginc.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 50,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 21981868032,
+            "revenue_growth": 7.547,
+            "revenue_acceleration": -1.026458468490365,
+            "operating_margin": -4.01755,
+            "fcf": -91360376,
+            "trailing_pe": 151.0,
+            "employees": 1132
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QBTS",
+          "name": "D-Wave Quantum",
+          "score": 50,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 9535258624,
+            "revenue_growth": -0.809,
+            "revenue_acceleration": 0.3217098423819641,
+            "operating_margin": -19.14871,
+            "fcf": -63507248,
+            "trailing_pe": null,
+            "employees": 382
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage 2 quantum computers; Ocean, a suite of open-source tools; and Leap quantum cloud service, a cloud-based service that provides real-time access to quantum computers and quantum hybrid solvers; and secure access and data protection services, ",
+          "website": "https://www.dwavequantum.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QSI",
+          "name": "Quantum-Si",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 215582560,
+            "revenue_growth": -0.694,
+            "revenue_acceleration": -0.2455843741831943,
+            "operating_margin": -93.22868,
+            "fcf": -45931124,
+            "trailing_pe": null,
+            "employees": 145
+          },
+          "sector": "Healthcare",
+          "industry": "Medical Devices",
+          "summary": "Quantum-Si incorporated, a life sciences company, develops proprietary, universal, and single-molecule detection platform applied to proteomics to enable next-gen protein sequencing (NGPS). The company offers Platinum and Platinum Pro NGPS instruments for single-molecule, amino acid level resolution, and automated data analysis; library preparation kits to prepare a customer's protein sample for s",
+          "website": "https://www.quantum-si.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "ARQQ",
+          "name": "Arqit Quantum",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 257473088,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": -65.89057,
+            "fcf": -11289250,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
+          "website": "https://arqit.uk"
+        }
+      ]
+    },
+    "smr_nuclear": {
+      "label": "☢️ SMR·소형원전",
+      "thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+      "tickers": [
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "ASPI",
+          "name": "ASP Isotopes",
+          "score": 50,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 650920832,
+            "revenue_growth": 2.793,
+            "revenue_acceleration": -2.607374343051987,
+            "operating_margin": -5.9540696,
+            "fcf": -39828560,
+            "trailing_pe": null,
+            "employees": 271
+          },
+          "sector": "Basic Materials",
+          "industry": "Chemicals",
+          "summary": "ASP Isotopes Inc., a development stage advanced materials company, engages in the production, distribution, marketing, and sale of isotopes in South Africa,Hong Kong, and United States. It operates in two segments, Nuclear Fuels, and Specialist Isotopes and Related Services. The Nuclear Fuels segment focuses on the research and development of technologies and methods used to produce high-assay low",
+          "website": "https://aspisotopes.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "NNE",
+          "name": "Nano Nuclear Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1306249088,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -33311692,
+            "trailing_pe": null,
+            "employees": 36
+          },
+          "sector": "Industrials",
+          "industry": "Specialty Industrial Machinery",
+          "summary": "NANO Nuclear Energy Inc. operates as a nuclear energy company. The company is developing KRONOS MMR Energy System, a high-temperature gas-cooled reactor; LOKI MMR, a compact microreactor designed for remote and specialized applications; ZEUS, a solid core battery reactor; and ODIN, a low-pressure salt coolant reactor. It is also developing a high-assay low-enriched uranium fuel processing facility",
+          "website": "https://nanonuclearenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "OKLO",
+          "name": "Oklo",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 11325073408,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -100000128,
+            "trailing_pe": null,
+            "employees": 215
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
+          "website": "https://www.oklo.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "LEU",
+          "name": "Centrus Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3485035264,
+            "revenue_growth": 0.049,
+            "revenue_acceleration": -0.9921324137307403,
+            "operating_margin": -0.00261,
+            "fcf": -10875000,
+            "trailing_pe": 64.41818,
+            "employees": 467
+          },
+          "sector": "Energy",
+          "industry": "Uranium",
+          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Belgium, Japan, the Netherlands, and internationally. The company operates in two segments, Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and ",
+          "website": "https://www.centrusenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "SMR",
+          "name": "NuScale Power",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3921378560,
+            "revenue_growth": -0.958,
+            "revenue_acceleration": -0.30245829827381665,
+            "operating_margin": -101.81239,
+            "fcf": -161970368,
+            "trailing_pe": null,
+            "employees": 428
+          },
+          "sector": "Industrials",
+          "industry": "Specialty Industrial Machinery",
+          "summary": "NuScale Power Corporation provides small modular reactor technology solutions. It offers NuScale Power Module (NPM), a light water nuclear reactor that can generate 77 megawatts of electricity (MWe). The company also provides design and nuclear regulatory licensing basis information to construct and operate the power plant; and licensing, design, development, construction, operation, and maintenan",
+          "website": "https://www.nuscalepower.com"
+        }
+      ]
+    },
+    "humanoid_robotics": {
+      "label": "🤖 휴머노이드·로봇",
+      "thesis": "노동력 부족 + AI = 10년 내 휴머노이드 양산. 메이저는 비상장(Figure, 1X) — 상장 픽스 제한적.",
+      "tickers": [
+        {
+          "theme": "humanoid_robotics",
+          "theme_label": "🤖 휴머노이드·로봇",
+          "theme_thesis": "노동력 부족 + AI = 10년 내 휴머노이드 양산. 메이저는 비상장(Figure, 1X) — 상장 픽스 제한적.",
+          "ticker": "PATH",
+          "name": "UiPath",
+          "score": 78,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 8,
+            "acceleration": 15,
+            "margin": 10,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 5501086720,
+            "revenue_growth": 0.136,
+            "revenue_acceleration": 0.17271009751344468,
+            "operating_margin": 0.16688,
+            "fcf": 473554368,
+            "trailing_pe": 20.326923,
+            "employees": 3981
+          },
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "summary": "UiPath, Inc. provides an automation platform that offers a range of robotic process automation (RPA) solutions primarily in the United States, Romania, the United Kingdom, the Netherlands, and internationally. It offers the UiPath platform, an integrated enterprise software platform that enables AI agents, robots, people, and models to work together in coordinated workflows. The company's UiPath p",
+          "website": "https://www.uipath.com"
+        },
+        {
+          "theme": "humanoid_robotics",
+          "theme_label": "🤖 휴머노이드·로봇",
+          "theme_thesis": "노동력 부족 + AI = 10년 내 휴머노이드 양산. 메이저는 비상장(Figure, 1X) — 상장 픽스 제한적.",
+          "ticker": "SYM",
+          "name": "Symbotic",
+          "score": 37,
+          "breakdown": {
+            "cap": 8,
+            "revenue_growth": 8,
+            "acceleration": 5,
+            "margin": 6,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 30755141632,
+            "revenue_growth": 0.231,
+            "revenue_acceleration": 0.027008496249401513,
+            "operating_margin": 0.010880001,
+            "fcf": 331211488,
+            "trailing_pe": null,
+            "employees": 2000
+          },
+          "sector": "Industrials",
+          "industry": "Specialty Industrial Machinery",
+          "summary": "Symbotic Inc., an automation technology company, develops technologies to enhance operating efficiencies in modern warehouses. The company automates the processing of pallets, cases, and individual items in warehouses. Its systems enhance operations at the front end of the supply chain. The company is headquartered in Wilmington, Massachusetts.",
+          "website": "https://www.symbotic.com"
+        },
+        {
+          "theme": "humanoid_robotics",
+          "theme_label": "🤖 휴머노이드·로봇",
+          "theme_thesis": "노동력 부족 + AI = 10년 내 휴머노이드 양산. 메이저는 비상장(Figure, 1X) — 상장 픽스 제한적.",
+          "ticker": "RBOT",
+          "name": "Vicarious Surgical",
+          "score": 11,
+          "breakdown": {
+            "cap": 5,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 6760883,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": null,
+            "trailing_pe": null,
+            "employees": 26
+          },
+          "sector": "Healthcare",
+          "industry": "Medical Devices",
+          "summary": "Vicarious Surgical Inc. engages in the development and sale of single-port surgical robot in the United States. The company offers Vicarious Surgical System, a single-port surgical robot that virtually transports surgeons inside the patient to perform invasive surgery. Vicarious Surgical Inc. was founded in 2014 and is headquartered in Waltham, Massachusetts.",
+          "website": "https://www.vicarioussurgical.com"
+        },
+        {
+          "theme": "humanoid_robotics",
+          "theme_label": "🤖 휴머노이드·로봇",
+          "theme_thesis": "노동력 부족 + AI = 10년 내 휴머노이드 양산. 메이저는 비상장(Figure, 1X) — 상장 픽스 제한적.",
+          "ticker": "BOTZ",
+          "name": "Global X Robotics & AI ETF",
+          "score": 5,
+          "breakdown": {
+            "cap": 5,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": null,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": null,
+            "fcf": null,
+            "trailing_pe": 39.479687,
+            "employees": null
+          },
+          "sector": "",
+          "industry": "",
+          "summary": "The fund invests at least 80% of its total assets in the securities of the underlying index. The underlying index is designed to provide exposure to exchange-listed companies in developed markets that are involved in the development of robotics and/or artificial intelligence as defined by Indxx, the provider of the underlying index. The fund is non-diversified.",
+          "website": ""
+        }
+      ]
+    },
+    "space_economy": {
+      "label": "🚀 우주경제",
+      "thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+      "tickers": [
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "LUNR",
+          "name": "Intuitive Machines",
+          "score": 83,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 5493886976,
+            "revenue_growth": 1.987,
+            "revenue_acceleration": 3.350931502831061,
+            "operating_margin": -0.10295,
+            "fcf": -32115124,
+            "trailing_pe": null,
+            "employees": 525
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Intuitive Machines, Inc. operates as a space infrastructure and services company in the United States. The company provides delivery services for the transportation and delivery of payloads, such as satellites, scientific instruments, and cargo to various destinations in space, rideshare delivery, and lunar surface access; data transmission services, which include the collection, processing, and i",
+          "website": "https://www.intuitivemachines.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "IRDM",
+          "name": "Iridium Communications",
+          "score": 73,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 10,
+            "margin": 15,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 4831757824,
+            "revenue_growth": 0.019,
+            "revenue_acceleration": 0.030724771420804906,
+            "operating_margin": 0.23150998,
+            "fcf": 252985376,
+            "trailing_pe": 46.161617,
+            "employees": 975
+          },
+          "sector": "Communication Services",
+          "industry": "Telecom Services",
+          "summary": "Iridium Communications Inc. provides mobile voice and data communications services and products to businesses, the United States and foreign governments, non-governmental organizations, and consumers in the United States, Canada, and internationally. The company offers mobile satellite communications services for land mobile end users and aviation sectors; broadband terminals, embedded devices, an",
+          "website": "https://www.iridium.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "RDW",
+          "name": "Redwire",
+          "score": 57,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 22,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3053402368,
+            "revenue_growth": 0.579,
+            "revenue_acceleration": -0.3528397024514931,
+            "operating_margin": -0.71836,
+            "fcf": -71324128,
+            "trailing_pe": null,
+            "employees": 1400
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Redwire Corporation provides critical space solutions and space infrastructure for government and commercial customers in the United States, Europe, and internationally. It operates in two segments Space and Defense Tech. The company offers sensors and avionics systems, including star trackers and sun sensors, which are critical for accurate navigation and control of spacecraft; camera systems; in",
+          "website": "https://www.rdw.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "PL",
+          "name": "Planet Labs",
+          "score": 45,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 15139581952,
+            "revenue_growth": 0.411,
+            "revenue_acceleration": -0.02854440827718646,
+            "operating_margin": -0.30429,
+            "fcf": 233776992,
+            "trailing_pe": null,
+            "employees": 945
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platform in the United States and internationally. The company offers SuperDove satellites to create an always-online scanner for the planet, with the goal of imaging the Earth every day at a ground sampli",
+          "website": "https://www.planet.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "ASTS",
+          "name": "AST SpaceMobile",
+          "score": 38,
+          "breakdown": {
+            "cap": 8,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 37349228544,
+            "revenue_growth": 19.522,
+            "revenue_acceleration": -5.743485682582001,
+            "operating_margin": -10.13994,
+            "fcf": -1412748416,
+            "trailing_pe": null,
+            "employees": 1126
+          },
+          "sector": "Technology",
+          "industry": "Communication Equipment",
+          "summary": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to be accessible directly by smartphones for commercial use and other applications, as well as for government use. Its SpaceMobile service provides cellular broadband services to end-users who are out o",
+          "website": "https://ast-science.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "RKLB",
+          "name": "Rocket Lab",
+          "score": 33,
+          "breakdown": {
+            "cap": 8,
+            "revenue_growth": 22,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 72604311552,
+            "revenue_growth": 0.635,
+            "revenue_acceleration": -0.021663358197334573,
+            "operating_margin": -0.22356,
+            "fcf": -214999376,
+            "trailing_pe": null,
+            "employees": 2600
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and space systems segments. The company provides launch services, spacecraft design services, spacecraft components, spacecraft manufacturing, optical systems, and other spacecraft and on-orbit managemen",
+          "website": "https://rocketlabcorp.com"
+        }
+      ]
+    },
+    "gene_therapy_crispr": {
+      "label": "🧬 유전자치료·CRISPR",
+      "thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+      "tickers": [
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "BEAM",
+          "name": "Beam Therapeutics",
+          "score": 65,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2846668032,
+            "revenue_growth": 3.249,
+            "revenue_acceleration": -4.403561451393062,
+            "operating_margin": -3.37813,
+            "fcf": -233555744,
+            "trailing_pe": null,
+            "employees": 522
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
+          "website": "https://beamtx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "CRSP",
+          "name": "CRISPR Therapeutics",
+          "score": 57,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 22,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 4812794880,
+            "revenue_growth": 0.686,
+            "revenue_acceleration": null,
+            "operating_margin": -89.33333,
+            "fcf": -260895744,
+            "trailing_pe": null,
+            "employees": null
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "CRISPR Therapeutics AG, a gene editing company, focuses on developing gene-based medicines for serious human diseases using its Clustered Regularly Interspaced Short Palindromic Repeats (CRISPR)/CRISPR-associated protein 9 (Cas9) platform. The company's CRISPR/Cas9 is a technology for gene editing which is the process of precisely altering specific sequences of genomic DNA. It has a portfolio of t",
+          "website": "https://www.crisprtx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "NTLA",
+          "name": "Intellia Therapeutics",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1728364544,
+            "revenue_growth": -0.095,
+            "revenue_acceleration": -0.510993463496041,
+            "operating_margin": -6.68075,
+            "fcf": -235232880,
+            "trailing_pe": null,
+            "employees": 377
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
+          "website": "https://www.intelliatx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "PRME",
+          "name": "Prime Medicine",
+          "score": 35,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 532821504,
+            "revenue_growth": -0.411,
+            "revenue_acceleration": 0.17161757695414145,
+            "operating_margin": -59.17523,
+            "fcf": -78317504,
+            "trailing_pe": null,
+            "employees": 146
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Prime Medicine, Inc., a biotechnology company, engages in delivering genetic medicines to address the spectrum of diseases by deploying gene editing technology in the United States. Its lead therapeutic product candidate is PM359 for Chronic Granulomatous Disease, which is in Phase 1/2 clinical trial; PM577 for Wilson Disease, that is in preclinical studies; and PM647 to treat genetic disorder cau",
+          "website": "https://primemedicine.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "EDIT",
+          "name": "Editas Medicine",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 261409776,
+            "revenue_growth": -0.392,
+            "revenue_acceleration": -1.9376733903076366,
+            "operating_margin": -8.83186,
+            "fcf": -73816000,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
+          "website": "https://www.editasmedicine.com"
+        }
+      ]
+    },
+    "obesity_next_gen": {
+      "label": "💉 비만·차세대 GLP-1",
+      "thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
+      "tickers": [
+        {
+          "theme": "obesity_next_gen",
+          "theme_label": "💉 비만·차세대 GLP-1",
+          "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
+          "ticker": "VKTX",
+          "name": "Viking Therapeutics",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3562120960,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -177354752,
+            "trailing_pe": null,
+            "employees": 59
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Viking Therapeutics, Inc., a clinical-stage biopharmaceutical company, focuses on the development of novel therapies for metabolic and endocrine disorders. Its lead drug candidate is VK2809, an orally available tissue and receptor-subtype selective agonist of the thyroid hormone receptor beta (TRß), which is in Phase IIb clinical trials to treat patients with biopsy-confirmed non-alcoholic steatoh",
+          "website": "https://www.vikingtherapeutics.com"
+        },
+        {
+          "theme": "obesity_next_gen",
+          "theme_label": "💉 비만·차세대 GLP-1",
+          "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
+          "ticker": "ALT",
+          "name": "Altimmune",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 569809280,
+            "revenue_growth": null,
+            "revenue_acceleration": -2.4000000000000004,
+            "operating_margin": -2672.4722,
+            "fcf": -42502000,
+            "trailing_pe": null,
+            "employees": 57
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Altimmune, Inc., a late clinical stage biopharmaceutical company, focuses on developing novel therapies for serious liver diseases. Its lead product candidate is pemvidutide, a GLP-1/glucagon dual receptor agonist, which is in Phase 3 clinical trial for the treatment of metabolic dysfunction-associated steatohepatitis, alcohol use disorder, and alcohol-associated liver disease. The company was fou",
+          "website": "https://altimmune.com"
+        },
+        {
+          "theme": "obesity_next_gen",
+          "theme_label": "💉 비만·차세대 GLP-1",
+          "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
+          "ticker": "STRC",
+          "name": "Sutro Biopharma",
+          "score": 13,
+          "breakdown": {
+            "cap": 5,
+            "revenue_growth": 8,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": null,
+            "revenue_growth": 0.119,
+            "revenue_acceleration": -0.026182867736796497,
+            "operating_margin": -116.41528,
+            "fcf": -8699502592,
+            "trailing_pe": null,
+            "employees": 1511
+          },
+          "sector": "Technology",
+          "industry": "Software - Application",
+          "summary": "Strategy Inc, together with its subsidiaries, operates as a bitcoin treasury company in the United States, Europe, the Middle East, Africa, and internationally. It offers investors varying degrees of economic exposure to Bitcoin by offering a range of securities, including equity and fixed income instruments. The company also provides AI-powered enterprise analytics software, including Strategy On",
+          "website": "https://www.strategy.com"
+        }
+      ]
+    },
+    "battery_energy_storage": {
+      "label": "🔋 배터리·에너지저장",
+      "thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+      "tickers": [
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "ENVX",
+          "name": "Enovix",
+          "score": 50,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1374366720,
+            "revenue_growth": 0.491,
+            "revenue_acceleration": -0.6402352468317538,
+            "operating_margin": -5.7756596,
+            "fcf": -72119248,
+            "trailing_pe": null,
+            "employees": 664
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Enovix Corporation designs, develops, and manufactures lithium-ion battery cells in the United States and internationally. It serves wearables and IoT, smartphone, computing, electrical vehicles, and original equipment manufacturers. The company was founded in 2006 and is headquartered in Fremont, California.",
+          "website": "https://www.enovix.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "FLNC",
+          "name": "Fluence Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3721232896,
+            "revenue_growth": 0.077,
+            "revenue_acceleration": -0.2155300469098605,
+            "operating_margin": -0.08434,
+            "fcf": -133672128,
+            "trailing_pe": null,
+            "employees": 1670
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Renewable",
+          "summary": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. It sells energy storage products with integrated hardware, software, and digital intelligence. The company's energy storage products include Gridstack Pro, a large-scale front-of-the-meter a",
+          "website": "https://fluenceenergy.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "QS",
+          "name": "QuantumScape",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 5154915840,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -148616128,
+            "trailing_pe": null,
+            "employees": 700
+          },
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Parts",
+          "summary": "QuantumScape Corporation, together with its subsidiaries, develops solid-state lithium-metal battery technology for electric vehicles and other applications in the United States. The company was founded in 2010 and is headquartered in San Jose, California.",
+          "website": "https://www.quantumscape.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "SLDP",
+          "name": "Solid Power",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 668201600,
+            "revenue_growth": -0.589,
+            "revenue_acceleration": -0.024503926738905196,
+            "operating_margin": -12.515909,
+            "fcf": -48534376,
+            "trailing_pe": null,
+            "employees": 230
+          },
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Parts",
+          "summary": "Solid Power, Inc., a research and development-stage company, develops solid-state battery technologies for the electric vehicles markets in the United States. It engages in the development of sulfide-based solid electrolytes. The company was founded in 2011 and is headquartered in Louisville, Colorado.",
+          "website": "https://www.solidpowerbattery.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "STEM",
+          "name": "Stem Inc",
+          "score": 15,
+          "breakdown": {
+            "cap": 5,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 81956120,
+            "revenue_growth": -0.108,
+            "revenue_acceleration": -0.521399780303095,
+            "operating_margin": -0.37469003,
+            "fcf": 140250,
+            "trailing_pe": null,
+            "employees": 423
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Renewable",
+          "summary": "Stem, Inc. engages in the development, deployment, and operation of clean energy assets in the United States and internationally. The company offers OEM energy storage systems, and edge hardware devices and solutions. It also provides PowerTrack, an integrated suite of software and solutions for solar, storage, and hybrid assets, including software, energy management system, supervisory control an",
+          "website": "https://www.stem.com"
+        }
+      ]
+    },
+    "synthetic_biology": {
+      "label": "🧪 합성생물학",
+      "thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
+      "tickers": [
+        {
+          "theme": "synthetic_biology",
+          "theme_label": "🧪 합성생물학",
+          "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
+          "ticker": "CDNA",
+          "name": "CareDx",
+          "score": 66,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 1114294912,
+            "revenue_growth": 0.39,
+            "revenue_acceleration": -0.0011086551191295951,
+            "operating_margin": 0.01528,
+            "fcf": 70143376,
+            "trailing_pe": null,
+            "employees": 761
+          },
+          "sector": "Healthcare",
+          "industry": "Diagnostics & Research",
+          "summary": "CareDx, Inc. provides solutions for improving outcomes for transplant patients and advancing organ health in the United States and internationally. The company provides AlloSure Kidney, a donor-derived cell-free DNA (dd-cfDNA) solution for kidney transplant patients; AlloMap Heart, a gene expression profiling solution for heart transplant patients; AlloSure Heart, a dd-cfDNA solution for heart tra",
+          "website": "https://caredx.com"
+        },
+        {
+          "theme": "synthetic_biology",
+          "theme_label": "🧪 합성생물학",
+          "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
+          "ticker": "TWST",
+          "name": "Twist Bioscience",
+          "score": 48,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 8,
+            "acceleration": 5,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3663732480,
+            "revenue_growth": 0.193,
+            "revenue_acceleration": 0.029912266600075683,
+            "operating_margin": -0.34917,
+            "fcf": -58482500,
+            "trailing_pe": null,
+            "employees": 979
+          },
+          "sector": "Healthcare",
+          "industry": "Diagnostics & Research",
+          "summary": "Twist Bioscience Corporation manufactures and sells synthetic DNA-based products. The company offers synthetic genes and gene fragments used in product development for therapeutics, diagnostics, chemicals/materials, food/agriculture, data storage, and various applications within academic research by biotech, pharma, industrial chemical, and agricultural companies, as well as academic labs; Oligo p",
+          "website": "https://www.twistbioscience.com"
+        },
+        {
+          "theme": "synthetic_biology",
+          "theme_label": "🧪 합성생물학",
+          "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
+          "ticker": "PACB",
+          "name": "Pacific Biosciences",
+          "score": 23,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 388252128,
+            "revenue_growth": 0.001,
+            "revenue_acceleration": -0.2333864569001049,
+            "operating_margin": -1.02891,
+            "fcf": -48237124,
+            "trailing_pe": null,
+            "employees": 485
+          },
+          "sector": "Healthcare",
+          "industry": "Medical Devices",
+          "summary": "Pacific Biosciences of California, Inc. designs, develops, and manufactures sequencing solutions to resolve genetically complex problems. The company provides sequencing systems; consumable products, including single molecule real-time (SMRT) technology; long-read sequencing; and various reagent kits designed for specific workflow, such as preparation kit to convert DNA into SMRTbell double-strand",
+          "website": "https://www.pacb.com"
+        },
+        {
+          "theme": "synthetic_biology",
+          "theme_label": "🧪 합성생물학",
+          "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
+          "ticker": "DNA",
+          "name": "Ginkgo Bioworks",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 527821888,
+            "revenue_growth": -0.491,
+            "revenue_acceleration": -0.39699546347286946,
+            "operating_margin": -3.66509,
+            "fcf": -77930000,
+            "trailing_pe": null,
+            "employees": 485
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Ginkgo Bioworks Holdings, Inc., together with its subsidiaries, develops a platform for cell engineering in the United States. It operates through the Cell Engineering and Biosecurity segments. The company offers cell engineering research and development solutions, as well as cell engineering tools comprising functional genomics, antibody developability, and small molecule developability, artifici",
+          "website": "https://www.ginkgo.bio"
+        }
+      ]
+    },
+    "ai_infra_picks": {
+      "label": "⚡ AI 인프라 picks-and-shovels",
+      "thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+      "tickers": [
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "MOD",
+          "name": "Modine Manufacturing",
+          "score": 65,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 15,
+            "acceleration": 5,
+            "margin": 10,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 13188599808,
+            "revenue_growth": 0.305,
+            "revenue_acceleration": 0.027305798605124117,
+            "operating_margin": 0.11913,
+            "fcf": -109575000,
+            "trailing_pe": 136.67213,
+            "employees": 11000
+          },
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Parts",
+          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. The company offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired make",
+          "website": "https://www.modine.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "BE",
+          "name": "Bloom Energy",
+          "score": 58,
+          "breakdown": {
+            "cap": 8,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 10,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 87574577152,
+            "revenue_growth": 1.304,
+            "revenue_acceleration": -0.37511312885213116,
+            "operating_margin": 0.09612001,
+            "fcf": 265521248,
+            "trailing_pe": null,
+            "employees": 2000
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provide",
+          "website": "https://www.bloomenergy.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "AEHR",
+          "name": "Aehr Test Systems",
+          "score": 50,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2871682304,
+            "revenue_growth": -0.437,
+            "revenue_acceleration": 0.2269928646468391,
+            "operating_margin": -0.41006002,
+            "fcf": -7451625,
+            "trailing_pe": null,
+            "employees": 136
+          },
+          "sector": "Technology",
+          "industry": "Semiconductor Equipment & Materials",
+          "summary": "Aehr Test Systems, Inc. provides test solutions for testing, burning-in, and semiconductor devices in wafer level, singulated die, package part form, and installed systems in the United States, Asia, and Europe. Its product portfolio includes FOX-XP and FOX-NP systems that are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize range of devices, ",
+          "website": "https://www.aehr.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "VRT",
+          "name": "Vertiv Holdings",
+          "score": 35,
+          "breakdown": {
+            "cap": 0,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 10,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 124220784640,
+            "revenue_growth": 0.301,
+            "revenue_acceleration": -0.20881176531398293,
+            "operating_margin": 0.16364999,
+            "fcf": 1964749952,
+            "trailing_pe": 81.25628,
+            "employees": 34000
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
+          "website": "https://www.vertiv.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "PWR",
+          "name": "Quanta Services",
+          "score": 31,
+          "breakdown": {
+            "cap": 0,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 107579613184,
+            "revenue_growth": 0.263,
+            "revenue_acceleration": -0.07611429324319695,
+            "operating_margin": 0.04244,
+            "fcf": 1037176768,
+            "trailing_pe": 98.0725,
+            "employees": 69500
+          },
+          "sector": "Industrials",
+          "industry": "Engineering & Construction",
+          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
+          "website": "https://www.quantaservices.com"
+        }
+      ]
+    },
+    "post_quantum_security": {
+      "label": "🔐 양자내성암호 (PQC)",
+      "thesis": "양자컴 발달 시 RSA·ECC 깨짐 → 전 세계 암호 인프라 재구축 필요. 표준화 진행 중인 새 시장.",
+      "tickers": [
+        {
+          "theme": "post_quantum_security",
+          "theme_label": "🔐 양자내성암호 (PQC)",
+          "theme_thesis": "양자컴 발달 시 RSA·ECC 깨짐 → 전 세계 암호 인프라 재구축 필요. 표준화 진행 중인 새 시장.",
+          "ticker": "S",
+          "name": "SentinelOne",
+          "score": 56,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 8,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 6184241152,
+            "revenue_growth": 0.202,
+            "revenue_acceleration": -8.17196743530535e-05,
+            "operating_margin": -0.28122,
+            "fcf": 283892512,
+            "trailing_pe": null,
+            "employees": 2900
+          },
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "summary": "SentinelOne, Inc. operates as a cybersecurity provider in the United States and internationally. The company's Singularity Platform delivers an artificial intelligence-powered autonomous threat prevention, detection, and response capabilities across an organization's endpoints, cloud workloads, and identify credentials, which enables seamless and autonomous protection against a spectrum of cyber t",
+          "website": "https://www.sentinelone.com"
+        },
+        {
+          "theme": "post_quantum_security",
+          "theme_label": "🔐 양자내성암호 (PQC)",
+          "theme_thesis": "양자컴 발달 시 RSA·ECC 깨짐 → 전 세계 암호 인프라 재구축 필요. 표준화 진행 중인 새 시장.",
+          "ticker": "ARQQ",
+          "name": "Arqit Quantum",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 257473088,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": -65.89057,
+            "fcf": -11289250,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
+          "website": "https://arqit.uk"
+        }
+      ]
+    }
+  },
+  "score_breakdown_labels": {
+    "cap": "시총 sweet spot ($2-15B 최고)",
+    "revenue_growth": "매출 성장률 YoY",
+    "acceleration": "매출 가속 (분기별 변곡)",
+    "margin": "영업이익률 / 개선 추세",
+    "fcf": "FCF (+) 보너스"
+  },
+  "disclaimer_kr": "Asymmetric bet은 venture 투자. 10개 중 8-9개가 -50%+로 가거나 사라질 수 있음. 1-2개 winner가 10-100x로 전체를 견인하는 게임. 단일 종목 베팅 금지. 동일가중 10개 이상으로 분산. 5년 commitment 필요."
+}
