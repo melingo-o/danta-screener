@@ -126,7 +126,12 @@
       </div>
 
       <!-- Stats cards -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+        <div class="bg-gradient-to-br from-amber-50 to-yellow-100 border border-amber-200 rounded-lg shadow p-4 md:col-span-1">
+          <div class="text-xs text-amber-700 uppercase tracking-wide font-semibold">🏆 Must-Buy</div>
+          <div class="text-2xl font-bold mt-1 text-amber-700" id="lt-stat-mustbuy">—</div>
+          <div class="text-xs text-amber-600 mt-1">Buffett 8조건 만점</div>
+        </div>
         <div class="bg-white rounded-lg shadow p-4">
           <div class="text-xs text-slate-500 uppercase tracking-wide">전체 평가</div>
           <div class="text-2xl font-bold mt-1" id="lt-stat-total">—</div>
@@ -143,6 +148,18 @@
           <div class="text-xs text-slate-500 uppercase tracking-wide">현재 필터</div>
           <div class="text-2xl font-bold mt-1" id="lt-stat-filtered">—</div>
         </div>
+      </div>
+
+      <!-- Must-buy highlight strip (shown only when there are must-buy stocks) -->
+      <div id="lt-mustbuy-strip" class="hidden bg-gradient-to-r from-amber-50 via-yellow-50 to-amber-50 border border-amber-200 rounded-lg shadow p-4 mb-4">
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <h3 class="font-semibold text-amber-800">🏆 무조건 투자 후보 (S-Tier)</h3>
+            <p class="text-xs text-amber-700 mt-1">ROE≥20% · 부채≤60 · PER≤25 · PEG≤1 · 매출↑5% · 영업율≥15% · FCF&gt;0 · 시총충분</p>
+          </div>
+          <button id="lt-mustbuy-toggle" class="text-xs px-3 py-1 bg-amber-500 hover:bg-amber-600 text-white rounded">아래 표 → S-tier만 보기</button>
+        </div>
+        <div id="lt-mustbuy-list" class="flex flex-wrap gap-2"></div>
       </div>
 
       <!-- Filters -->
@@ -164,6 +181,13 @@
               <option value="5" selected>5+</option>
               <option value="6">6+</option>
               <option value="7">7 (만점)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-slate-500 block mb-1">등급</label>
+            <select id="lt-tier" class="border rounded px-2 py-1 text-sm">
+              <option value="all">전체</option>
+              <option value="mustbuy">🏆 Must-Buy만</option>
             </select>
           </div>
           <div>

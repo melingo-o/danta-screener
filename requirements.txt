@@ -2,4 +2,5 @@ numpy>=1.26
 pandas>=2.2
 yfinance>=0.2.40
 finance-datareader>=0.9.96
+pykrx>=1.0.45
 pytz>=2024.1

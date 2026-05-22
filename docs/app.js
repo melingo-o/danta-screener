@@ -317,11 +317,46 @@ async function loadLongTerm() {
   $("lt-status").textContent = `${ltAll.length}개 종목 평가 완료 (KR ${data.kr_scored || 0} · US ${data.us_scored || 0})`;
   $("lt-updated").textContent = data.updated_at || "—";
 
+  const mustBuyList = ltAll.filter(s => s.must_buy);
   $("lt-stat-total").textContent = ltAll.length;
   $("lt-stat-perfect").textContent = ltAll.filter(s => s.score === 7).length;
   $("lt-stat-6plus").textContent = ltAll.filter(s => s.score >= 6).length;
+  $("lt-stat-mustbuy").textContent = mustBuyList.length;
 
-  ["lt-market", "lt-min-score", "lt-sort", "lt-search"].forEach(id => {
+  // Must-buy strip — show only when there's at least one
+  if (mustBuyList.length > 0) {
+    const sorted = [...mustBuyList].sort((a, b) =>
+      (b.metrics?.market_cap || 0) - (a.metrics?.market_cap || 0)
+    );
+    $("lt-mustbuy-list").innerHTML = sorted.map(s => {
+      const m = s.metrics || {};
+      const flag = s.market === "KR" ? "🇰🇷" : "🇺🇸";
+      const cap = (() => {
+        const v = m.market_cap;
+        if (!v) return "";
+        if (s.market === "KR") return v >= 1e12 ? `${(v / 1e12).toFixed(1)}조` : `${Math.round(v / 1e8).toLocaleString()}억`;
+        return v >= 1e12 ? `${(v / 1e12).toFixed(1)}T` : `${(v / 1e9).toFixed(1)}B`;
+      })();
+      return `<button class="bg-white hover:bg-amber-100 border border-amber-300 rounded-lg px-3 py-2 text-left transition" data-ticker="${s.ticker}">
+        <div class="flex items-center gap-2 text-sm font-semibold">${flag} ${s.name}</div>
+        <div class="text-xs text-slate-500 font-mono">${s.ticker} · ${cap}</div>
+        <div class="text-xs text-amber-700 mt-1">ROE ${m.roe != null ? (m.roe * 100).toFixed(0) + "%" : "—"} · PER ${m.per != null ? m.per.toFixed(1) : "—"} · PEG ${m.peg != null ? m.peg.toFixed(2) : "—"}</div>
+      </button>`;
+    }).join("");
+    $("lt-mustbuy-list").querySelectorAll("button[data-ticker]").forEach(b => {
+      b.addEventListener("click", () => openLtDetail(b.dataset.ticker));
+    });
+    $("lt-mustbuy-strip").classList.remove("hidden");
+
+    $("lt-mustbuy-toggle").addEventListener("click", () => {
+      $("lt-tier").value = "mustbuy";
+      $("lt-min-score").value = "0";
+      renderLongTermTable();
+      document.getElementById("lt-tbody").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  ["lt-market", "lt-min-score", "lt-tier", "lt-sort", "lt-search"].forEach(id => {
     const evt = id === "lt-search" ? "input" : "change";
     $(id).addEventListener(evt, renderLongTermTable);
   });
@@ -332,12 +367,14 @@ async function loadLongTerm() {
 function renderLongTermTable() {
   const market = $("lt-market").value;
   const minScore = parseInt($("lt-min-score").value, 10);
+  const tier = ($("lt-tier") && $("lt-tier").value) || "all";
   const sort = $("lt-sort").value;
   const search = ($("lt-search").value || "").toLowerCase().trim();
 
   let rows = ltAll.filter(s => {
     if (market !== "all" && s.market !== market) return false;
     if (s.score < minScore) return false;
+    if (tier === "mustbuy" && !s.must_buy) return false;
     if (search && !(`${s.name} ${s.ticker}`.toLowerCase().includes(search))) return false;
     return true;
   });
@@ -354,9 +391,24 @@ function renderLongTermTable() {
   $("lt-stat-filtered").textContent = rows.length;
 
   const fmtPct = v => (v == null || isNaN(v)) ? "—" : `${(v * 100).toFixed(1)}%`;
+  // D/E: yfinance sometimes returns extreme values when equity is negative (buyback-heavy).
+  // Clip 999+ to "—" since the number is meaningless beyond that.
+  const fmtDE = v => {
+    if (v == null || isNaN(v)) return "—";
+    if (Math.abs(v) >= 999) return "—";
+    return Number(v).toFixed(0);
+  };
   const fmtNum = (v, d = 1) => (v == null || isNaN(v)) ? "—" : Number(v).toFixed(d);
-  const fmtCap = v => {
+  // KR market cap is in KRW (조/억), US is in USD (T/B/M).
+  const fmtCap = (v, market) => {
     if (v == null) return "—";
+    if (market === "KR") {
+      const 조 = 1_000_000_000_000;
+      const 억 = 100_000_000;
+      if (v >= 조) return `${(v / 조).toFixed(1)}조`;
+      if (v >= 억) return `${Math.round(v / 억).toLocaleString()}억`;
+      return v.toLocaleString();
+    }
     if (v >= 1e12) return `${(v / 1e12).toFixed(1)}T`;
     if (v >= 1e9) return `${(v / 1e9).toFixed(1)}B`;
     if (v >= 1e6) return `${(v / 1e6).toFixed(0)}M`;
@@ -374,18 +426,22 @@ function renderLongTermTable() {
   $("lt-tbody").innerHTML = top.map(s => {
     const m = s.metrics || {};
     const p = s.passes || {};
-    return `<tr class="hover:bg-slate-50 cursor-pointer" data-ticker="${s.ticker}">
-      <td class="px-3 py-2"><span class="${scoreClass(s.score)} px-2 py-0.5 rounded font-mono text-xs">${s.score}/7</span></td>
+    const rowBg = s.must_buy ? "bg-amber-50 hover:bg-amber-100" : "hover:bg-slate-50";
+    const scoreBadge = s.must_buy
+      ? `<span class="bg-amber-200 text-amber-900 px-2 py-0.5 rounded font-mono text-xs">🏆 ${s.score}/7</span>`
+      : `<span class="${scoreClass(s.score)} px-2 py-0.5 rounded font-mono text-xs">${s.score}/7</span>`;
+    return `<tr class="${rowBg} cursor-pointer" data-ticker="${s.ticker}">
+      <td class="px-3 py-2">${scoreBadge}</td>
       <td class="px-3 py-2 text-xs">${s.market === "KR" ? "🇰🇷" : "🇺🇸"}</td>
       <td class="px-3 py-2">
         <div class="font-medium">${s.name}</div>
         <div class="text-xs text-slate-500 font-mono">${s.ticker}</div>
       </td>
       <td class="px-3 py-2 text-xs text-slate-600">${s.sector || "—"}</td>
-      <td class="px-3 py-2 text-right text-xs">${fmtCap(m.market_cap)}</td>
+      <td class="px-3 py-2 text-right text-xs">${fmtCap(m.market_cap, s.market)}</td>
       <td class="px-3 py-2 text-right ${cellClass(p.roe_15)}">${fmtPct(m.roe)}</td>
       <td class="px-3 py-2 text-right ${cellClass(p.fcf_positive)}">${m.fcf == null ? "—" : (m.fcf > 0 ? "✓" : "✗")}</td>
-      <td class="px-3 py-2 text-right ${cellClass(p.debt_safe)}">${fmtNum(m.debt_equity, 0)}</td>
+      <td class="px-3 py-2 text-right ${cellClass(p.debt_safe)}">${fmtDE(m.debt_equity)}</td>
       <td class="px-3 py-2 text-right ${cellClass(p.per_reasonable)}">${fmtNum(m.per, 1)}</td>
       <td class="px-3 py-2 text-right ${cellClass(p.peg_attractive)}">${fmtNum(m.peg, 2)}</td>
       <td class="px-3 py-2 text-right ${cellClass(p.revenue_growing)}">${fmtPct(m.revenue_growth)}</td>
@@ -417,6 +473,37 @@ function openLtDetail(ticker) {
   const fmtNumD = (v, d = 1) => v != null ? Number(v).toFixed(d) : "—";
 
   const scoreColor = s.score >= 6 ? "text-green-600" : s.score >= 4 ? "text-blue-600" : "text-slate-400";
+  const mbBadge = s.must_buy
+    ? `<div class="inline-block bg-amber-100 text-amber-800 border border-amber-300 px-2 py-0.5 rounded text-xs font-semibold mt-2">🏆 Must-Buy (S-Tier)</div>`
+    : "";
+
+  // Must-buy detail rendering
+  const mbLabels = ltMeta.must_buy_labels_kr || {
+    roe_20: "ROE ≥ 20%",
+    fcf_positive: "FCF > 0",
+    debt_low: "부채비율 ≤ 60%",
+    per_fair: "PER ≤ 25",
+    peg_attractive: "PEG ≤ 1.0",
+    growth_solid: "매출 성장 ≥ 5%",
+    margin_strong: "영업이익률 ≥ 15%",
+    scale_safe: "시총 충분",
+  };
+  const mbChecks = s.must_buy_checks || {};
+  const mbSection = `
+    <div class="mb-4 ${s.must_buy ? "p-3 bg-amber-50 border border-amber-200 rounded" : ""}">
+      <h3 class="text-sm font-semibold mb-2 ${s.must_buy ? "text-amber-800" : "text-slate-700"}">
+        🏆 Must-Buy 체크 (Buffett 8조건) ${s.must_buy ? "<span class='text-xs font-normal'>— 모두 통과 ✨</span>" : ""}
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        ${Object.entries(mbLabels).map(([k, label]) => `
+          <div class="flex items-center gap-2 text-sm ${mbChecks[k] ? "" : "text-slate-400"}">
+            <span class="text-lg">${mbChecks[k] ? "✅" : "⬜"}</span>
+            <span>${label}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
 
   $("lt-detail-body").innerHTML = `
     <div class="flex items-start justify-between mb-4 gap-4">
@@ -424,6 +511,7 @@ function openLtDetail(ticker) {
         <h2 class="text-xl font-bold">${s.market === "KR" ? "🇰🇷" : "🇺🇸"} ${s.name}</h2>
         <p class="text-sm text-slate-500 font-mono mt-1">${s.ticker}${s.yf_ticker !== s.ticker ? ` (${s.yf_ticker})` : ""}</p>
         <p class="text-xs text-slate-500 mt-1">${s.sector || ""} ${s.industry ? "· " + s.industry : ""}</p>
+        ${mbBadge}
       </div>
       <div class="text-right">
         <div class="text-3xl font-bold ${scoreColor}">${s.score}/7</div>
@@ -432,7 +520,7 @@ function openLtDetail(ticker) {
     </div>
 
     <div class="mb-4">
-      <h3 class="text-sm font-semibold mb-2 text-slate-700">✅ 정량 체크리스트</h3>
+      <h3 class="text-sm font-semibold mb-2 text-slate-700">✅ 정량 체크리스트 (7-tier)</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         ${Object.entries(labels).map(([k, label]) => `
           <div class="flex items-center gap-2 text-sm ${p[k] ? "" : "text-slate-400"}">
@@ -442,6 +530,8 @@ function openLtDetail(ticker) {
         `).join("")}
       </div>
     </div>
+
+    ${mbSection}
 
     <div class="mb-4">
       <h3 class="text-sm font-semibold mb-2 text-slate-700">📊 주요 지표</h3>
