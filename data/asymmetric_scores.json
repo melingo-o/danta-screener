@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-22T17:22:41+09:00",
-  "started_at": "2026-05-22T17:22:38+09:00",
+  "updated_at": "2026-05-25T08:32:05+09:00",
+  "started_at": "2026-05-25T08:32:02+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7326070272,
+            "market_cap": 8781976576,
             "revenue_growth": 1.989,
             "revenue_acceleration": 1.2674616303654243,
             "operating_margin": -5.8979497,
@@ -63,7 +63,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2573354240,
+            "market_cap": 2776335872,
             "revenue_growth": 93.641,
             "revenue_acceleration": 15.849810964308915,
             "operating_margin": -5.5676003,
@@ -91,12 +91,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 21981868032,
+            "market_cap": 23754899456,
             "revenue_growth": 7.547,
             "revenue_acceleration": -1.026458468490365,
             "operating_margin": -4.01755,
             "fcf": -91360376,
-            "trailing_pe": 151.0,
+            "trailing_pe": 163.17949,
             "employees": 1132
           },
           "sector": "Technology",
@@ -119,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 9535258624,
+            "market_cap": 10891087872,
             "revenue_growth": -0.809,
             "revenue_acceleration": 0.3217098423819641,
             "operating_margin": -19.14871,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 215582560,
+            "market_cap": 230825760,
             "revenue_growth": -0.694,
             "revenue_acceleration": -0.2455843741831943,
             "operating_margin": -93.22868,
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 257473088,
+            "market_cap": 304368192,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -65.89057,
@@ -209,7 +209,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 650920832,
+            "market_cap": 698764160,
             "revenue_growth": 2.793,
             "revenue_acceleration": -2.607374343051987,
             "operating_margin": -5.9540696,
@@ -226,34 +226,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "NNE",
-          "name": "Nano Nuclear Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 6,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1306249088,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": 0.0,
-            "fcf": -33311692,
-            "trailing_pe": null,
-            "employees": 36
-          },
-          "sector": "Industrials",
-          "industry": "Specialty Industrial Machinery",
-          "summary": "NANO Nuclear Energy Inc. operates as a nuclear energy company. The company is developing KRONOS MMR Energy System, a high-temperature gas-cooled reactor; LOKI MMR, a compact microreactor designed for remote and specialized applications; ZEUS, a solid core battery reactor; and ODIN, a low-pressure salt coolant reactor. It is also developing a high-assay low-enriched uranium fuel processing facility",
-          "website": "https://nanonuclearenergy.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "OKLO",
           "name": "Oklo",
           "score": 41,
@@ -265,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 11325073408,
+            "market_cap": 11462525952,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -282,6 +254,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "NNE",
+          "name": "Nano Nuclear Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1392186496,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -33311692,
+            "trailing_pe": null,
+            "employees": 36
+          },
+          "sector": "Industrials",
+          "industry": "Specialty Industrial Machinery",
+          "summary": "NANO Nuclear Energy Inc. operates as a nuclear energy company. The company is developing KRONOS MMR Energy System, a high-temperature gas-cooled reactor; LOKI MMR, a compact microreactor designed for remote and specialized applications; ZEUS, a solid core battery reactor; and ODIN, a low-pressure salt coolant reactor. It is also developing a high-assay low-enriched uranium fuel processing facility",
+          "website": "https://nanonuclearenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "LEU",
           "name": "Centrus Energy",
           "score": 41,
@@ -293,12 +293,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3485035264,
+            "market_cap": 3528512256,
             "revenue_growth": 0.049,
             "revenue_acceleration": -0.9921324137307403,
             "operating_margin": -0.00261,
             "fcf": -10875000,
-            "trailing_pe": 64.41818,
+            "trailing_pe": 65.459854,
             "employees": 467
           },
           "sector": "Energy",
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3921378560,
+            "market_cap": 3945605888,
             "revenue_growth": -0.958,
             "revenue_acceleration": -0.30245829827381665,
             "operating_margin": -101.81239,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5501086720,
+            "market_cap": 5688446464,
             "revenue_growth": 0.136,
             "revenue_acceleration": 0.17271009751344468,
             "operating_margin": 0.16688,
             "fcf": 473554368,
-            "trailing_pe": 20.326923,
+            "trailing_pe": 21.019232,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,7 +383,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 30755141632,
+            "market_cap": 32614332416,
             "revenue_growth": 0.231,
             "revenue_acceleration": 0.027008496249401513,
             "operating_margin": 0.010880001,
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6760883,
+            "market_cap": 7074348,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 39.479687,
+            "trailing_pe": 40.11694,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5493886976,
+            "market_cap": 6138905088,
             "revenue_growth": 1.987,
             "revenue_acceleration": 3.350931502831061,
             "operating_margin": -0.10295,
@@ -501,12 +501,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4831757824,
+            "market_cap": 5163743232,
             "revenue_growth": 0.019,
             "revenue_acceleration": 0.030724771420804906,
             "operating_margin": 0.23150998,
             "fcf": 252985376,
-            "trailing_pe": 46.161617,
+            "trailing_pe": 49.333332,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -529,7 +529,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3053402368,
+            "market_cap": 3479088384,
             "revenue_growth": 0.579,
             "revenue_acceleration": -0.3528397024514931,
             "operating_margin": -0.71836,
@@ -557,7 +557,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 15139581952,
+            "market_cap": 15806036992,
             "revenue_growth": 0.411,
             "revenue_acceleration": -0.02854440827718646,
             "operating_margin": -0.30429,
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 37349228544,
+            "market_cap": 41086869504,
             "revenue_growth": 19.522,
             "revenue_acceleration": -5.743485682582001,
             "operating_margin": -10.13994,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 72604311552,
+            "market_cap": 78587043840,
             "revenue_growth": 0.635,
             "revenue_acceleration": -0.021663358197334573,
             "operating_margin": -0.22356,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2846668032,
+            "market_cap": 2946460672,
             "revenue_growth": 3.249,
             "revenue_acceleration": -4.403561451393062,
             "operating_margin": -3.37813,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4812794880,
+            "market_cap": 4857161216,
             "revenue_growth": 0.686,
             "revenue_acceleration": null,
             "operating_margin": -89.33333,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1728364544,
+            "market_cap": 1760500736,
             "revenue_growth": -0.095,
             "revenue_acceleration": -0.510993463496041,
             "operating_margin": -6.68075,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 532821504,
+            "market_cap": 536433856,
             "revenue_growth": -0.411,
             "revenue_acceleration": 0.17161757695414145,
             "operating_margin": -59.17523,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 261409776,
+            "market_cap": 270221344,
             "revenue_growth": -0.392,
             "revenue_acceleration": -1.9376733903076366,
             "operating_margin": -8.83186,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3562120960,
+            "market_cap": 3586503168,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 569809280,
+            "market_cap": 563975104,
             "revenue_growth": null,
             "revenue_acceleration": -2.4000000000000004,
             "operating_margin": -2672.4722,
@@ -883,7 +883,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1374366720,
+            "market_cap": 1457264896,
             "revenue_growth": 0.491,
             "revenue_acceleration": -0.6402352468317538,
             "operating_margin": -5.7756596,
@@ -900,34 +900,6 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
-          "ticker": "FLNC",
-          "name": "Fluence Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 3,
-            "acceleration": 0,
-            "margin": 3,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3721232896,
-            "revenue_growth": 0.077,
-            "revenue_acceleration": -0.2155300469098605,
-            "operating_margin": -0.08434,
-            "fcf": -133672128,
-            "trailing_pe": null,
-            "employees": 1670
-          },
-          "sector": "Utilities",
-          "industry": "Utilities - Renewable",
-          "summary": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. It sells energy storage products with integrated hardware, software, and digital intelligence. The company's energy storage products include Gridstack Pro, a large-scale front-of-the-meter a",
-          "website": "https://fluenceenergy.com"
-        },
-        {
-          "theme": "battery_energy_storage",
-          "theme_label": "🔋 배터리·에너지저장",
-          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "QS",
           "name": "QuantumScape",
           "score": 41,
@@ -939,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5154915840,
+            "market_cap": 5044189696,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -956,6 +928,34 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "FLNC",
+          "name": "Fluence Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3960836608,
+            "revenue_growth": 0.077,
+            "revenue_acceleration": -0.2155300469098605,
+            "operating_margin": -0.08434,
+            "fcf": -133672128,
+            "trailing_pe": null,
+            "employees": 1670
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Renewable",
+          "summary": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. It sells energy storage products with integrated hardware, software, and digital intelligence. The company's energy storage products include Gridstack Pro, a large-scale front-of-the-meter a",
+          "website": "https://fluenceenergy.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "SLDP",
           "name": "Solid Power",
           "score": 20,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 668201600,
+            "market_cap": 688450112,
             "revenue_growth": -0.589,
             "revenue_acceleration": -0.024503926738905196,
             "operating_margin": -12.515909,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 81956120,
+            "market_cap": 84732776,
             "revenue_growth": -0.108,
             "revenue_acceleration": -0.521399780303095,
             "operating_margin": -0.37469003,
@@ -1029,7 +1029,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1114294912,
+            "market_cap": 1117394560,
             "revenue_growth": 0.39,
             "revenue_acceleration": -0.0011086551191295951,
             "operating_margin": 0.01528,
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3663732480,
+            "market_cap": 3771773440,
             "revenue_growth": 0.193,
             "revenue_acceleration": 0.029912266600075683,
             "operating_margin": -0.34917,
@@ -1085,7 +1085,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 388252128,
+            "market_cap": 378934080,
             "revenue_growth": 0.001,
             "revenue_acceleration": -0.2333864569001049,
             "operating_margin": -1.02891,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 527821888,
+            "market_cap": 549378944,
             "revenue_growth": -0.491,
             "revenue_acceleration": -0.39699546347286946,
             "operating_margin": -3.66509,
@@ -1147,12 +1147,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 13188599808,
+            "market_cap": 13737530368,
             "revenue_growth": 0.305,
             "revenue_acceleration": 0.027305798605124117,
             "operating_margin": 0.11913,
             "fcf": -109575000,
-            "trailing_pe": 136.67213,
+            "trailing_pe": 143.14285,
             "employees": 11000
           },
           "sector": "Consumer Cyclical",
@@ -1175,7 +1175,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 87574577152,
+            "market_cap": 86041427968,
             "revenue_growth": 1.304,
             "revenue_acceleration": -0.37511312885213116,
             "operating_margin": 0.09612001,
@@ -1203,7 +1203,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2871682304,
+            "market_cap": 2988688128,
             "revenue_growth": -0.437,
             "revenue_acceleration": 0.2269928646468391,
             "operating_margin": -0.41006002,
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 124220784640,
+            "market_cap": 125780262912,
             "revenue_growth": 0.301,
             "revenue_acceleration": -0.20881176531398293,
             "operating_margin": 0.16364999,
             "fcf": 1964749952,
-            "trailing_pe": 81.25628,
+            "trailing_pe": 81.865,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1259,12 +1259,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 107579613184,
+            "market_cap": 108559507456,
             "revenue_growth": 0.263,
             "revenue_acceleration": -0.07611429324319695,
             "operating_margin": 0.04244,
             "fcf": 1037176768,
-            "trailing_pe": 98.0725,
+            "trailing_pe": 98.965805,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6184241152,
+            "market_cap": 6389130240,
             "revenue_growth": 0.202,
             "revenue_acceleration": -8.17196743530535e-05,
             "operating_margin": -0.28122,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 257473088,
+            "market_cap": 304368192,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -65.89057,
