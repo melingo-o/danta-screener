@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-01T08:36:38+09:00",
-  "started_at": "2026-06-01T08:36:34+09:00",
+  "updated_at": "2026-06-08T08:35:21+09:00",
+  "started_at": "2026-06-08T08:35:18+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -24,34 +24,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "RGTI",
-          "name": "Rigetti Computing",
-          "score": 80,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 30,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 8489465856,
-            "revenue_growth": 1.989,
-            "revenue_acceleration": 1.2674616303654243,
-            "operating_margin": -5.8979497,
-            "fcf": -6209875,
-            "trailing_pe": null,
-            "employees": 162
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
-          "website": "https://www.rigetti.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QUBT",
           "name": "Quantum Computing Inc",
           "score": 80,
@@ -63,7 +35,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2697398528,
+            "market_cap": 2245200896,
             "revenue_growth": 93.641,
             "revenue_acceleration": 15.849810964308915,
             "operating_margin": -5.5676003,
@@ -80,29 +52,29 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "score": 50,
+          "ticker": "RGTI",
+          "name": "Rigetti Computing",
+          "score": 80,
           "breakdown": {
-            "cap": 20,
+            "cap": 35,
             "revenue_growth": 30,
-            "acceleration": 0,
+            "acceleration": 15,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 26901565440,
-            "revenue_growth": 7.547,
-            "revenue_acceleration": -1.026458468490365,
-            "operating_margin": -4.01755,
-            "fcf": -91360376,
-            "trailing_pe": 184.79488,
-            "employees": 1132
+            "market_cap": 6874007552,
+            "revenue_growth": 1.989,
+            "revenue_acceleration": 1.2674616303654243,
+            "operating_margin": -5.8979497,
+            "fcf": -6209875,
+            "trailing_pe": null,
+            "employees": 162
           },
           "sector": "Technology",
           "industry": "Computer Hardware",
-          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
-          "website": "https://www.ionq.com"
+          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
+          "website": "https://www.rigetti.com"
         },
         {
           "theme": "quantum",
@@ -119,11 +91,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 287313824,
+            "market_cap": 211265280,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
-            "fcf": -19680876,
+            "fcf": -19702876,
             "trailing_pe": null,
             "employees": 87
           },
@@ -131,6 +103,34 @@
           "industry": "Software - Infrastructure",
           "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
           "website": "https://arqit.uk"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 50,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 21194266624,
+            "revenue_growth": 7.547,
+            "revenue_acceleration": -1.026458468490365,
+            "operating_margin": -4.01755,
+            "fcf": -91360376,
+            "trailing_pe": 145.58975,
+            "employees": 1132
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
         },
         {
           "theme": "quantum",
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 11165217792,
+            "market_cap": 8835118080,
             "revenue_growth": -0.809,
             "revenue_acceleration": 0.3217098423819641,
             "operating_margin": -19.14871,
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 259134608,
+            "market_cap": 228648160,
             "revenue_growth": -0.694,
             "revenue_acceleration": -0.2455843741831943,
             "operating_margin": -93.22868,
@@ -209,7 +209,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 979528832,
+            "market_cap": 844812160,
             "revenue_growth": 2.793,
             "revenue_acceleration": -2.607374343051987,
             "operating_margin": -5.9540696,
@@ -226,34 +226,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "OKLO",
-          "name": "Oklo",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 6,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 11636516864,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": 0.0,
-            "fcf": -100000128,
-            "trailing_pe": null,
-            "employees": 215
-          },
-          "sector": "Utilities",
-          "industry": "Utilities - Independent Power Producers",
-          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
-          "website": "https://www.oklo.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "NNE",
           "name": "Nano Nuclear Energy",
           "score": 41,
@@ -265,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1504165504,
+            "market_cap": 1227991424,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -282,6 +254,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "OKLO",
+          "name": "Oklo",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 10107137024,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -100000128,
+            "trailing_pe": null,
+            "employees": 215
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
+          "website": "https://www.oklo.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "LEU",
           "name": "Centrus Energy",
           "score": 41,
@@ -293,12 +293,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3589694720,
+            "market_cap": 3182664704,
             "revenue_growth": 0.049,
             "revenue_acceleration": -0.9921324137307403,
             "operating_margin": -0.00261,
             "fcf": -10875000,
-            "trailing_pe": 66.11232,
+            "trailing_pe": 58.82909,
             "employees": 467
           },
           "sector": "Energy",
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4385160192,
+            "market_cap": 3634110720,
             "revenue_growth": -0.958,
             "revenue_acceleration": -0.30245829827381665,
             "operating_margin": -101.81239,
@@ -346,21 +346,21 @@
           "theme_thesis": "노동력 부족 + AI = 10년 내 휴머노이드 양산. 메이저는 비상장(Figure, 1X) — 상장 픽스 제한적.",
           "ticker": "PATH",
           "name": "UiPath",
-          "score": 78,
+          "score": 63,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 8,
-            "acceleration": 15,
+            "acceleration": 0,
             "margin": 10,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6099596800,
+            "market_cap": 5823671808,
             "revenue_growth": 0.173,
-            "revenue_acceleration": 0.17271009751344468,
+            "revenue_acceleration": -0.23740710952661498,
             "operating_margin": 0.07274,
-            "fcf": 522565632,
-            "trailing_pe": 19.533333,
+            "fcf": 511553632,
+            "trailing_pe": 18.733332,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,7 +383,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 28023697408,
+            "market_cap": 26571960320,
             "revenue_growth": 0.231,
             "revenue_acceleration": 0.027008496249401513,
             "operating_margin": 0.010880001,
@@ -411,13 +411,13 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6411796,
+            "market_cap": 3818581,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
             "fcf": -23139876,
             "trailing_pe": null,
-            "employees": 26
+            "employees": 48
           },
           "sector": "Healthcare",
           "industry": "Medical Devices",
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 39.97754,
+            "trailing_pe": 36.4108,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7032624640,
+            "market_cap": 4710879744,
             "revenue_growth": 1.987,
             "revenue_acceleration": 3.350931502831061,
             "operating_margin": -0.10295,
@@ -501,18 +501,46 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5474582528,
+            "market_cap": 5007265792,
             "revenue_growth": 0.019,
             "revenue_acceleration": 0.030724771420804906,
             "operating_margin": 0.23150998,
             "fcf": 252985376,
-            "trailing_pe": 52.30303,
+            "trailing_pe": 47.838383,
             "employees": 975
           },
           "sector": "Communication Services",
           "industry": "Telecom Services",
           "summary": "Iridium Communications Inc. provides mobile voice and data communications services and products to businesses, the United States and foreign governments, non-governmental organizations, and consumers in the United States, Canada, and internationally. The company offers mobile satellite communications services for land mobile end users and aviation sectors; broadband terminals, embedded devices, an",
           "website": "https://www.iridium.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "PL",
+          "name": "Planet Labs",
+          "score": 60,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 11482988544,
+            "revenue_growth": 0.421,
+            "revenue_acceleration": -0.009998172065729033,
+            "operating_margin": -0.30459,
+            "fcf": 84853752,
+            "trailing_pe": null,
+            "employees": 945
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platform in the United States and internationally. The company offers SuperDove satellites to create an always-online scanner for the planet, with the goal of imaging the Earth every day at a ground sampli",
+          "website": "https://www.planet.com"
         },
         {
           "theme": "space_economy",
@@ -529,7 +557,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4887432704,
+            "market_cap": 3670050560,
             "revenue_growth": 0.579,
             "revenue_acceleration": -0.3528397024514931,
             "operating_margin": -0.71836,
@@ -546,34 +574,6 @@
           "theme": "space_economy",
           "theme_label": "🚀 우주경제",
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
-          "ticker": "PL",
-          "name": "Planet Labs",
-          "score": 45,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 15,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 18225946624,
-            "revenue_growth": 0.411,
-            "revenue_acceleration": -0.02854440827718646,
-            "operating_margin": -0.30429,
-            "fcf": 233776992,
-            "trailing_pe": null,
-            "employees": 945
-          },
-          "sector": "Industrials",
-          "industry": "Aerospace & Defense",
-          "summary": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platform in the United States and internationally. The company offers SuperDove satellites to create an always-online scanner for the planet, with the goal of imaging the Earth every day at a ground sampli",
-          "website": "https://www.planet.com"
-        },
-        {
-          "theme": "space_economy",
-          "theme_label": "🚀 우주경제",
-          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "ASTS",
           "name": "AST SpaceMobile",
           "score": 38,
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 44017209344,
+            "market_cap": 36328460288,
             "revenue_growth": 19.522,
             "revenue_acceleration": -5.743485682582001,
             "operating_margin": -10.13994,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 83055902720,
+            "market_cap": 68780048384,
             "revenue_growth": 0.635,
             "revenue_acceleration": -0.021663358197334573,
             "operating_margin": -0.22356,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3387812608,
+            "market_cap": 3024648960,
             "revenue_growth": 3.249,
             "revenue_acceleration": -4.403561451393062,
             "operating_margin": -3.37813,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5418492928,
+            "market_cap": 5105417216,
             "revenue_growth": 0.686,
             "revenue_acceleration": null,
             "operating_margin": -89.33333,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1965892352,
+            "market_cap": 1891839616,
             "revenue_growth": -0.095,
             "revenue_acceleration": -0.510993463496041,
             "operating_margin": -6.68075,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 641191936,
+            "market_cap": 552689408,
             "revenue_growth": -0.411,
             "revenue_acceleration": 0.17161757695414145,
             "operating_margin": -59.17523,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 530977984,
+            "market_cap": 415881600,
             "revenue_growth": -0.392,
             "revenue_acceleration": -1.9376733903076366,
             "operating_margin": -8.83186,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3801298944,
+            "market_cap": 3303205632,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 593146176,
+            "market_cap": 527024992,
             "revenue_growth": null,
             "revenue_acceleration": -2.4000000000000004,
             "operating_margin": -2672.4722,
@@ -883,7 +883,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1740864512,
+            "market_cap": 1588157056,
             "revenue_growth": 0.491,
             "revenue_acceleration": -0.6402352468317538,
             "operating_margin": -5.7756596,
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3479785728,
+            "market_cap": 4222557952,
             "revenue_growth": 0.077,
             "revenue_acceleration": -0.2155300469098605,
             "operating_margin": -0.08434,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5524002816,
+            "market_cap": 4718162944,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 744696000,
+            "market_cap": 661452096,
             "revenue_growth": -0.589,
             "revenue_acceleration": -0.024503926738905196,
             "operating_margin": -12.515909,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 87061584,
+            "market_cap": 68968536,
             "revenue_growth": -0.108,
             "revenue_acceleration": -0.521399780303095,
             "operating_margin": -0.37469003,
@@ -1029,7 +1029,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1178869376,
+            "market_cap": 1149423488,
             "revenue_growth": 0.39,
             "revenue_acceleration": -0.0011086551191295951,
             "operating_margin": 0.01528,
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4164082688,
+            "market_cap": 4310420480,
             "revenue_growth": 0.193,
             "revenue_acceleration": 0.029912266600075683,
             "operating_margin": -0.34917,
@@ -1085,7 +1085,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 462796544,
+            "market_cap": 450372480,
             "revenue_growth": 0.001,
             "revenue_acceleration": -0.2333864569001049,
             "operating_margin": -1.02891,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 612090496,
+            "market_cap": 536967360,
             "revenue_growth": -0.491,
             "revenue_acceleration": -0.39699546347286946,
             "operating_margin": -3.66509,
@@ -1147,17 +1147,17 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 14730850304,
+            "market_cap": 14604093440,
             "revenue_growth": 0.475,
             "revenue_acceleration": 0.11004833910041649,
             "operating_margin": 0.11829001,
             "fcf": -101450000,
-            "trailing_pe": 123.41151,
+            "trailing_pe": 121.81058,
             "employees": 13200
           },
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
-          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. The company offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired make",
+          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
           "website": "https://www.modine.com"
         },
         {
@@ -1175,7 +1175,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 81066500096,
+            "market_cap": 74982244352,
             "revenue_growth": 1.304,
             "revenue_acceleration": -0.37511312885213116,
             "operating_margin": 0.09612001,
@@ -1203,7 +1203,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2904079104,
+            "market_cap": 3096572672,
             "revenue_growth": -0.437,
             "revenue_acceleration": 0.2269928646468391,
             "operating_margin": -0.41006002,
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 121266987008,
+            "market_cap": 115428540416,
             "revenue_growth": 0.301,
             "revenue_acceleration": -0.20881176531398293,
             "operating_margin": 0.16364999,
             "fcf": 1964749952,
-            "trailing_pe": 79.32412,
+            "trailing_pe": 75.69521,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1259,12 +1259,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 106802307072,
+            "market_cap": 104308301824,
             "revenue_growth": 0.263,
             "revenue_acceleration": -0.07611429324319695,
             "operating_margin": 0.04244,
             "fcf": 1037176768,
-            "trailing_pe": 98.03443,
+            "trailing_pe": 95.22054,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5673401344,
+            "market_cap": 5467719168,
             "revenue_growth": 0.208,
             "revenue_acceleration": -0.03763094198184093,
             "operating_margin": -0.28803,
@@ -1321,11 +1321,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 287313824,
+            "market_cap": 211265280,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
-            "fcf": -19680876,
+            "fcf": -19702876,
             "trailing_pe": null,
             "employees": 87
           },
