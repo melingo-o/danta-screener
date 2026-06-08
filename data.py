@@ -42,10 +42,63 @@ def latest_trading_day_kr() -> date:
     return df.index[-1].date()
 
 
-def fetch_kr_full_listing() -> pd.DataFrame:
-    """Fetch the entire KOSPI+KOSDAQ listing (~2700 stocks) from FDR.
-    Indexed by 6-digit Code. Columns include Name, Market, Marcap, Volume, Close, etc.
+def _fetch_kr_listing_pykrx() -> pd.DataFrame:
+    """Full KOSPI+KOSDAQ listing via pykrx (queries KRX directly).
+
+    Robust replacement for fdr.StockListing('KRX'), whose hosted marcap-cache CSV
+    periodically returns HTTP 404. Returns the same schema downstream code expects:
+    indexed by 6-digit code, columns Name/Market/Marcap/Volume/Close.
     """
+    from pykrx import stock as krxstock
+
+    today = date.today()
+    # KRX publishes after close; walk back up to 10 days to land on a session w/ data
+    for offset in range(0, 10):
+        ds = (today - timedelta(days=offset)).strftime("%Y%m%d")
+        rows = []
+        try:
+            for market in ("KOSPI", "KOSDAQ"):
+                cap = krxstock.get_market_cap_by_ticker(ds, market=market)
+                if cap is None or len(cap) == 0:
+                    continue
+                for ticker6, r in cap.iterrows():
+                    t6 = str(ticker6).zfill(6)
+                    rows.append(
+                        {
+                            "code": t6,
+                            "Name": krxstock.get_market_ticker_name(t6),
+                            "Market": market,
+                            "Marcap": float(r.get("시가총액", 0) or 0),
+                            "Volume": float(r.get("거래량", 0) or 0),
+                            "Close": float(r.get("종가", 0) or 0),
+                        }
+                    )
+            if not rows:
+                continue
+            df = pd.DataFrame(rows).drop_duplicates(subset=["code"]).set_index("code")
+            df.index.name = "code"
+            df = df[df["Marcap"] > 0].sort_values("Marcap", ascending=False)
+            print(f"[fetch_kr_full_listing] pykrx: {len(df)} stocks for {ds}")
+            return df
+        except Exception as e:
+            print(f"[fetch_kr_full_listing] pykrx {ds} failed: {e}")
+            continue
+    raise RuntimeError("pykrx KR listing fetch failed for all recent dates")
+
+
+def fetch_kr_full_listing() -> pd.DataFrame:
+    """Fetch the entire KOSPI+KOSDAQ listing (~2700 stocks).
+
+    Primary source is pykrx (queries KRX directly); FDR StockListing is kept as a
+    fallback. FDR's marcap-cache CSV started returning HTTP 404 (2026-06), which
+    previously crashed the morning screening — pykrx avoids that hosted cache.
+    Indexed by 6-digit Code. Columns include Name, Market, Marcap, Volume, Close.
+    """
+    try:
+        return _fetch_kr_listing_pykrx()
+    except Exception as e:
+        print(f"[fetch_kr_full_listing] pykrx path failed ({e}); falling back to FDR")
+
     listing = _retry(lambda: fdr.StockListing("KRX"))
     if "Code" not in listing.columns:
         raise RuntimeError(f"FDR StockListing missing 'Code'. Got: {list(listing.columns)}")

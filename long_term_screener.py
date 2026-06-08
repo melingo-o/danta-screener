@@ -76,19 +76,21 @@ def kst_now_iso() -> str:
 
 
 def fetch_kr_universe() -> List[Dict]:
-    listing = fdr.StockListing("KRX")
-    listing = listing.dropna(subset=["Code", "Marcap"])
-    listing["Code"] = listing["Code"].astype(str).str.zfill(6)
+    # Reuse the shared pykrx-primary listing fetch (FDR's KRX marcap cache 404s).
+    from data import fetch_kr_full_listing
+
+    listing = fetch_kr_full_listing()  # indexed by 6-digit code; cols Name/Market/Marcap/...
+    listing = listing.dropna(subset=["Marcap"])
     listing = listing[listing["Market"].isin(["KOSPI", "KOSDAQ"])]
     listing = listing[listing["Marcap"] >= KR_MIN_MARKET_CAP_KRW]
     listing = listing.sort_values("Marcap", ascending=False)
 
     out = []
-    for _, row in listing.iterrows():
+    for code, row in listing.iterrows():
         suffix = "KS" if row["Market"] == "KOSPI" else "KQ"
         out.append({
-            "ticker": row["Code"],
-            "yf_ticker": f"{row['Code']}.{suffix}",
+            "ticker": code,
+            "yf_ticker": f"{code}.{suffix}",
             "name": row["Name"],
             "market": "KR",
             "market_cap_krw": float(row["Marcap"]),
