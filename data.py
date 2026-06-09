@@ -2,6 +2,7 @@
 
 import time
 from datetime import date, timedelta
+from pathlib import Path
 from typing import Dict, Tuple
 
 import numpy as np
@@ -86,19 +87,10 @@ def _fetch_kr_listing_pykrx() -> pd.DataFrame:
     raise RuntimeError("pykrx KR listing fetch failed for all recent dates")
 
 
-def fetch_kr_full_listing() -> pd.DataFrame:
-    """Fetch the entire KOSPI+KOSDAQ listing (~2700 stocks).
-
-    Primary source is pykrx (queries KRX directly); FDR StockListing is kept as a
-    fallback. FDR's marcap-cache CSV started returning HTTP 404 (2026-06), which
-    previously crashed the morning screening — pykrx avoids that hosted cache.
-    Indexed by 6-digit Code. Columns include Name, Market, Marcap, Volume, Close.
-    """
-    try:
-        return _fetch_kr_listing_pykrx()
-    except Exception as e:
-        print(f"[fetch_kr_full_listing] pykrx path failed ({e}); falling back to FDR")
-
+def _fetch_kr_listing_fdr_krx() -> pd.DataFrame:
+    """Legacy path: fdr.StockListing('KRX'). Its hosted marcap-cache CSV started
+    returning HTTP 404 (2026-06), so this is kept only as a middle fallback in case
+    the cache is restored upstream."""
     listing = _retry(lambda: fdr.StockListing("KRX"))
     if "Code" not in listing.columns:
         raise RuntimeError(f"FDR StockListing missing 'Code'. Got: {list(listing.columns)}")
@@ -108,9 +100,58 @@ def fetch_kr_full_listing() -> pd.DataFrame:
         listing = listing[listing["Market"].isin(["KOSPI", "KOSDAQ"])]
     listing = listing.drop_duplicates(subset=["Code"]).set_index("Code")
     listing.index.name = "code"
-    if "Marcap" in listing.columns:
-        listing = listing.sort_values("Marcap", ascending=False)
-    return listing
+    if "Marcap" not in listing.columns:
+        raise RuntimeError("FDR KRX listing has no Marcap column")
+    return listing.sort_values("Marcap", ascending=False)
+
+
+def _fetch_kr_listing_snapshot() -> pd.DataFrame:
+    """Last-resort fallback: reuse the most recently committed universe.csv snapshot.
+
+    Stock membership + market cap barely move day-to-day, so a slightly stale listing
+    is fine for universe selection — OHLCV is still fetched fresh from yfinance. This
+    keeps the morning screening alive through any upstream KRX/FDR outage.
+    """
+    path = Path(__file__).parent / "data" / "universe.csv"
+    if not path.exists():
+        raise RuntimeError("no committed universe.csv snapshot to fall back to")
+    df = pd.read_csv(path, dtype={"code": str})
+    if "code" not in df.columns:
+        raise RuntimeError(f"snapshot missing 'code'. Got: {list(df.columns)}")
+    df["code"] = df["code"].astype(str).str.zfill(6)
+    df = df.drop_duplicates(subset=["code"]).set_index("code")
+    df.index.name = "code"
+    needed = {"Name", "Market", "Marcap"}
+    missing = needed - set(df.columns)
+    if missing:
+        raise RuntimeError(f"snapshot missing columns: {missing}")
+    df = df[df["Market"].isin(["KOSPI", "KOSDAQ"])]
+    df = df.dropna(subset=["Marcap"]).sort_values("Marcap", ascending=False)
+    as_of = df["snapshot_date"].iloc[0] if "snapshot_date" in df.columns and len(df) else "?"
+    print(f"[fetch_kr_full_listing] SNAPSHOT fallback: {len(df)} stocks (as of {as_of})")
+    return df
+
+
+def fetch_kr_full_listing() -> pd.DataFrame:
+    """Fetch the entire KOSPI+KOSDAQ listing (~2700 stocks).
+
+    Layered for resilience — both upstream sources have failed simultaneously
+    (FDR's marcap-cache CSV → HTTP 404; KRX rejecting datacenter IPs → empty body):
+      1. pykrx (queries KRX directly — freshest when reachable)
+      2. fdr.StockListing('KRX') legacy cache (if upstream restores it)
+      3. last committed data/universe.csv snapshot (guaranteed; keeps the run alive)
+    Indexed by 6-digit Code. Columns include Name, Market, Marcap, Volume, Close.
+    """
+    for name, fn in (
+        ("pykrx", _fetch_kr_listing_pykrx),
+        ("fdr-krx", _fetch_kr_listing_fdr_krx),
+        ("snapshot", _fetch_kr_listing_snapshot),
+    ):
+        try:
+            return fn()
+        except Exception as e:
+            print(f"[fetch_kr_full_listing] {name} failed: {type(e).__name__}: {e}")
+    raise RuntimeError("all KR listing sources failed (pykrx, fdr-krx, snapshot)")
 
 
 def filter_to_picking_universe(full_listing: pd.DataFrame) -> pd.DataFrame:
