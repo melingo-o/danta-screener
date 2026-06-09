@@ -31,6 +31,10 @@ def _save_csv(df: pd.DataFrame, name: str, as_of) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     path = DATA_DIR / name
     out = df.copy()
+    # Drop any pre-existing snapshot_date (e.g. when the listing came from a
+    # committed snapshot CSV fallback) so the re-insert below can't collide.
+    if "snapshot_date" in out.columns:
+        out = out.drop(columns=["snapshot_date"])
     out.insert(0, "snapshot_date", as_of.strftime("%Y-%m-%d"))
     out.to_csv(path, encoding="utf-8-sig")
     print(f"[run] saved {path} (rows={len(out)})")
