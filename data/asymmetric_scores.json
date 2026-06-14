@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-08T08:35:21+09:00",
-  "started_at": "2026-06-08T08:35:18+09:00",
+  "updated_at": "2026-06-15T08:45:28+09:00",
+  "started_at": "2026-06-15T08:45:25+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -24,34 +24,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "QUBT",
-          "name": "Quantum Computing Inc",
-          "score": 80,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 30,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 2245200896,
-            "revenue_growth": 93.641,
-            "revenue_acceleration": 15.849810964308915,
-            "operating_margin": -5.5676003,
-            "fcf": -40361376,
-            "trailing_pe": null,
-            "employees": 72
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "Quantum Computing Inc., an integrated photonics company, provides quantum machines to commercial and government markets in the United States. The company develops thin-film lithium niobate chips for optical devices, such as electro-optical modulators, periodically poled devices for frequency conversion, and micro-ring resonator cavities markets. It is also developing the entropy quantum computer (",
-          "website": "https://www.quantumcomputinginc.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "RGTI",
           "name": "Rigetti Computing",
           "score": 80,
@@ -63,7 +35,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6874007552,
+            "market_cap": 6973727232,
             "revenue_growth": 1.989,
             "revenue_acceleration": 1.2674616303654243,
             "operating_margin": -5.8979497,
@@ -80,6 +52,62 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QUBT",
+          "name": "Quantum Computing Inc",
+          "score": 80,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2239562496,
+            "revenue_growth": 93.641,
+            "revenue_acceleration": 15.849810964308915,
+            "operating_margin": -5.5676003,
+            "fcf": -40361376,
+            "trailing_pe": null,
+            "employees": 72
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "Quantum Computing Inc., an integrated photonics company, provides quantum machines to commercial and government markets in the United States. The company develops thin-film lithium niobate chips for optical devices, such as electro-optical modulators, periodically poled devices for frequency conversion, and micro-ring resonator cavities markets. It is also developing the entropy quantum computer (",
+          "website": "https://www.quantumcomputinginc.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QBTS",
+          "name": "D-Wave Quantum",
+          "score": 50,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 8657304576,
+            "revenue_growth": -0.809,
+            "revenue_acceleration": 0.3217098423819641,
+            "operating_margin": -19.14871,
+            "fcf": -63507248,
+            "trailing_pe": null,
+            "employees": 382
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage 2 quantum computers; Ocean, a suite of open-source tools; and Leap quantum cloud service, a cloud-based service that provides real-time access to quantum computers and quantum hybrid solvers; and secure access and data protection services, ",
+          "website": "https://www.dwavequantum.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "ARQQ",
           "name": "Arqit Quantum",
           "score": 50,
@@ -91,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 211265280,
+            "market_cap": 236672816,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -119,46 +147,18 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 21194266624,
+            "market_cap": 21593665536,
             "revenue_growth": 7.547,
             "revenue_acceleration": -1.026458468490365,
             "operating_margin": -4.01755,
             "fcf": -91360376,
-            "trailing_pe": 145.58975,
+            "trailing_pe": 148.33333,
             "employees": 1132
           },
           "sector": "Technology",
           "industry": "Computer Hardware",
           "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
           "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "QBTS",
-          "name": "D-Wave Quantum",
-          "score": 50,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 8835118080,
-            "revenue_growth": -0.809,
-            "revenue_acceleration": 0.3217098423819641,
-            "operating_margin": -19.14871,
-            "fcf": -63507248,
-            "trailing_pe": null,
-            "employees": 382
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage 2 quantum computers; Ocean, a suite of open-source tools; and Leap quantum cloud service, a cloud-based service that provides real-time access to quantum computers and quantum hybrid solvers; and secure access and data protection services, ",
-          "website": "https://www.dwavequantum.com"
         },
         {
           "theme": "quantum",
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 228648160,
+            "market_cap": 206153536,
             "revenue_growth": -0.694,
             "revenue_acceleration": -0.2455843741831943,
             "operating_margin": -93.22868,
@@ -209,7 +209,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 844812160,
+            "market_cap": 824667584,
             "revenue_growth": 2.793,
             "revenue_acceleration": -2.607374343051987,
             "operating_margin": -5.9540696,
@@ -237,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1227991424,
+            "market_cap": 1208185088,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -254,6 +254,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "LEU",
+          "name": "Centrus Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3198402816,
+            "revenue_growth": 0.049,
+            "revenue_acceleration": -0.9921324137307403,
+            "operating_margin": -0.00261,
+            "fcf": -10875000,
+            "trailing_pe": 59.12,
+            "employees": 467
+          },
+          "sector": "Energy",
+          "industry": "Uranium",
+          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Belgium, Japan, the Netherlands, and internationally. The company operates in two segments, Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and ",
+          "website": "https://www.centrusenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "OKLO",
           "name": "Oklo",
           "score": 41,
@@ -265,7 +293,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 10107137024,
+            "market_cap": 10002742272,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -282,34 +310,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "LEU",
-          "name": "Centrus Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 3,
-            "acceleration": 0,
-            "margin": 3,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3182664704,
-            "revenue_growth": 0.049,
-            "revenue_acceleration": -0.9921324137307403,
-            "operating_margin": -0.00261,
-            "fcf": -10875000,
-            "trailing_pe": 58.82909,
-            "employees": 467
-          },
-          "sector": "Energy",
-          "industry": "Uranium",
-          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Belgium, Japan, the Netherlands, and internationally. The company operates in two segments, Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and ",
-          "website": "https://www.centrusenergy.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
           "score": 35,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3634110720,
+            "market_cap": 3422986496,
             "revenue_growth": -0.958,
             "revenue_acceleration": -0.30245829827381665,
             "operating_margin": -101.81239,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5823671808,
+            "market_cap": 5466168832,
             "revenue_growth": 0.173,
             "revenue_acceleration": -0.23740710952661498,
             "operating_margin": 0.07274,
             "fcf": 511553632,
-            "trailing_pe": 18.733332,
+            "trailing_pe": 17.583332,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,7 +383,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 26571960320,
+            "market_cap": 25129275392,
             "revenue_growth": 0.231,
             "revenue_acceleration": 0.027008496249401513,
             "operating_margin": 0.010880001,
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3818581,
+            "market_cap": 3633351,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 36.4108,
+            "trailing_pe": 35.586334,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4710879744,
+            "market_cap": 4271240448,
             "revenue_growth": 1.987,
             "revenue_acceleration": 3.350931502831061,
             "operating_margin": -0.10295,
@@ -501,12 +501,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5007265792,
+            "market_cap": 5003036672,
             "revenue_growth": 0.019,
             "revenue_acceleration": 0.030724771420804906,
             "operating_margin": 0.23150998,
             "fcf": 252985376,
-            "trailing_pe": 47.838383,
+            "trailing_pe": 47.797977,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -529,7 +529,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 11482988544,
+            "market_cap": 11101938688,
             "revenue_growth": 0.421,
             "revenue_acceleration": -0.009998172065729033,
             "operating_margin": -0.30459,
@@ -557,7 +557,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3670050560,
+            "market_cap": 3007651072,
             "revenue_growth": 0.579,
             "revenue_acceleration": -0.3528397024514931,
             "operating_margin": -0.71836,
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 36328460288,
+            "market_cap": 31985348608,
             "revenue_growth": 19.522,
             "revenue_acceleration": -5.743485682582001,
             "operating_margin": -10.13994,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 68780048384,
+            "market_cap": 63975190528,
             "revenue_growth": 0.635,
             "revenue_acceleration": -0.021663358197334573,
             "operating_margin": -0.22356,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3024648960,
+            "market_cap": 2986583808,
             "revenue_growth": 3.249,
             "revenue_acceleration": -4.403561451393062,
             "operating_margin": -3.37813,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5105417216,
+            "market_cap": 4904509440,
             "revenue_growth": 0.686,
             "revenue_acceleration": null,
             "operating_margin": -89.33333,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1891839616,
+            "market_cap": 1692036608,
             "revenue_growth": -0.095,
             "revenue_acceleration": -0.510993463496041,
             "operating_margin": -6.68075,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 552689408,
+            "market_cap": 501213472,
             "revenue_growth": -0.411,
             "revenue_acceleration": 0.17161757695414145,
             "operating_margin": -59.17523,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 415881600,
+            "market_cap": 383654592,
             "revenue_growth": -0.392,
             "revenue_acceleration": -1.9376733903076366,
             "operating_margin": -8.83186,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3303205632,
+            "market_cap": 3338037248,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 527024992,
+            "market_cap": 507577536,
             "revenue_growth": null,
             "revenue_acceleration": -2.4000000000000004,
             "operating_margin": -2672.4722,
@@ -883,7 +883,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1588157056,
+            "market_cap": 1452901888,
             "revenue_growth": 0.491,
             "revenue_acceleration": -0.6402352468317538,
             "operating_margin": -5.7756596,
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4222557952,
+            "market_cap": 4370006016,
             "revenue_growth": 0.077,
             "revenue_acceleration": -0.2155300469098605,
             "operating_margin": -0.08434,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4718162944,
+            "market_cap": 4361378816,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 661452096,
+            "market_cap": 629954368,
             "revenue_growth": -0.589,
             "revenue_acceleration": -0.024503926738905196,
             "operating_margin": -12.515909,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 68968536,
+            "market_cap": 65475324,
             "revenue_growth": -0.108,
             "revenue_acceleration": -0.521399780303095,
             "operating_margin": -0.37469003,
@@ -1029,7 +1029,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1149423488,
+            "market_cap": 1186618240,
             "revenue_growth": 0.39,
             "revenue_acceleration": -0.0011086551191295951,
             "operating_margin": 0.01528,
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4310420480,
+            "market_cap": 4743205888,
             "revenue_growth": 0.193,
             "revenue_acceleration": 0.029912266600075683,
             "operating_margin": -0.34917,
@@ -1085,7 +1085,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 450372480,
+            "market_cap": 406888192,
             "revenue_growth": 0.001,
             "revenue_acceleration": -0.2333864569001049,
             "operating_margin": -1.02891,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 536967360,
+            "market_cap": 515410240,
             "revenue_growth": -0.491,
             "revenue_acceleration": -0.39699546347286946,
             "operating_margin": -3.66509,
@@ -1147,12 +1147,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 14604093440,
+            "market_cap": 14497932288,
             "revenue_growth": 0.475,
             "revenue_acceleration": 0.11004833910041649,
             "operating_margin": 0.11829001,
             "fcf": -101450000,
-            "trailing_pe": 121.81058,
+            "trailing_pe": 122.0,
             "employees": 13200
           },
           "sector": "Consumer Cyclical",
@@ -1175,7 +1175,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 74982244352,
+            "market_cap": 74017988608,
             "revenue_growth": 1.304,
             "revenue_acceleration": -0.37511312885213116,
             "operating_margin": 0.09612001,
@@ -1203,7 +1203,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3096572672,
+            "market_cap": 3411734528,
             "revenue_growth": -0.437,
             "revenue_acceleration": 0.2269928646468391,
             "operating_margin": -0.41006002,
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 115428540416,
+            "market_cap": 116335034368,
             "revenue_growth": 0.301,
             "revenue_acceleration": -0.20881176531398293,
             "operating_margin": 0.16364999,
             "fcf": 1964749952,
-            "trailing_pe": 75.69521,
+            "trailing_pe": 76.28967,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1259,12 +1259,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 104308301824,
+            "market_cap": 106203561984,
             "revenue_growth": 0.263,
             "revenue_acceleration": -0.07611429324319695,
             "operating_margin": 0.04244,
             "fcf": 1037176768,
-            "trailing_pe": 95.22054,
+            "trailing_pe": 97.08368,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5467719168,
+            "market_cap": 5090635264,
             "revenue_growth": 0.208,
             "revenue_acceleration": -0.03763094198184093,
             "operating_margin": -0.28803,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 211265280,
+            "market_cap": 236672816,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
