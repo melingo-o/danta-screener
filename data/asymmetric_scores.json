@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-29T08:36:41+09:00",
-  "started_at": "2026-06-29T08:36:38+09:00",
+  "updated_at": "2026-07-06T08:34:19+09:00",
+  "started_at": "2026-07-06T08:34:14+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -24,34 +24,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "RGTI",
-          "name": "Rigetti Computing",
-          "score": 80,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 30,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 6102842368,
-            "revenue_growth": 1.989,
-            "revenue_acceleration": 1.2674616303654243,
-            "operating_margin": -5.8979497,
-            "fcf": -6209875,
-            "trailing_pe": null,
-            "employees": 162
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
-          "website": "https://www.rigetti.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QUBT",
           "name": "Quantum Computing Inc",
           "score": 80,
@@ -63,7 +35,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2070411264,
+            "market_cap": 2041091712,
             "revenue_growth": 93.641,
             "revenue_acceleration": 15.849810964308915,
             "operating_margin": -5.5676003,
@@ -80,6 +52,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "RGTI",
+          "name": "Rigetti Computing",
+          "score": 80,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 5963234816,
+            "revenue_growth": 1.989,
+            "revenue_acceleration": 1.2674616303654243,
+            "operating_margin": -5.8979497,
+            "fcf": -6209875,
+            "trailing_pe": null,
+            "employees": 162
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
+          "website": "https://www.rigetti.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "IONQ",
           "name": "IonQ",
           "score": 50,
@@ -91,12 +91,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 18405941248,
+            "market_cap": 18335019008,
             "revenue_growth": 7.547,
             "revenue_acceleration": -1.026458468490365,
             "operating_margin": -4.01755,
             "fcf": -91360376,
-            "trailing_pe": 126.435905,
+            "trailing_pe": 125.94872,
             "employees": 1132
           },
           "sector": "Technology",
@@ -119,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 422182528,
+            "market_cap": 409217696,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 8431332352,
+            "market_cap": 8346130432,
             "revenue_growth": -0.809,
             "revenue_acceleration": 0.3217098423819641,
             "operating_margin": -19.14871,
@@ -166,16 +166,16 @@
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QSI",
           "name": "Quantum-Si",
-          "score": 5,
+          "score": 20,
           "breakdown": {
-            "cap": 5,
+            "cap": 20,
             "revenue_growth": 0,
             "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 186141376,
+            "market_cap": 202604048,
             "revenue_growth": -0.694,
             "revenue_acceleration": -0.2455843741831943,
             "operating_margin": -93.22868,
@@ -209,7 +209,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 776824256,
+            "market_cap": 708836416,
             "revenue_growth": 2.793,
             "revenue_acceleration": -2.607374343051987,
             "operating_margin": -5.9540696,
@@ -237,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 8699549696,
+            "market_cap": 9110168576,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -254,34 +254,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "LEU",
-          "name": "Centrus Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 3,
-            "acceleration": 0,
-            "margin": 3,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3256240896,
-            "revenue_growth": 0.049,
-            "revenue_acceleration": -0.9921324137307403,
-            "operating_margin": -0.00261,
-            "fcf": -10875000,
-            "trailing_pe": 60.18909,
-            "employees": 467
-          },
-          "sector": "Energy",
-          "industry": "Uranium",
-          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The company operates through two segments: Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and enri",
-          "website": "https://www.centrusenergy.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "NNE",
           "name": "Nano Nuclear Energy",
           "score": 41,
@@ -293,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1035661696,
+            "market_cap": 1044001216,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -310,6 +282,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "LEU",
+          "name": "Centrus Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3189550080,
+            "revenue_growth": 0.049,
+            "revenue_acceleration": -0.9921324137307403,
+            "operating_margin": -0.00261,
+            "fcf": -10875000,
+            "trailing_pe": 58.742756,
+            "employees": 467
+          },
+          "sector": "Energy",
+          "industry": "Uranium",
+          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The company operates through two segments: Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and enri",
+          "website": "https://www.centrusenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
           "score": 35,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3495668736,
+            "market_cap": 3377992704,
             "revenue_growth": -0.958,
             "revenue_acceleration": -0.30245829827381665,
             "operating_margin": -101.81239,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5455805952,
+            "market_cap": 6067188224,
             "revenue_growth": 0.173,
             "revenue_acceleration": -0.23740710952661498,
             "operating_margin": 0.07274,
             "fcf": 511553632,
-            "trailing_pe": 17.55,
+            "trailing_pe": 19.516666,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,7 +383,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 24893857792,
+            "market_cap": 25799309312,
             "revenue_growth": 0.231,
             "revenue_acceleration": 0.027008496249401513,
             "operating_margin": 0.010880001,
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1362088,
+            "market_cap": 1319300,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 34.522194,
+            "trailing_pe": 35.84518,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3175351296,
+            "market_cap": 3141656064,
             "revenue_growth": 1.987,
             "revenue_acceleration": 3.350931502831061,
             "operating_margin": -0.10295,
@@ -501,12 +501,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4601271296,
+            "market_cap": 5695149568,
             "revenue_growth": 0.019,
             "revenue_acceleration": 0.030724771420804906,
             "operating_margin": 0.23150998,
             "fcf": 252985376,
-            "trailing_pe": 43.959595,
+            "trailing_pe": 54.29293,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -529,7 +529,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 9647816704,
+            "market_cap": 11183910912,
             "revenue_growth": 0.421,
             "revenue_acceleration": -0.009998172065729033,
             "operating_margin": -0.30459,
@@ -557,7 +557,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2174181632,
+            "market_cap": 2249770752,
             "revenue_growth": 0.579,
             "revenue_acceleration": -0.3528397024514931,
             "operating_margin": -0.71836,
@@ -576,16 +576,16 @@
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "ASTS",
           "name": "AST SpaceMobile",
-          "score": 50,
+          "score": 38,
           "breakdown": {
-            "cap": 20,
+            "cap": 8,
             "revenue_growth": 30,
             "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 27731499008,
+            "market_cap": 33041043456,
             "revenue_growth": 19.522,
             "revenue_acceleration": -5.743485682582001,
             "operating_margin": -10.13994,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 52822179840,
+            "market_cap": 62769291264,
             "revenue_growth": 0.635,
             "revenue_acceleration": -0.021663358197334573,
             "operating_margin": -0.22356,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3581225728,
+            "market_cap": 3579168000,
             "revenue_growth": 3.249,
             "revenue_acceleration": -4.403561451393062,
             "operating_margin": -3.37813,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5408748032,
+            "market_cap": 5916926464,
             "revenue_growth": 0.686,
             "revenue_acceleration": null,
             "operating_margin": -89.33333,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2330567424,
+            "market_cap": 2453522944,
             "revenue_growth": -0.095,
             "revenue_acceleration": -0.510993463496041,
             "operating_margin": -6.68075,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 619517888,
+            "market_cap": 698989504,
             "revenue_growth": -0.411,
             "revenue_acceleration": 0.17161757695414145,
             "operating_margin": -59.17523,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 437366240,
+            "market_cap": 560135744,
             "revenue_growth": -0.392,
             "revenue_acceleration": -1.9376733903076366,
             "operating_margin": -8.83186,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4416658432,
+            "market_cap": 4346995200,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 548417088,
+            "market_cap": 614538368,
             "revenue_growth": null,
             "revenue_acceleration": -2.4000000000000004,
             "operating_margin": -2672.4722,
@@ -883,7 +883,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1298012928,
+            "market_cap": 1169302528,
             "revenue_growth": 0.491,
             "revenue_acceleration": -0.6402352468317538,
             "operating_margin": -5.7756596,
@@ -900,34 +900,6 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
-          "ticker": "FLNC",
-          "name": "Fluence Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 3,
-            "acceleration": 0,
-            "margin": 3,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3551666944,
-            "revenue_growth": 0.077,
-            "revenue_acceleration": -0.2155300469098605,
-            "operating_margin": -0.08434,
-            "fcf": -133672128,
-            "trailing_pe": null,
-            "employees": 1670
-          },
-          "sector": "Utilities",
-          "industry": "Utilities - Renewable",
-          "summary": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. It sells energy storage products with integrated hardware, software, and digital intelligence. The company's energy storage products include Gridstack Pro, a large-scale front-of-the-meter a",
-          "website": "https://fluenceenergy.com"
-        },
-        {
-          "theme": "battery_energy_storage",
-          "theme_label": "🔋 배터리·에너지저장",
-          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "QS",
           "name": "QuantumScape",
           "score": 41,
@@ -939,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4404438528,
+            "market_cap": 4349075968,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -956,6 +928,34 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "FLNC",
+          "name": "Fluence Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3133281792,
+            "revenue_growth": 0.077,
+            "revenue_acceleration": -0.2155300469098605,
+            "operating_margin": -0.08434,
+            "fcf": -133672128,
+            "trailing_pe": null,
+            "employees": 1670
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Renewable",
+          "summary": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. It sells energy storage products with integrated hardware, software, and digital intelligence. The company's energy storage products include Gridstack Pro, a large-scale front-of-the-meter a",
+          "website": "https://fluenceenergy.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "SLDP",
           "name": "Solid Power",
           "score": 20,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 582707776,
+            "market_cap": 566958912,
             "revenue_growth": -0.589,
             "revenue_acceleration": -0.024503926738905196,
             "operating_margin": -12.515909,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 65923176,
+            "market_cap": 70312080,
             "revenue_growth": -0.108,
             "revenue_acceleration": -0.521399780303095,
             "operating_margin": -0.37469003,
@@ -1029,7 +1029,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1488826240,
+            "market_cap": 1507940224,
             "revenue_growth": 0.39,
             "revenue_acceleration": -0.0011086551191295951,
             "operating_margin": 0.01528,
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6217167360,
+            "market_cap": 6179804672,
             "revenue_growth": 0.193,
             "revenue_acceleration": 0.029912266600075683,
             "operating_margin": -0.34917,
@@ -1085,7 +1085,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 512492800,
+            "market_cap": 521810848,
             "revenue_growth": 0.001,
             "revenue_acceleration": -0.2333864569001049,
             "operating_margin": -1.02891,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 669576064,
+            "market_cap": 679374720,
             "revenue_growth": -0.491,
             "revenue_acceleration": -0.39699546347286946,
             "operating_margin": -3.66509,
@@ -1147,12 +1147,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 13520313344,
+            "market_cap": 12198861824,
             "revenue_growth": 0.475,
             "revenue_acceleration": 0.11004833910041649,
             "operating_margin": 0.11829001,
             "fcf": -101450000,
-            "trailing_pe": 113.77334,
+            "trailing_pe": 102.19912,
             "employees": 13200
           },
           "sector": "Consumer Cyclical",
@@ -1175,7 +1175,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 71685545984,
+            "market_cap": 77053001728,
             "revenue_growth": 1.304,
             "revenue_acceleration": -0.37511312885213116,
             "operating_margin": 0.09612001,
@@ -1203,7 +1203,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2887723264,
+            "market_cap": 2200469504,
             "revenue_growth": -0.437,
             "revenue_acceleration": 0.2269928646468391,
             "operating_margin": -0.41006002,
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 116749877248,
+            "market_cap": 115436216320,
             "revenue_growth": 0.301,
             "revenue_acceleration": -0.20881176531398293,
             "operating_margin": 0.16364999,
             "fcf": 1964749952,
-            "trailing_pe": 76.36935,
+            "trailing_pe": 75.70025,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1259,12 +1259,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 103221870592,
+            "market_cap": 100286693376,
             "revenue_growth": 0.263,
             "revenue_acceleration": -0.07611429324319695,
             "operating_margin": 0.04244,
             "fcf": 1037176768,
-            "trailing_pe": 94.358025,
+            "trailing_pe": 91.80082,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5432980480,
+            "market_cap": 6002492928,
             "revenue_growth": 0.208,
             "revenue_acceleration": -0.03763094198184093,
             "operating_margin": -0.28803,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 422182528,
+            "market_cap": 409217696,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
