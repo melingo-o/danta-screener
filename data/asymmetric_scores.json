@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-27T08:27:12+09:00",
-  "started_at": "2026-07-27T08:27:07+09:00",
+  "updated_at": "2026-08-03T08:27:54+09:00",
+  "started_at": "2026-08-03T08:27:52+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1675724928,
+            "market_cap": 1826833536,
             "revenue_growth": 93.641,
             "revenue_acceleration": 15.849810964308915,
             "operating_margin": -5.5676003,
@@ -63,7 +63,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4703442944,
+            "market_cap": 4969362432,
             "revenue_growth": 1.989,
             "revenue_acceleration": 1.2674616303654243,
             "operating_margin": -5.8979497,
@@ -91,46 +91,18 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 12258185216,
+            "market_cap": 13601956864,
             "revenue_growth": 7.547,
             "revenue_acceleration": -1.026458468490365,
             "operating_margin": -4.01755,
             "fcf": -91360376,
-            "trailing_pe": 84.20513,
+            "trailing_pe": 93.4359,
             "employees": 1132
           },
           "sector": "Technology",
           "industry": "Computer Hardware",
           "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
           "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "ARQQ",
-          "name": "Arqit Quantum",
-          "score": 50,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 289750144,
-            "revenue_growth": 8.299,
-            "revenue_acceleration": null,
-            "operating_margin": -49.31621,
-            "fcf": -19702876,
-            "trailing_pe": null,
-            "employees": 87
-          },
-          "sector": "Technology",
-          "industry": "Software - Infrastructure",
-          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
-          "website": "https://arqit.uk"
         },
         {
           "theme": "quantum",
@@ -147,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6004916224,
+            "market_cap": 6697649152,
             "revenue_growth": -0.809,
             "revenue_acceleration": 0.3217098423819641,
             "operating_margin": -19.14871,
@@ -164,6 +136,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "ARQQ",
+          "name": "Arqit Quantum",
+          "score": 50,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 298103296,
+            "revenue_growth": 8.299,
+            "revenue_acceleration": null,
+            "operating_margin": -49.31621,
+            "fcf": -19702876,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
+          "website": "https://arqit.uk"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QSI",
           "name": "Quantum-Si",
           "score": 5,
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 167697104,
+            "market_cap": 155132336,
             "revenue_growth": -0.694,
             "revenue_acceleration": -0.2455843741831943,
             "operating_margin": -93.22868,
@@ -209,7 +209,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 487246336,
+            "market_cap": 503613792,
             "revenue_growth": 2.793,
             "revenue_acceleration": -2.607374343051987,
             "operating_margin": -5.9540696,
@@ -226,6 +226,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "LEU",
+          "name": "Centrus Energy",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3480707328,
+            "revenue_growth": 0.049,
+            "revenue_acceleration": -0.9921324137307403,
+            "operating_margin": -0.00261,
+            "fcf": -10875000,
+            "trailing_pe": 64.57299,
+            "employees": 467
+          },
+          "sector": "Energy",
+          "industry": "Uranium",
+          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The company operates through two segments: Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and enri",
+          "website": "https://www.centrusenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "OKLO",
           "name": "Oklo",
           "score": 41,
@@ -237,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7003137536,
+            "market_cap": 6756070400,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -254,34 +282,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "LEU",
-          "name": "Centrus Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 3,
-            "acceleration": 0,
-            "margin": 3,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3224174080,
-            "revenue_growth": 0.049,
-            "revenue_acceleration": -0.9921324137307403,
-            "operating_margin": -0.00261,
-            "fcf": -10875000,
-            "trailing_pe": 59.596363,
-            "employees": 467
-          },
-          "sector": "Energy",
-          "industry": "Uranium",
-          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The company operates through two segments: Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and enri",
-          "website": "https://www.centrusenergy.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
           "score": 35,
@@ -293,7 +293,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2799995904,
+            "market_cap": 2914210816,
             "revenue_growth": -0.958,
             "revenue_acceleration": -0.30245829827381665,
             "operating_margin": -101.81239,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 812580032,
+            "market_cap": 854337472,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5616423424,
+            "market_cap": 6611214336,
             "revenue_growth": 0.173,
             "revenue_acceleration": -0.23740710952661498,
             "operating_margin": 0.07274,
             "fcf": 511553632,
-            "trailing_pe": 18.066666,
+            "trailing_pe": 21.266666,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,7 +383,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 24235896832,
+            "market_cap": 25986435072,
             "revenue_growth": 0.231,
             "revenue_acceleration": 0.027008496249401513,
             "operating_margin": 0.010880001,
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 784449,
+            "market_cap": 541982,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 33.18228,
+            "trailing_pe": 34.54567,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2073043840,
+            "market_cap": 1979981440,
             "revenue_growth": 1.987,
             "revenue_acceleration": 3.350931502831061,
             "operating_margin": -0.10295,
@@ -501,12 +501,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4850866176,
+            "market_cap": 5016164352,
             "revenue_growth": 0.038,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.15099,
             "fcf": 239205376,
-            "trailing_pe": 52.62069,
+            "trailing_pe": 54.41379,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -529,7 +529,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7295559680,
+            "market_cap": 7299123712,
             "revenue_growth": 0.421,
             "revenue_acceleration": -0.009998172065729033,
             "operating_margin": -0.30459,
@@ -557,7 +557,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2075392128,
+            "market_cap": 2058674432,
             "revenue_growth": 0.579,
             "revenue_acceleration": -0.3528397024514931,
             "operating_margin": -0.71836,
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 21812600832,
+            "market_cap": 22891587584,
             "revenue_growth": 19.522,
             "revenue_acceleration": -5.743485682582001,
             "operating_margin": -10.13994,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 39932166144,
+            "market_cap": 40581976064,
             "revenue_growth": 0.635,
             "revenue_acceleration": -0.021663358197334573,
             "operating_margin": -0.22356,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2582268416,
+            "market_cap": 2625477632,
             "revenue_growth": 3.249,
             "revenue_acceleration": -4.403561451393062,
             "operating_margin": -3.37813,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4583451648,
+            "market_cap": 4726253568,
             "revenue_growth": 0.686,
             "revenue_acceleration": null,
             "operating_margin": -89.33333,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1499219968,
+            "market_cap": 1492233856,
             "revenue_growth": -0.095,
             "revenue_acceleration": -0.510993463496041,
             "operating_margin": -6.68075,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 532821504,
+            "market_cap": 527402976,
             "revenue_growth": -0.411,
             "revenue_acceleration": 0.17161757695414145,
             "operating_margin": -59.17523,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 399000768,
+            "market_cap": 395931520,
             "revenue_growth": -0.392,
             "revenue_acceleration": -1.9376733903076366,
             "operating_margin": -8.83186,
@@ -793,13 +793,13 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4039315200,
+            "market_cap": 3702564096,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
-            "fcf": -177354752,
+            "fcf": -230792128,
             "trailing_pe": null,
-            "employees": 59
+            "employees": 65
           },
           "sector": "Healthcare",
           "industry": "Biotechnology",
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 538693440,
+            "market_cap": 552306624,
             "revenue_growth": null,
             "revenue_acceleration": -2.4000000000000004,
             "operating_margin": -2672.4722,
@@ -840,22 +840,22 @@
           "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
           "ticker": "STRC",
           "name": "Sutro Biopharma",
-          "score": 13,
+          "score": 8,
           "breakdown": {
             "cap": 5,
-            "revenue_growth": 8,
+            "revenue_growth": 3,
             "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
             "market_cap": null,
-            "revenue_growth": 0.119,
+            "revenue_growth": 0.069,
             "revenue_acceleration": -0.026182867736796497,
-            "operating_margin": -116.41528,
-            "fcf": -8699502592,
+            "operating_margin": -68.081116,
+            "fcf": null,
             "trailing_pe": null,
-            "employees": 1511
+            "employees": 1539
           },
           "sector": "Technology",
           "industry": "Software - Application",
@@ -872,34 +872,6 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
-          "ticker": "QS",
-          "name": "QuantumScape",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 6,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3004983808,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": 0.0,
-            "fcf": -141085376,
-            "trailing_pe": null,
-            "employees": 700
-          },
-          "sector": "Consumer Cyclical",
-          "industry": "Auto Parts",
-          "summary": "QuantumScape Corporation, together with its subsidiaries, develops solid-state lithium-metal battery technology for electric vehicles and other applications in the United States. The company was founded in 2010 and is headquartered in San Jose, California.",
-          "website": "https://www.quantumscape.com"
-        },
-        {
-          "theme": "battery_energy_storage",
-          "theme_label": "🔋 배터리·에너지저장",
-          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "FLNC",
           "name": "Fluence Energy",
           "score": 41,
@@ -911,7 +883,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2477135616,
+            "market_cap": 2567448064,
             "revenue_growth": 0.077,
             "revenue_acceleration": -0.2155300469098605,
             "operating_margin": -0.08434,
@@ -928,6 +900,34 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "QS",
+          "name": "QuantumScape",
+          "score": 41,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 6,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3211057152,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": 0.0,
+            "fcf": -141085376,
+            "trailing_pe": null,
+            "employees": 700
+          },
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Parts",
+          "summary": "QuantumScape Corporation, together with its subsidiaries, develops solid-state lithium-metal battery technology for electric vehicles and other applications in the United States. The company was founded in 2010 and is headquartered in San Jose, California.",
+          "website": "https://www.quantumscape.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "ENVX",
           "name": "Enovix",
           "score": 35,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 861706112,
+            "market_cap": 892247616,
             "revenue_growth": 0.491,
             "revenue_acceleration": -0.6402352468317538,
             "operating_margin": -5.7756596,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 467966080,
+            "market_cap": 463466400,
             "revenue_growth": -0.589,
             "revenue_acceleration": -0.024503926738905196,
             "operating_margin": -12.515909,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 49173668,
+            "market_cap": 48367548,
             "revenue_growth": -0.108,
             "revenue_acceleration": -0.521399780303095,
             "operating_margin": -0.37469003,
@@ -1020,21 +1020,21 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "CDNA",
           "name": "CareDx",
-          "score": 66,
+          "score": 78,
           "breakdown": {
             "cap": 35,
-            "revenue_growth": 15,
-            "acceleration": 0,
+            "revenue_growth": 22,
+            "acceleration": 5,
             "margin": 6,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1918633088,
-            "revenue_growth": 0.39,
-            "revenue_acceleration": -0.0011086551191295951,
-            "operating_margin": 0.01528,
-            "fcf": 70143376,
-            "trailing_pe": null,
+            "market_cap": 2261302784,
+            "revenue_growth": 0.522,
+            "revenue_acceleration": 0.013215421425928617,
+            "operating_margin": 0.00195,
+            "fcf": 112160872,
+            "trailing_pe": 21.014423,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5621231104,
+            "market_cap": 5700938752,
             "revenue_growth": 0.193,
             "revenue_acceleration": 0.029912266600075683,
             "operating_margin": -0.34917,
@@ -1085,7 +1085,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 422418304,
+            "market_cap": 434842368,
             "revenue_growth": 0.001,
             "revenue_acceleration": -0.2333864569001049,
             "operating_margin": -1.02891,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 480788256,
+            "market_cap": 528475136,
             "revenue_growth": -0.491,
             "revenue_acceleration": -0.39699546347286946,
             "operating_margin": -3.66509,
@@ -1136,29 +1136,29 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "MOD",
-          "name": "Modine Manufacturing",
-          "score": 75,
+          "ticker": "BE",
+          "name": "Bloom Energy",
+          "score": 73,
           "breakdown": {
-            "cap": 35,
-            "revenue_growth": 15,
+            "cap": 8,
+            "revenue_growth": 30,
             "acceleration": 15,
             "margin": 10,
-            "fcf": 0
+            "fcf": 10
           },
           "metrics": {
-            "market_cap": 12840784896,
-            "revenue_growth": 0.475,
-            "revenue_acceleration": 0.11004833910041649,
-            "operating_margin": 0.11829001,
-            "fcf": -101450000,
-            "trailing_pe": 107.46222,
-            "employees": 13200
+            "market_cap": 60616675328,
+            "revenue_growth": 1.655,
+            "revenue_acceleration": 0.16594349345922565,
+            "operating_margin": 0.17106001,
+            "fcf": 531637504,
+            "trailing_pe": 270.80264,
+            "employees": 2214
           },
-          "sector": "Consumer Cyclical",
-          "industry": "Auto Parts",
-          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
-          "website": "https://www.modine.com"
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provide",
+          "website": "https://www.bloomenergy.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1175,74 +1175,46 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2478873600,
+            "market_cap": 2608983808,
             "revenue_growth": 0.337,
-            "revenue_acceleration": 0.2269928646468391,
-            "operating_margin": -0.04242,
-            "fcf": -955375,
+            "revenue_acceleration": 0.9186560267229597,
+            "operating_margin": -0.06403,
+            "fcf": -1955375,
             "trailing_pe": null,
-            "employees": null
+            "employees": 138
           },
           "sector": "Technology",
           "industry": "Semiconductor Equipment & Materials",
-          "summary": "Aehr Test Systems, Inc. provides test solutions for testing, burning-in, and semiconductor devices in wafer level, singulated die, package part form, and installed systems in the United States, Asia, and Europe. Its product portfolio includes FOX-XP and FOX-NP systems that are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize range of devices, ",
+          "summary": "Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United States, Asia, Europe, and the Middle East. The company offers FOX-XP and FOX-NP systems, which are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize a range of devices, including silicon",
           "website": "https://www.aehr.com"
         },
         {
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "BE",
-          "name": "Bloom Energy",
-          "score": 58,
+          "ticker": "MOD",
+          "name": "Modine Manufacturing",
+          "score": 60,
           "breakdown": {
-            "cap": 8,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 10,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 52590825472,
-            "revenue_growth": 1.304,
-            "revenue_acceleration": -0.37511312885213116,
-            "operating_margin": 0.09612001,
-            "fcf": 265521248,
-            "trailing_pe": null,
-            "employees": 2000
-          },
-          "sector": "Industrials",
-          "industry": "Electrical Equipment & Parts",
-          "summary": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provide",
-          "website": "https://www.bloomenergy.com"
-        },
-        {
-          "theme": "ai_infra_picks",
-          "theme_label": "⚡ AI 인프라 picks-and-shovels",
-          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "PWR",
-          "name": "Quanta Services",
-          "score": 39,
-          "breakdown": {
-            "cap": 8,
+            "cap": 35,
             "revenue_growth": 15,
             "acceleration": 0,
-            "margin": 6,
-            "fcf": 10
+            "margin": 10,
+            "fcf": 0
           },
           "metrics": {
-            "market_cap": 93913645056,
-            "revenue_growth": 0.263,
-            "revenue_acceleration": -0.07611429324319695,
-            "operating_margin": 0.04244,
-            "fcf": 1037176768,
-            "trailing_pe": 86.20386,
-            "employees": 69500
+            "market_cap": 10678841344,
+            "revenue_growth": 0.28,
+            "revenue_acceleration": -0.203206313902418,
+            "operating_margin": 0.09004,
+            "fcf": -73737504,
+            "trailing_pe": 75.30337,
+            "employees": 13000
           },
-          "sector": "Industrials",
-          "industry": "Engineering & Construction",
-          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
-          "website": "https://www.quantaservices.com"
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Parts",
+          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
+          "website": "https://www.modine.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1250,27 +1222,55 @@
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "VRT",
           "name": "Vertiv Holdings",
-          "score": 35,
+          "score": 56,
           "breakdown": {
-            "cap": 0,
-            "revenue_growth": 15,
-            "acceleration": 0,
-            "margin": 10,
+            "cap": 8,
+            "revenue_growth": 8,
+            "acceleration": 15,
+            "margin": 15,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 111529828352,
-            "revenue_growth": 0.301,
-            "revenue_acceleration": -0.20881176531398293,
-            "operating_margin": 0.16364999,
-            "fcf": 1964749952,
-            "trailing_pe": 72.95477,
+            "market_cap": 93001588736,
+            "revenue_growth": 0.241,
+            "revenue_acceleration": 0.23229491503866428,
+            "operating_margin": 0.20362,
+            "fcf": 2696537600,
+            "trailing_pe": 54.653847,
             "employees": 34000
           },
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
           "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
           "website": "https://www.vertiv.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "PWR",
+          "name": "Quanta Services",
+          "score": 50,
+          "breakdown": {
+            "cap": 0,
+            "revenue_growth": 15,
+            "acceleration": 15,
+            "margin": 10,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 100333166592,
+            "revenue_growth": 0.411,
+            "revenue_acceleration": 0.16078149192372454,
+            "operating_margin": 0.07217,
+            "fcf": 1955491328,
+            "trailing_pe": 76.35698,
+            "employees": 69500
+          },
+          "sector": "Industrials",
+          "industry": "Engineering & Construction",
+          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
+          "website": "https://www.quantaservices.com"
         }
       ]
     },
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6218459136,
+            "market_cap": 6533838336,
             "revenue_growth": 0.208,
             "revenue_acceleration": -0.03763094198184093,
             "operating_margin": -0.28803,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 289750144,
+            "market_cap": 298103296,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
