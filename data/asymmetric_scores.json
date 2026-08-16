@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-10T07:58:56+09:00",
-  "started_at": "2026-08-10T07:58:52+09:00",
+  "updated_at": "2026-08-17T07:44:39+09:00",
+  "started_at": "2026-08-17T07:44:35+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,11 +35,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2070411264,
-            "revenue_growth": 93.641,
+            "market_cap": 2039385344,
+            "revenue_growth": 90.0,
             "revenue_acceleration": 15.849810964308915,
-            "operating_margin": -5.5676003,
-            "fcf": -40361376,
+            "operating_margin": -2.8126502,
+            "fcf": -53905876,
             "trailing_pe": null,
             "employees": 72
           },
@@ -63,7 +63,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5987811328,
+            "market_cap": 6281527296,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -91,11 +91,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 16584384512,
+            "market_cap": 18741573632,
             "revenue_growth": 2.868,
             "revenue_acceleration": -1.026458468490365,
-            "operating_margin": -4.2129,
-            "fcf": -101649752,
+            "operating_margin": -4.08174,
+            "fcf": -87774752,
             "trailing_pe": null,
             "employees": 1132
           },
@@ -119,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 398515232,
+            "market_cap": 423922752,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7731853312,
+            "market_cap": 7884553728,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -175,11 +175,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 177343872,
-            "revenue_growth": -0.694,
+            "market_cap": 161930304,
+            "revenue_growth": -0.418,
             "revenue_acceleration": -0.2455843741831943,
-            "operating_margin": -93.22868,
-            "fcf": -45931124,
+            "operating_margin": -74.50291,
+            "fcf": -52170500,
             "trailing_pe": null,
             "employees": 145
           },
@@ -209,12 +209,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3818378240,
+            "market_cap": 3794035712,
             "revenue_growth": 0.14,
             "revenue_acceleration": 1.308841825150707,
             "operating_margin": 0.053379998,
             "fcf": -127300000,
-            "trailing_pe": null,
+            "trailing_pe": 101.143616,
             "employees": 467
           },
           "sector": "Energy",
@@ -237,11 +237,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 557752256,
-            "revenue_growth": 2.793,
+            "market_cap": 537607744,
+            "revenue_growth": 3.276,
             "revenue_acceleration": -2.607374343051987,
-            "operating_margin": -5.9540696,
-            "fcf": -39828560,
+            "operating_margin": -6.6748,
+            "fcf": -28586018,
             "trailing_pe": null,
             "employees": 271
           },
@@ -249,34 +249,6 @@
           "industry": "Chemicals",
           "summary": "ASP Isotopes Inc., a development stage advanced materials company, engages in the production, distribution, marketing, and sale of isotopes in South Africa,Hong Kong, and United States. It operates in two segments, Nuclear Fuels, and Specialist Isotopes and Related Services. The Nuclear Fuels segment focuses on the research and development of technologies and methods used to produce high-assay low",
           "website": "https://aspisotopes.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "NNE",
-          "name": "Nano Nuclear Energy",
-          "score": 41,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 6,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1012210048,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": 0.0,
-            "fcf": -33311692,
-            "trailing_pe": null,
-            "employees": 36
-          },
-          "sector": "Industrials",
-          "industry": "Specialty Industrial Machinery",
-          "summary": "NANO Nuclear Energy Inc. operates as a nuclear energy company. The company is developing KRONOS MMR Energy System, a high-temperature gas-cooled reactor; LOKI MMR, a compact microreactor designed for remote and specialized applications; ZEUS, a solid core battery reactor; and ODIN, a low-pressure salt coolant reactor. It is also developing a high-assay low-enriched uranium fuel processing facility",
-          "website": "https://nanonuclearenergy.com"
         },
         {
           "theme": "smr_nuclear",
@@ -293,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 8424643584,
+            "market_cap": 8255463424,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -60.4876,
@@ -321,7 +293,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4030025216,
+            "market_cap": 3853557760,
             "revenue_growth": -0.991,
             "revenue_acceleration": -0.38565886067560307,
             "operating_margin": -853.37335,
@@ -333,6 +305,34 @@
           "industry": "Specialty Industrial Machinery",
           "summary": "NuScale Power Corporation provides small modular reactor technology solutions. It offers NuScale Power Module (NPM), a light water nuclear reactor that can generate 77 megawatts of electricity (MWe). The company also provides design and nuclear regulatory licensing basis information to construct and operate the power plant; and licensing, design, development, construction, operation, and maintenan",
           "website": "https://www.nuscalepower.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "NNE",
+          "name": "Nano Nuclear Energy",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1055705472,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": -73.782745,
+            "fcf": -35458040,
+            "trailing_pe": null,
+            "employees": 36
+          },
+          "sector": "Industrials",
+          "industry": "Specialty Industrial Machinery",
+          "summary": "NANO Nuclear Energy Inc. operates as a nuclear energy company. The company is developing KRONOS MMR Energy System, a high-temperature gas-cooled reactor; LOKI MMR, a compact microreactor designed for remote and specialized applications; ZEUS, a solid core battery reactor; and ODIN, a low-pressure salt coolant reactor. It is also developing a high-assay low-enriched uranium fuel processing facility",
+          "website": "https://nanonuclearenergy.com"
         }
       ]
     },
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7797709824,
+            "market_cap": 8295105536,
             "revenue_growth": 0.173,
             "revenue_acceleration": -0.23740710952661498,
             "operating_margin": 0.07274,
             "fcf": 511553632,
-            "trailing_pe": 25.083332,
+            "trailing_pe": 26.683332,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 24323557376,
+            "market_cap": 25849077760,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 1004.5,
+            "trailing_pe": 1067.5,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 477800,
+            "market_cap": 427881,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 36.441414,
+            "trailing_pe": 36.567375,
             "employees": null
           },
           "sector": "",
@@ -473,11 +473,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2631417600,
-            "revenue_growth": 1.987,
+            "market_cap": 3050198272,
+            "revenue_growth": 3.098,
             "revenue_acceleration": 3.350931502831061,
-            "operating_margin": -0.10295,
-            "fcf": -32115124,
+            "operating_margin": -0.25761998,
+            "fcf": -114870872,
             "trailing_pe": null,
             "employees": 525
           },
@@ -501,7 +501,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3245636352,
+            "market_cap": 3394899712,
             "revenue_growth": 0.896,
             "revenue_acceleration": 0.0013243934111020206,
             "operating_margin": -0.18858999,
@@ -529,12 +529,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5290601984,
+            "market_cap": 5319211520,
             "revenue_growth": 0.038,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.15099,
             "fcf": 239205376,
-            "trailing_pe": 57.390804,
+            "trailing_pe": 57.70115,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -557,7 +557,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 8528712704,
+            "market_cap": 8799578112,
             "revenue_growth": 0.421,
             "revenue_acceleration": -0.009998172065729033,
             "operating_margin": -0.30459,
@@ -585,11 +585,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 27921682432,
-            "revenue_growth": 19.522,
+            "market_cap": 27623108608,
+            "revenue_growth": 26.266,
             "revenue_acceleration": -5.743485682582001,
-            "operating_margin": -10.13994,
-            "fcf": -1412748416,
+            "operating_margin": -5.44626,
+            "fcf": -1799572992,
             "trailing_pe": null,
             "employees": 1126
           },
@@ -613,11 +613,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 51753738240,
-            "revenue_growth": 0.635,
+            "market_cap": 51312734208,
+            "revenue_growth": 0.62,
             "revenue_acceleration": -0.021663358197334573,
-            "operating_margin": -0.22356,
-            "fcf": -214999376,
+            "operating_margin": -0.24572,
+            "fcf": -251963632,
             "trailing_pe": null,
             "employees": 2600
           },
@@ -636,34 +636,6 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "EDIT",
-          "name": "Editas Medicine",
-          "score": 65,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 442310496,
-            "revenue_growth": 2.323,
-            "revenue_acceleration": 2.365735644086145,
-            "operating_margin": -1.6730901,
-            "fcf": -44316000,
-            "trailing_pe": null,
-            "employees": 87
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
-          "website": "https://www.editasmedicine.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "CRSP",
           "name": "CRISPR Therapeutics",
           "score": 65,
@@ -675,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5174990848,
+            "market_cap": 5177891840,
             "revenue_growth": 10.414,
             "revenue_acceleration": null,
             "operating_margin": -11.27551,
@@ -692,6 +664,34 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "EDIT",
+          "name": "Editas Medicine",
+          "score": 65,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 433095680,
+            "revenue_growth": 2.323,
+            "revenue_acceleration": 2.365735644086145,
+            "operating_margin": -1.6730901,
+            "fcf": -44316000,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
+          "website": "https://www.editasmedicine.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "PRME",
           "name": "Prime Medicine",
           "score": 38,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 558640704,
+            "market_cap": 560454464,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -720,34 +720,6 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "BEAM",
-          "name": "Beam Therapeutics",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 2838344960,
-            "revenue_growth": -0.942,
-            "revenue_acceleration": -4.381194861195988,
-            "operating_margin": -258.27142,
-            "fcf": -241844000,
-            "trailing_pe": null,
-            "employees": 540
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
-          "website": "https://beamtx.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "NTLA",
           "name": "Intellia Therapeutics",
           "score": 35,
@@ -759,11 +731,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1668283904,
+            "market_cap": 1668908800,
             "revenue_growth": -0.462,
             "revenue_acceleration": -0.5881460154751182,
             "operating_margin": -14.72255,
-            "fcf": null,
+            "fcf": -249825376,
             "trailing_pe": null,
             "employees": 377
           },
@@ -771,6 +743,34 @@
           "industry": "Biotechnology",
           "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
           "website": "https://www.intelliatx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "BEAM",
+          "name": "Beam Therapeutics",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2762945024,
+            "revenue_growth": -0.942,
+            "revenue_acceleration": -4.381194861195988,
+            "operating_margin": -258.27142,
+            "fcf": -241844000,
+            "trailing_pe": null,
+            "employees": 540
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
+          "website": "https://beamtx.com"
         }
       ]
     },
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3996529408,
+            "market_cap": 3871710720,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,11 +821,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 598980416,
+            "market_cap": 571882048,
             "revenue_growth": null,
             "revenue_acceleration": -2.4000000000000004,
-            "operating_margin": -2672.4722,
-            "fcf": -42502000,
+            "operating_margin": -3184.9355,
+            "fcf": -48786124,
             "trailing_pe": null,
             "employees": 57
           },
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2999779840,
+            "market_cap": 2987276032,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -900,34 +900,6 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
-          "ticker": "ENVX",
-          "name": "Enovix",
-          "score": 50,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 15,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1025321152,
-            "revenue_growth": 0.491,
-            "revenue_acceleration": -0.6402352468317538,
-            "operating_margin": -5.7756596,
-            "fcf": -72119248,
-            "trailing_pe": null,
-            "employees": 664
-          },
-          "sector": "Industrials",
-          "industry": "Electrical Equipment & Parts",
-          "summary": "Enovix Corporation designs, develops, and manufactures lithium-ion battery cells in the United States and internationally. It serves wearables and IoT, smartphone, computing, electrical vehicles, and original equipment manufacturers. The company was founded in 2006 and is headquartered in Fremont, California.",
-          "website": "https://www.enovix.com"
-        },
-        {
-          "theme": "battery_energy_storage",
-          "theme_label": "🔋 배터리·에너지저장",
-          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "QS",
           "name": "QuantumScape",
           "score": 41,
@@ -939,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3740082176,
+            "market_cap": 3807748096,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 531662208,
+            "market_cap": 552198592,
             "revenue_growth": null,
             "revenue_acceleration": -1.1775141261624293,
             "operating_margin": 29.78269,
@@ -984,22 +956,50 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "ENVX",
+          "name": "Enovix",
+          "score": 28,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 8,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 963379008,
+            "revenue_growth": 0.208,
+            "revenue_acceleration": -0.6402352468317538,
+            "operating_margin": -4.7978697,
+            "fcf": -69503624,
+            "trailing_pe": null,
+            "employees": 664
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Enovix Corporation designs, develops, and manufactures lithium-ion battery cells in the United States and internationally. It serves wearables and IoT, smartphone, computing, electrical vehicles, and original equipment manufacturers. The company was founded in 2006 and is headquartered in Fremont, California.",
+          "website": "https://www.enovix.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "STEM",
           "name": "Stem Inc",
-          "score": 15,
+          "score": 18,
           "breakdown": {
             "cap": 5,
             "revenue_growth": 0,
             "acceleration": 0,
-            "margin": 0,
+            "margin": 3,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 52666884,
-            "revenue_growth": -0.108,
+            "market_cap": 56787084,
+            "revenue_growth": -0.123,
             "revenue_acceleration": -0.521399780303095,
-            "operating_margin": -0.37469003,
-            "fcf": 140250,
+            "operating_margin": -0.24413,
+            "fcf": 19736250,
             "trailing_pe": null,
             "employees": 423
           },
@@ -1029,12 +1029,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2415470848,
+            "market_cap": 2344594944,
             "revenue_growth": 0.522,
             "revenue_acceleration": 0.013215421425928617,
             "operating_margin": 0.00195,
             "fcf": 112160872,
-            "trailing_pe": 22.447115,
+            "trailing_pe": 21.788462,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7253367808,
+            "market_cap": 7435219456,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1074,6 +1074,34 @@
           "theme": "synthetic_biology",
           "theme_label": "🧪 합성생물학",
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
+          "ticker": "PACB",
+          "name": "Pacific Biosciences",
+          "score": 40,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 10,
+            "margin": 0,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 357455360,
+            "revenue_growth": -0.019,
+            "revenue_acceleration": 0.0622565979507478,
+            "operating_margin": -1.14364,
+            "fcf": 291644736,
+            "trailing_pe": null,
+            "employees": 485
+          },
+          "sector": "Healthcare",
+          "industry": "Medical Devices",
+          "summary": "Pacific Biosciences of California, Inc. designs, develops, and manufactures sequencing solutions to resolve genetically complex problems. The company provides sequencing systems; consumable products, including single molecule real-time (SMRT) technology; long-read sequencing; and various reagent kits designed for specific workflow, such as preparation kit to convert DNA into SMRTbell double-strand",
+          "website": "https://www.pacb.com"
+        },
+        {
+          "theme": "synthetic_biology",
+          "theme_label": "🧪 합성생물학",
+          "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "DNA",
           "name": "Ginkgo Bioworks",
           "score": 35,
@@ -1085,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 520636192,
+            "market_cap": 457240512,
             "revenue_growth": -0.485,
             "revenue_acceleration": 0.22320903402887088,
             "operating_margin": -2.84987,
@@ -1097,34 +1125,6 @@
           "industry": "Biotechnology",
           "summary": "Ginkgo Bioworks Holdings, Inc., together with its subsidiaries, develops a platform for cell engineering in the United States. It operates through the Cell Engineering and Biosecurity segments. The company offers cell engineering research and development solutions, as well as cell engineering tools comprising functional genomics, antibody developability, and small molecule developability, artifici",
           "website": "https://www.ginkgo.bio"
-        },
-        {
-          "theme": "synthetic_biology",
-          "theme_label": "🧪 합성생물학",
-          "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
-          "ticker": "PACB",
-          "name": "Pacific Biosciences",
-          "score": 30,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 0,
-            "acceleration": 10,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 368062976,
-            "revenue_growth": -0.019,
-            "revenue_acceleration": 0.0622565979507478,
-            "operating_margin": -1.13082,
-            "fcf": -63317752,
-            "trailing_pe": null,
-            "employees": 485
-          },
-          "sector": "Healthcare",
-          "industry": "Medical Devices",
-          "summary": "Pacific Biosciences of California, Inc. designs, develops, and manufactures sequencing solutions to resolve genetically complex problems. The company provides sequencing systems; consumable products, including single molecule real-time (SMRT) technology; long-read sequencing; and various reagent kits designed for specific workflow, such as preparation kit to convert DNA into SMRTbell double-strand",
-          "website": "https://www.pacb.com"
         }
       ]
     },
@@ -1147,12 +1147,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 64601628672,
+            "market_cap": 67723620352,
             "revenue_growth": 1.655,
             "revenue_acceleration": 0.16594349345922565,
             "operating_margin": 0.17106001,
             "fcf": 531637504,
-            "trailing_pe": 284.85715,
+            "trailing_pe": 302.55264,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1175,7 +1175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3362189824,
+            "market_cap": 4373097472,
             "revenue_growth": 0.337,
             "revenue_acceleration": 0.9186560267229597,
             "operating_margin": -0.06403,
@@ -1203,12 +1203,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 10388845568,
+            "market_cap": 11127112704,
             "revenue_growth": 0.28,
             "revenue_acceleration": -0.203206313902418,
             "operating_margin": 0.09004,
             "fcf": -73737504,
-            "trailing_pe": 72.98508,
+            "trailing_pe": 78.17164,
             "employees": 13000
           },
           "sector": "Consumer Cyclical",
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 101009711104,
+            "market_cap": 103102496768,
             "revenue_growth": 0.411,
             "revenue_acceleration": 0.16078149192372454,
             "operating_margin": 0.07217,
             "fcf": 1955491328,
-            "trailing_pe": 76.95991,
+            "trailing_pe": 78.73479,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1259,12 +1259,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 104870772736,
+            "market_cap": 113124917248,
             "revenue_growth": 0.241,
             "revenue_acceleration": 0.23229491503866428,
             "operating_margin": 0.20362,
             "fcf": 2696537600,
-            "trailing_pe": 61.768707,
+            "trailing_pe": 66.63039,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7335999488,
+            "market_cap": 7891651584,
             "revenue_growth": 0.208,
             "revenue_acceleration": -0.03763094198184093,
             "operating_margin": -0.28803,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 398515232,
+            "market_cap": 423922752,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
