@@ -1,18 +1,6 @@
 {
   "date": "2026-08-19",
   "market_seen": [
-    "https://www.yna.co.kr/view/AKR20260818084700002",
-    "https://www.yna.co.kr/view/AKR20260818088400008",
-    "https://www.yna.co.kr/view/AKR20260818090200065",
-    "https://www.yna.co.kr/view/AKR20260818093000004",
-    "https://www.yna.co.kr/view/AKR20260818093051004",
-    "https://www.yna.co.kr/view/AKR20260818093900003",
-    "https://www.yna.co.kr/view/AKR20260818097800002",
-    "https://www.yna.co.kr/view/AKR20260818098300003",
-    "https://www.yna.co.kr/view/AKR20260818098500008",
-    "https://www.yna.co.kr/view/AKR20260818099000055",
-    "https://www.yna.co.kr/view/AKR20260818099600002",
-    "https://www.yna.co.kr/view/AKR20260818099700008",
     "https://www.yna.co.kr/view/AKR20260818099751008",
     "https://www.yna.co.kr/view/AKR20260818100200002",
     "https://www.yna.co.kr/view/AKR20260818100400057",
@@ -191,6 +179,7 @@
     "https://www.yna.co.kr/view/AKR20260819081600002",
     "https://www.yna.co.kr/view/AKR20260819081900003",
     "https://www.yna.co.kr/view/AKR20260819082000002",
+    "https://www.yna.co.kr/view/AKR20260819082051002",
     "https://www.yna.co.kr/view/AKR20260819082400051",
     "https://www.yna.co.kr/view/AKR20260819083600003",
     "https://www.yna.co.kr/view/AKR20260819083900008",
@@ -199,8 +188,19 @@
     "https://www.yna.co.kr/view/AKR20260819084800008",
     "https://www.yna.co.kr/view/AKR20260819087100001",
     "https://www.yna.co.kr/view/AKR20260819088500002",
+    "https://www.yna.co.kr/view/AKR20260819089100530",
     "https://www.yna.co.kr/view/AKR20260819091700017",
-    "https://www.yna.co.kr/view/AKR20260819102200054"
+    "https://www.yna.co.kr/view/AKR20260819102200054",
+    "https://www.yna.co.kr/view/AKR20260819103400002",
+    "https://www.yna.co.kr/view/AKR20260819104400062",
+    "https://www.yna.co.kr/view/AKR20260819107000002",
+    "https://www.yna.co.kr/view/AKR20260819107200011",
+    "https://www.yna.co.kr/view/AKR20260819107900030",
+    "https://www.yna.co.kr/view/AKR20260819109400002",
+    "https://www.yna.co.kr/view/AKR20260819109500054",
+    "https://www.yna.co.kr/view/AKR20260819109600054",
+    "https://www.yna.co.kr/view/AKR20260819110000051",
+    "https://www.yna.co.kr/view/AKR20260819110300030"
   ],
   "stock_seen": []
 }
