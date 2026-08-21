@@ -1,11 +1,6 @@
 {
   "date": "2026-08-21",
   "market_seen": [
-    "https://www.yna.co.kr/view/AKR20260820070051008",
-    "https://www.yna.co.kr/view/AKR20260820070052008",
-    "https://www.yna.co.kr/view/AKR20260820071100530",
-    "https://www.yna.co.kr/view/AKR20260820072200004",
-    "https://www.yna.co.kr/view/AKR20260820073100003",
     "https://www.yna.co.kr/view/AKR20260820073200055",
     "https://www.yna.co.kr/view/AKR20260820074600002",
     "https://www.yna.co.kr/view/AKR20260820079000030",
@@ -200,7 +195,12 @@
     "https://www.yna.co.kr/view/AKR20260821092800002",
     "https://www.yna.co.kr/view/AKR20260821093200002",
     "https://www.yna.co.kr/view/AKR20260821095800002",
-    "https://www.yna.co.kr/view/AKR20260821096000008"
+    "https://www.yna.co.kr/view/AKR20260821096000008",
+    "https://www.yna.co.kr/view/AKR20260821101000004",
+    "https://www.yna.co.kr/view/AKR20260821101700051",
+    "https://www.yna.co.kr/view/AKR20260821102200057",
+    "https://www.yna.co.kr/view/AKR20260821103700011",
+    "https://www.yna.co.kr/view/AKR20260821106900008"
   ],
   "stock_seen": []
 }
