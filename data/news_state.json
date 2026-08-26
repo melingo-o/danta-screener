@@ -1,14 +1,6 @@
 {
   "date": "2026-08-26",
   "market_seen": [
-    "https://www.yna.co.kr/view/AKR20260825123000004",
-    "https://www.yna.co.kr/view/AKR20260825124900008",
-    "https://www.yna.co.kr/view/AKR20260825125500017",
-    "https://www.yna.co.kr/view/AKR20260825126100055",
-    "https://www.yna.co.kr/view/AKR20260825126800030",
-    "https://www.yna.co.kr/view/AKR20260825127400002",
-    "https://www.yna.co.kr/view/AKR20260825129200002",
-    "https://www.yna.co.kr/view/AKR20260825129600002",
     "https://www.yna.co.kr/view/AKR20260825130200030",
     "https://www.yna.co.kr/view/AKR20260825130400008",
     "https://www.yna.co.kr/view/AKR20260825130451008",
@@ -193,14 +185,22 @@
     "https://www.yna.co.kr/view/AKR20260826105300003",
     "https://www.yna.co.kr/view/AKR20260826105900051",
     "https://www.yna.co.kr/view/AKR20260826107400051",
+    "https://www.yna.co.kr/view/AKR20260826107600030",
+    "https://www.yna.co.kr/view/AKR20260826107651030",
     "https://www.yna.co.kr/view/AKR20260826108700011",
     "https://www.yna.co.kr/view/AKR20260826110300002",
+    "https://www.yna.co.kr/view/AKR20260826110700030",
     "https://www.yna.co.kr/view/AKR20260826111300063",
     "https://www.yna.co.kr/view/AKR20260826113000062",
     "https://www.yna.co.kr/view/AKR20260826113200053",
     "https://www.yna.co.kr/view/AKR20260826114400008",
     "https://www.yna.co.kr/view/AKR20260826115700054",
-    "https://www.yna.co.kr/view/AKR20260826116200002"
+    "https://www.yna.co.kr/view/AKR20260826116200002",
+    "https://www.yna.co.kr/view/AKR20260826117100004",
+    "https://www.yna.co.kr/view/AKR20260826117600002",
+    "https://www.yna.co.kr/view/AKR20260826119400052",
+    "https://www.yna.co.kr/view/AKR20260826120900008",
+    "https://www.yna.co.kr/view/AKR20260826128300004"
   ],
   "stock_seen": []
 }
