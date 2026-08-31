@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-24T07:46:24+09:00",
-  "started_at": "2026-08-24T07:46:20+09:00",
+  "updated_at": "2026-08-31T09:43:16+09:00",
+  "started_at": "2026-08-31T09:43:12+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2019014016,
+            "market_cap": 1844726912,
             "revenue_growth": 90.0,
             "revenue_acceleration": 15.849810964308915,
             "operating_margin": -2.8126502,
@@ -63,7 +63,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5977798144,
+            "market_cap": 5203454464,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -80,34 +80,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "score": 50,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 18174386176,
-            "revenue_growth": 2.868,
-            "revenue_acceleration": -1.026458468490365,
-            "operating_margin": -4.08174,
-            "fcf": -87774752,
-            "trailing_pe": null,
-            "employees": 1132
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
-          "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "ARQQ",
           "name": "Arqit Quantum",
           "score": 50,
@@ -119,7 +91,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 367886976,
+            "market_cap": 348744352,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -136,6 +108,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 50,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 15881317376,
+            "revenue_growth": 2.868,
+            "revenue_acceleration": -1.026458468490365,
+            "operating_margin": -4.08174,
+            "fcf": -87774752,
+            "trailing_pe": null,
+            "employees": 1132
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QBTS",
           "name": "D-Wave Quantum",
           "score": 45,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7594050048,
+            "market_cap": 6327754240,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 182768048,
+            "market_cap": 170729440,
             "revenue_growth": -0.418,
             "revenue_acceleration": -0.2455843741831943,
             "operating_margin": -74.50291,
@@ -209,12 +209,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3716419328,
+            "market_cap": 3507313408,
             "revenue_growth": 0.14,
             "revenue_acceleration": 1.308841825150707,
             "operating_margin": 0.053379998,
             "fcf": -127300000,
-            "trailing_pe": 99.07446,
+            "trailing_pe": 92.51579,
             "employees": 467
           },
           "sector": "Energy",
@@ -237,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 613237504,
+            "market_cap": 594840384,
             "revenue_growth": 3.276,
             "revenue_acceleration": -2.607374343051987,
             "operating_margin": -6.6748,
@@ -254,34 +254,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "OKLO",
-          "name": "Oklo",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 7829483008,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": -60.4876,
-            "fcf": -239324880,
-            "trailing_pe": null,
-            "employees": 215
-          },
-          "sector": "Utilities",
-          "industry": "Utilities - Independent Power Producers",
-          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
-          "website": "https://www.oklo.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
           "score": 35,
@@ -293,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3857661440,
+            "market_cap": 3812518656,
             "revenue_growth": -0.991,
             "revenue_acceleration": -0.38565886067560307,
             "operating_margin": -853.37335,
@@ -310,8 +282,8 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "NNE",
-          "name": "Nano Nuclear Energy",
+          "ticker": "OKLO",
+          "name": "Oklo",
           "score": 35,
           "breakdown": {
             "cap": 35,
@@ -321,7 +293,35 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1012210048,
+            "market_cap": 7466748416,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": -60.4876,
+            "fcf": -239324880,
+            "trailing_pe": null,
+            "employees": 215
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
+          "website": "https://www.oklo.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "NNE",
+          "name": "Nano Nuclear Energy",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 964955584,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -73.782745,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 8491990528,
+            "market_cap": 9403882496,
             "revenue_growth": 0.173,
             "revenue_acceleration": -0.23740710952661498,
             "operating_margin": 0.07274,
             "fcf": 511553632,
-            "trailing_pe": 27.316664,
+            "trailing_pe": 30.249998,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 25322409984,
+            "market_cap": 24138921984,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 1045.7501,
+            "trailing_pe": 996.875,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 285254,
+            "market_cap": 299516,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 34.920197,
+            "trailing_pe": 34.639206,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2939486208,
+            "market_cap": 2466151936,
             "revenue_growth": 3.098,
             "revenue_acceleration": 3.350931502831061,
             "operating_margin": -0.18099001,
@@ -501,7 +501,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3004911360,
+            "market_cap": 2717419520,
             "revenue_growth": 0.896,
             "revenue_acceleration": 0.0013243934111020206,
             "operating_margin": -0.18858999,
@@ -529,12 +529,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5189939712,
+            "market_cap": 4938740224,
             "revenue_growth": 0.038,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.15099,
             "fcf": 239205376,
-            "trailing_pe": 56.29885,
+            "trailing_pe": 53.563217,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -557,7 +557,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7944212480,
+            "market_cap": 7120922112,
             "revenue_growth": 0.421,
             "revenue_acceleration": -0.009998172065729033,
             "operating_margin": -0.30459,
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 26716348416,
+            "market_cap": 22591172608,
             "revenue_growth": 26.266,
             "revenue_acceleration": -5.743485682582001,
             "operating_margin": -5.44626,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 46402056192,
+            "market_cap": 41171673088,
             "revenue_growth": 0.62,
             "revenue_acceleration": -0.021663358197334573,
             "operating_margin": -0.24572,
@@ -636,34 +636,6 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "EDIT",
-          "name": "Editas Medicine",
-          "score": 65,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 477633888,
-            "revenue_growth": 2.323,
-            "revenue_acceleration": 2.365735644086145,
-            "operating_margin": -1.6730901,
-            "fcf": -44316000,
-            "trailing_pe": null,
-            "employees": 87
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
-          "website": "https://www.editasmedicine.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "CRSP",
           "name": "CRISPR Therapeutics",
           "score": 65,
@@ -675,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5753212928,
+            "market_cap": 5581100032,
             "revenue_growth": 10.414,
             "revenue_acceleration": null,
             "operating_margin": -11.27551,
@@ -692,6 +664,34 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "EDIT",
+          "name": "Editas Medicine",
+          "score": 65,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 485312928,
+            "revenue_growth": 2.323,
+            "revenue_acceleration": 2.365735644086145,
+            "operating_margin": -1.6730901,
+            "fcf": -44316000,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
+          "website": "https://www.editasmedicine.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "PRME",
           "name": "Prime Medicine",
           "score": 38,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 614867584,
+            "market_cap": 654770432,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1799226752,
+            "market_cap": 1803430400,
             "revenue_growth": -0.462,
             "revenue_acceleration": -0.5881460154751182,
             "operating_margin": -14.72255,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3073840896,
+            "market_cap": 3028394240,
             "revenue_growth": -0.942,
             "revenue_acceleration": -4.381194861195988,
             "operating_margin": -258.27142,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3953367808,
+            "market_cap": 3751558400,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2108212352,
+            "market_cap": 2022694016,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3678567680,
+            "market_cap": 3450963968,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 540789440,
+            "market_cap": 531662208,
             "revenue_growth": null,
             "revenue_acceleration": -1.1775141261624293,
             "operating_margin": 29.78269,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 741736064,
+            "market_cap": 737347008,
             "revenue_growth": 0.208,
             "revenue_acceleration": -0.6402352468317538,
             "operating_margin": -4.7978697,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 54872440,
+            "market_cap": 52369488,
             "revenue_growth": -0.123,
             "revenue_acceleration": -0.521399780303095,
             "operating_margin": -0.24115999,
@@ -1029,12 +1029,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2514800640,
+            "market_cap": 2575847168,
             "revenue_growth": 0.522,
             "revenue_acceleration": 0.013215421425928617,
             "operating_margin": 0.00195,
             "fcf": 112160872,
-            "trailing_pe": 23.370193,
+            "trailing_pe": 23.937502,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 9129573376,
+            "market_cap": 8865575936,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1085,7 +1085,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 419621536,
+            "market_cap": 435163040,
             "revenue_growth": -0.019,
             "revenue_acceleration": 0.0622565979507478,
             "operating_margin": -1.14364,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 498318080,
+            "market_cap": 468688352,
             "revenue_growth": -0.485,
             "revenue_acceleration": 0.22320903402887088,
             "operating_margin": -2.84987,
@@ -1147,12 +1147,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 59332534272,
+            "market_cap": 62077534208,
             "revenue_growth": 1.655,
             "revenue_acceleration": 0.16594349345922565,
             "operating_margin": 0.17106001,
             "fcf": 531637504,
-            "trailing_pe": 261.62338,
+            "trailing_pe": 270.21796,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1175,7 +1175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3318478592,
+            "market_cap": 2636058368,
             "revenue_growth": 0.337,
             "revenue_acceleration": 0.9186560267229597,
             "operating_margin": -0.06403,
@@ -1203,12 +1203,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 10499319808,
+            "market_cap": 9434411008,
             "revenue_growth": 0.28,
             "revenue_acceleration": -0.203206313902418,
             "operating_margin": 0.09004,
             "fcf": -73737504,
-            "trailing_pe": 73.486984,
+            "trailing_pe": 69.38672,
             "employees": 13000
           },
           "sector": "Consumer Cyclical",
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 96120545280,
+            "market_cap": 90611965952,
             "revenue_growth": 0.411,
             "revenue_acceleration": 0.16078149192372454,
             "operating_margin": 0.07217,
             "fcf": 1955491328,
-            "trailing_pe": 72.98402,
+            "trailing_pe": 68.95882,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1250,21 +1250,21 @@
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "VRT",
           "name": "Vertiv Holdings",
-          "score": 48,
+          "score": 56,
           "breakdown": {
-            "cap": 0,
+            "cap": 8,
             "revenue_growth": 8,
             "acceleration": 15,
             "margin": 15,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 100847656960,
+            "market_cap": 98972753920,
             "revenue_growth": 0.241,
             "revenue_acceleration": 0.23229491503866428,
             "operating_margin": 0.20362,
             "fcf": 2696537600,
-            "trailing_pe": 59.13093,
+            "trailing_pe": 58.16289,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1293,13 +1293,13 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7236005888,
-            "revenue_growth": 0.208,
+            "market_cap": 7383992320,
+            "revenue_growth": 0.206,
             "revenue_acceleration": -0.03763094198184093,
-            "operating_margin": -0.28803,
-            "fcf": 268394256,
+            "operating_margin": -0.21572,
+            "fcf": 297298752,
             "trailing_pe": null,
-            "employees": 3000
+            "employees": 2900
           },
           "sector": "Technology",
           "industry": "Software - Infrastructure",
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 367886976,
+            "market_cap": 348744352,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
