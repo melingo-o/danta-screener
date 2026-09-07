@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-31T09:43:16+09:00",
-  "started_at": "2026-08-31T09:43:12+09:00",
+  "updated_at": "2026-09-07T09:08:47+09:00",
+  "started_at": "2026-09-07T09:08:43+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -24,34 +24,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "QUBT",
-          "name": "Quantum Computing Inc",
-          "score": 80,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 30,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1844726912,
-            "revenue_growth": 90.0,
-            "revenue_acceleration": 15.849810964308915,
-            "operating_margin": -2.8126502,
-            "fcf": -53905876,
-            "trailing_pe": null,
-            "employees": 72
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "Quantum Computing Inc., an integrated photonics company, provides quantum machines to commercial and government markets in the United States. The company develops thin-film lithium niobate chips for optical devices, such as electro-optical modulators, periodically poled devices for frequency conversion, and micro-ring resonator cavities markets. It is also developing the entropy quantum computer (",
-          "website": "https://www.quantumcomputinginc.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "RGTI",
           "name": "Rigetti Computing",
           "score": 75,
@@ -63,7 +35,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5203454464,
+            "market_cap": 5073284608,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -80,6 +52,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QUBT",
+          "name": "Quantum Computing Inc",
+          "score": 65,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1813038464,
+            "revenue_growth": 90.0,
+            "revenue_acceleration": -6.980111894874307,
+            "operating_margin": -2.8126502,
+            "fcf": -53905876,
+            "trailing_pe": null,
+            "employees": 72
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "Quantum Computing Inc., an integrated photonics company, provides quantum machines to commercial and government markets in the United States. The company develops thin-film lithium niobate chips for optical devices, such as electro-optical modulators, periodically poled devices for frequency conversion, and micro-ring resonator cavities markets. It is also developing the entropy quantum computer (",
+          "website": "https://www.quantumcomputinginc.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "ARQQ",
           "name": "Arqit Quantum",
           "score": 50,
@@ -91,7 +91,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 348744352,
+            "market_cap": 371889568,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -101,7 +101,7 @@
           },
           "sector": "Technology",
           "industry": "Software - Infrastructure",
-          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
+          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. It offers QuantumCloud, a Platform as a Service that creates unbreakable software encryption keys. The company also provides maintenance and support, and professional services. Arqit Quantum Inc. is based in London, the United Kingdom.",
           "website": "https://arqit.uk"
         },
         {
@@ -119,9 +119,9 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 15881317376,
+            "market_cap": 16010960896,
             "revenue_growth": 2.868,
-            "revenue_acceleration": -1.026458468490365,
+            "revenue_acceleration": -0.2700685615780638,
             "operating_margin": -4.08174,
             "fcf": -87774752,
             "trailing_pe": null,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6327754240,
+            "market_cap": 6175054336,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -166,18 +166,18 @@
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QSI",
           "name": "Quantum-Si",
-          "score": 5,
+          "score": 20,
           "breakdown": {
             "cap": 5,
             "revenue_growth": 0,
-            "acceleration": 0,
+            "acceleration": 15,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 170729440,
+            "market_cap": 167665072,
             "revenue_growth": -0.418,
-            "revenue_acceleration": -0.2455843741831943,
+            "revenue_acceleration": 0.5589662593170944,
             "operating_margin": -74.50291,
             "fcf": -50126000,
             "trailing_pe": null,
@@ -209,12 +209,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3507313408,
+            "market_cap": 3469602560,
             "revenue_growth": 0.14,
             "revenue_acceleration": 1.308841825150707,
             "operating_margin": 0.053379998,
             "fcf": -127300000,
-            "trailing_pe": 92.51579,
+            "trailing_pe": 91.52106,
             "employees": 467
           },
           "sector": "Energy",
@@ -237,46 +237,18 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 594840384,
+            "market_cap": 643899328,
             "revenue_growth": 3.276,
-            "revenue_acceleration": -2.607374343051987,
+            "revenue_acceleration": -1.3542355023179513,
             "operating_margin": -6.6748,
             "fcf": -28586018,
             "trailing_pe": null,
             "employees": 271
           },
           "sector": "Basic Materials",
-          "industry": "Chemicals",
+          "industry": "Specialty Chemicals",
           "summary": "ASP Isotopes Inc., a development stage advanced materials company, engages in the production, distribution, marketing, and sale of isotopes in South Africa,Hong Kong, and United States. It operates in two segments, Nuclear Fuels, and Specialist Isotopes and Related Services. The Nuclear Fuels segment focuses on the research and development of technologies and methods used to produce high-assay low",
           "website": "https://aspisotopes.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "SMR",
-          "name": "NuScale Power",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 3812518656,
-            "revenue_growth": -0.991,
-            "revenue_acceleration": -0.38565886067560307,
-            "operating_margin": -853.37335,
-            "fcf": -204594000,
-            "trailing_pe": null,
-            "employees": 428
-          },
-          "sector": "Industrials",
-          "industry": "Specialty Industrial Machinery",
-          "summary": "NuScale Power Corporation provides small modular reactor technology solutions. It offers NuScale Power Module (NPM), a light water nuclear reactor that can generate 77 megawatts of electricity (MWe). The company also provides design and nuclear regulatory licensing basis information to construct and operate the power plant; and licensing, design, development, construction, operation, and maintenan",
-          "website": "https://www.nuscalepower.com"
         },
         {
           "theme": "smr_nuclear",
@@ -293,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7466748416,
+            "market_cap": 7676948480,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -60.4876,
@@ -310,6 +282,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "SMR",
+          "name": "NuScale Power",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3980778496,
+            "revenue_growth": -0.991,
+            "revenue_acceleration": -0.38565886067560307,
+            "operating_margin": -853.37335,
+            "fcf": -204594000,
+            "trailing_pe": null,
+            "employees": 428
+          },
+          "sector": "Industrials",
+          "industry": "Specialty Industrial Machinery",
+          "summary": "NuScale Power Corporation provides small modular reactor technology solutions. It offers NuScale Power Module (NPM), a light water nuclear reactor that can generate 77 megawatts of electricity (MWe). The company also provides design and nuclear regulatory licensing basis information to construct and operate the power plant; and licensing, design, development, construction, operation, and maintenan",
+          "website": "https://www.nuscalepower.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "NNE",
           "name": "Nano Nuclear Energy",
           "score": 20,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 964955584,
+            "market_cap": 951531072,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -73.782745,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 9403882496,
-            "revenue_growth": 0.173,
+            "market_cap": 7870246400,
+            "revenue_growth": 0.134,
             "revenue_acceleration": -0.23740710952661498,
-            "operating_margin": 0.07274,
-            "fcf": 511553632,
-            "trailing_pe": 30.249998,
+            "operating_margin": 0.091230005,
+            "fcf": 484752736,
+            "trailing_pe": 22.67164,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 24138921984,
+            "market_cap": 25994362880,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 996.875,
+            "trailing_pe": 1073.5,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 299516,
+            "market_cap": 278122,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 34.639206,
+            "trailing_pe": 34.22179,
             "employees": null
           },
           "sector": "",
@@ -462,20 +462,48 @@
           "theme": "space_economy",
           "theme_label": "🚀 우주경제",
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "PL",
+          "name": "Planet Labs",
+          "score": 85,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 22,
+            "acceleration": 15,
+            "margin": 3,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 6592926208,
+            "revenue_growth": 0.581,
+            "revenue_acceleration": 0.14591467119700136,
+            "operating_margin": -0.11995,
+            "fcf": 51749876,
+            "trailing_pe": null,
+            "employees": 945
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platform in the United States and internationally. The company offers SuperDove satellites to create an always-online scanner for the planet, with the goal of imaging the Earth every day at a ground sampli",
+          "website": "https://www.planet.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "LUNR",
           "name": "Intuitive Machines",
-          "score": 83,
+          "score": 68,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 30,
-            "acceleration": 15,
+            "acceleration": 0,
             "margin": 3,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2466151936,
+            "market_cap": 2376298752,
             "revenue_growth": 3.098,
-            "revenue_acceleration": 3.350931502831061,
+            "revenue_acceleration": -0.9265669483626229,
             "operating_margin": -0.18099001,
             "fcf": -79995872,
             "trailing_pe": null,
@@ -501,7 +529,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2717419520,
+            "market_cap": 2632422144,
             "revenue_growth": 0.896,
             "revenue_acceleration": 0.0013243934111020206,
             "operating_margin": -0.18858999,
@@ -529,46 +557,18 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4938740224,
+            "market_cap": 5003388928,
             "revenue_growth": 0.038,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.15099,
             "fcf": 239205376,
-            "trailing_pe": 53.563217,
+            "trailing_pe": 54.264366,
             "employees": 975
           },
           "sector": "Communication Services",
           "industry": "Telecom Services",
           "summary": "Iridium Communications Inc. provides mobile voice and data communications services and products to businesses, the United States and foreign governments, non-governmental organizations, and consumers in the United States, Canada, and internationally. The company offers mobile satellite communications services for land mobile end users and aviation sectors; broadband terminals, embedded devices, an",
           "website": "https://www.iridium.com"
-        },
-        {
-          "theme": "space_economy",
-          "theme_label": "🚀 우주경제",
-          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
-          "ticker": "PL",
-          "name": "Planet Labs",
-          "score": 60,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 15,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 7120922112,
-            "revenue_growth": 0.421,
-            "revenue_acceleration": -0.009998172065729033,
-            "operating_margin": -0.30459,
-            "fcf": 84853752,
-            "trailing_pe": null,
-            "employees": 945
-          },
-          "sector": "Industrials",
-          "industry": "Aerospace & Defense",
-          "summary": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platform in the United States and internationally. The company offers SuperDove satellites to create an always-online scanner for the planet, with the goal of imaging the Earth every day at a ground sampli",
-          "website": "https://www.planet.com"
         },
         {
           "theme": "space_economy",
@@ -585,9 +585,9 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 22591172608,
+            "market_cap": 24249026560,
             "revenue_growth": 26.266,
-            "revenue_acceleration": -5.743485682582001,
+            "revenue_acceleration": -3.4294689497038955,
             "operating_margin": -5.44626,
             "fcf": -1799572992,
             "trailing_pe": null,
@@ -604,18 +604,18 @@
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "RKLB",
           "name": "Rocket Lab",
-          "score": 33,
+          "score": 43,
           "breakdown": {
             "cap": 8,
             "revenue_growth": 22,
-            "acceleration": 0,
+            "acceleration": 10,
             "margin": 3,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 41171673088,
+            "market_cap": 41088552960,
             "revenue_growth": 0.62,
-            "revenue_acceleration": -0.021663358197334573,
+            "revenue_acceleration": 0.05267029650776832,
             "operating_margin": -0.24572,
             "fcf": -251963632,
             "trailing_pe": null,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5581100032,
+            "market_cap": 5394483200,
             "revenue_growth": 10.414,
             "revenue_acceleration": null,
             "operating_margin": -11.27551,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 485312928,
+            "market_cap": 496063520,
             "revenue_growth": 2.323,
             "revenue_acceleration": 2.365735644086145,
             "operating_margin": -1.6730901,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 654770432,
+            "market_cap": 671094400,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1803430400,
+            "market_cap": 1785213952,
             "revenue_growth": -0.462,
             "revenue_acceleration": -0.5881460154751182,
             "operating_margin": -14.72255,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3028394240,
+            "market_cap": 3063512064,
             "revenue_growth": -0.942,
             "revenue_acceleration": -4.381194861195988,
             "operating_margin": -258.27142,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3751558400,
+            "market_cap": 4067687680,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,9 +821,9 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 604950016,
+            "market_cap": 665250560,
             "revenue_growth": null,
-            "revenue_acceleration": -2.4000000000000004,
+            "revenue_acceleration": -3.1,
             "operating_margin": -3184.9355,
             "fcf": -48786124,
             "trailing_pe": null,
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2022694016,
+            "market_cap": 1924162176,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -900,6 +900,34 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "ENVX",
+          "name": "Enovix",
+          "score": 43,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 8,
+            "acceleration": 15,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 728569088,
+            "revenue_growth": 0.208,
+            "revenue_acceleration": 0.1358878857657073,
+            "operating_margin": -4.7978697,
+            "fcf": -69503624,
+            "trailing_pe": null,
+            "employees": 664
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Enovix Corporation designs, develops, and manufactures lithium-ion battery cells in the United States and internationally. It serves wearables and IoT, smartphone, computing, electrical vehicles, and original equipment manufacturers. The company was founded in 2006 and is headquartered in Fremont, California.",
+          "website": "https://www.enovix.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "QS",
           "name": "QuantumScape",
           "score": 41,
@@ -911,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3450963968,
+            "market_cap": 3370995200,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -939,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 531662208,
+            "market_cap": 573875776,
             "revenue_growth": null,
             "revenue_acceleration": -1.1775141261624293,
             "operating_margin": 29.78269,
@@ -956,48 +984,20 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
-          "ticker": "ENVX",
-          "name": "Enovix",
-          "score": 28,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 8,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 737347008,
-            "revenue_growth": 0.208,
-            "revenue_acceleration": -0.6402352468317538,
-            "operating_margin": -4.7978697,
-            "fcf": -69503624,
-            "trailing_pe": null,
-            "employees": 664
-          },
-          "sector": "Industrials",
-          "industry": "Electrical Equipment & Parts",
-          "summary": "Enovix Corporation designs, develops, and manufactures lithium-ion battery cells in the United States and internationally. It serves wearables and IoT, smartphone, computing, electrical vehicles, and original equipment manufacturers. The company was founded in 2006 and is headquartered in Fremont, California.",
-          "website": "https://www.enovix.com"
-        },
-        {
-          "theme": "battery_energy_storage",
-          "theme_label": "🔋 배터리·에너지저장",
-          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "STEM",
           "name": "Stem Inc",
-          "score": 18,
+          "score": 33,
           "breakdown": {
             "cap": 5,
             "revenue_growth": 0,
-            "acceleration": 0,
+            "acceleration": 15,
             "margin": 3,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 52369488,
+            "market_cap": 53620964,
             "revenue_growth": -0.123,
-            "revenue_acceleration": -0.521399780303095,
+            "revenue_acceleration": 0.212317662728815,
             "operating_margin": -0.24115999,
             "fcf": 16712750,
             "trailing_pe": null,
@@ -1029,12 +1029,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2575847168,
+            "market_cap": 2632237312,
             "revenue_growth": 0.522,
             "revenue_acceleration": 0.013215421425928617,
             "operating_margin": 0.00195,
             "fcf": 112160872,
-            "trailing_pe": 23.937502,
+            "trailing_pe": 24.46154,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 8865575936,
+            "market_cap": 8210619904,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1066,7 +1066,7 @@
             "employees": 979
           },
           "sector": "Healthcare",
-          "industry": "Diagnostics & Research",
+          "industry": "Biotechnology",
           "summary": "Twist Bioscience Corporation manufactures and sells synthetic DNA-based products. The company offers synthetic genes and gene fragments used in product development for therapeutics, diagnostics, chemicals/materials, food/agriculture, data storage, and various applications within academic research by biotech, pharma, industrial chemical, and agricultural companies, as well as academic labs; Oligo p",
           "website": "https://www.twistbioscience.com"
         },
@@ -1085,7 +1085,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 435163040,
+            "market_cap": 419621536,
             "revenue_growth": -0.019,
             "revenue_acceleration": 0.0622565979507478,
             "operating_margin": -1.14364,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 468688352,
+            "market_cap": 468014944,
             "revenue_growth": -0.485,
             "revenue_acceleration": 0.22320903402887088,
             "operating_margin": -2.84987,
@@ -1147,12 +1147,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 62077534208,
+            "market_cap": 74477133824,
             "revenue_growth": 1.655,
             "revenue_acceleration": 0.16594349345922565,
             "operating_margin": 0.17106001,
             "fcf": 531637504,
-            "trailing_pe": 270.21796,
+            "trailing_pe": 332.7237,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1175,7 +1175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2636058368,
+            "market_cap": 2813840128,
             "revenue_growth": 0.337,
             "revenue_acceleration": 0.9186560267229597,
             "operating_margin": -0.06403,
@@ -1203,12 +1203,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 9434411008,
+            "market_cap": 10338919424,
             "revenue_growth": 0.28,
             "revenue_acceleration": -0.203206313902418,
             "operating_margin": 0.09004,
             "fcf": -73737504,
-            "trailing_pe": 69.38672,
+            "trailing_pe": 72.36431,
             "employees": 13000
           },
           "sector": "Consumer Cyclical",
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 90611965952,
+            "market_cap": 93875912704,
             "revenue_growth": 0.411,
             "revenue_acceleration": 0.16078149192372454,
             "operating_margin": 0.07217,
             "fcf": 1955491328,
-            "trailing_pe": 68.95882,
+            "trailing_pe": 71.44279,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1250,21 +1250,21 @@
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "VRT",
           "name": "Vertiv Holdings",
-          "score": 56,
+          "score": 48,
           "breakdown": {
-            "cap": 8,
+            "cap": 0,
             "revenue_growth": 8,
             "acceleration": 15,
             "margin": 15,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 98972753920,
+            "market_cap": 108000731136,
             "revenue_growth": 0.241,
             "revenue_acceleration": 0.23229491503866428,
             "operating_margin": 0.20362,
             "fcf": 2696537600,
-            "trailing_pe": 58.16289,
+            "trailing_pe": 63.325058,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1284,22 +1284,22 @@
           "theme_thesis": "양자컴 발달 시 RSA·ECC 깨짐 → 전 세계 암호 인프라 재구축 필요. 표준화 진행 중인 새 시장.",
           "ticker": "S",
           "name": "SentinelOne",
-          "score": 56,
+          "score": 61,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 8,
-            "acceleration": 0,
+            "acceleration": 5,
             "margin": 3,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7383992320,
+            "market_cap": 6919216128,
             "revenue_growth": 0.206,
-            "revenue_acceleration": -0.03763094198184093,
-            "operating_margin": -0.21572,
-            "fcf": 297298752,
+            "revenue_acceleration": 0.00983886597653491,
+            "operating_margin": -0.22719,
+            "fcf": 296880640,
             "trailing_pe": null,
-            "employees": 2900
+            "employees": 2800
           },
           "sector": "Technology",
           "industry": "Software - Infrastructure",
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 348744352,
+            "market_cap": 371889568,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -1331,7 +1331,7 @@
           },
           "sector": "Technology",
           "industry": "Software - Infrastructure",
-          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. The company offers QuantumCloud, a platform as a service that creates unbreakable software encryption keys. It also provides maintenance and support, and professional services. The company has a strategic collaboration with RAD for the development of a joint quantum-safe encryption",
+          "summary": "Arqit Quantum Inc. provides cybersecurity services through satellite and terrestrial platforms in the United Kingdom. It offers QuantumCloud, a Platform as a Service that creates unbreakable software encryption keys. The company also provides maintenance and support, and professional services. Arqit Quantum Inc. is based in London, the United Kingdom.",
           "website": "https://arqit.uk"
         }
       ]
