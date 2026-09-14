@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-07T09:08:47+09:00",
-  "started_at": "2026-09-07T09:08:43+09:00",
+  "updated_at": "2026-09-14T09:19:21+09:00",
+  "started_at": "2026-09-14T09:19:17+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5073284608,
+            "market_cap": 5096648704,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -52,6 +52,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 65,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 14888734720,
+            "revenue_growth": 2.868,
+            "revenue_acceleration": -0.2700685615780638,
+            "operating_margin": -4.08174,
+            "fcf": -87774752,
+            "trailing_pe": null,
+            "employees": 1132
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QUBT",
           "name": "Quantum Computing Inc",
           "score": 65,
@@ -63,7 +91,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1813038464,
+            "market_cap": 1808511360,
             "revenue_growth": 90.0,
             "revenue_acceleration": -6.980111894874307,
             "operating_margin": -2.8126502,
@@ -91,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 371889568,
+            "market_cap": 348918336,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -108,34 +136,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "score": 50,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 16010960896,
-            "revenue_growth": 2.868,
-            "revenue_acceleration": -0.2700685615780638,
-            "operating_margin": -4.08174,
-            "fcf": -87774752,
-            "trailing_pe": null,
-            "employees": 1132
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
-          "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QBTS",
           "name": "D-Wave Quantum",
           "score": 45,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6175054336,
+            "market_cap": 6377726976,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 167665072,
+            "market_cap": 161974096,
             "revenue_growth": -0.418,
             "revenue_acceleration": 0.5589662593170944,
             "operating_margin": -74.50291,
@@ -209,12 +209,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3469602560,
+            "market_cap": 3115212800,
             "revenue_growth": 0.14,
             "revenue_acceleration": 1.308841825150707,
             "operating_margin": 0.053379998,
             "fcf": -127300000,
-            "trailing_pe": 91.52106,
+            "trailing_pe": 80.5873,
             "employees": 467
           },
           "sector": "Energy",
@@ -237,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 643899328,
+            "market_cap": 507454016,
             "revenue_growth": 3.276,
             "revenue_acceleration": -1.3542355023179513,
             "operating_margin": -6.6748,
@@ -265,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7676948480,
+            "market_cap": 6737559552,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -60.4876,
@@ -293,7 +293,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3980778496,
+            "market_cap": 3533453824,
             "revenue_growth": -0.991,
             "revenue_acceleration": -0.38565886067560307,
             "operating_margin": -853.37335,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 951531072,
+            "market_cap": 881186560,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -73.782745,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7870246400,
+            "market_cap": 7165886976,
             "revenue_growth": 0.134,
-            "revenue_acceleration": -0.23740710952661498,
-            "operating_margin": 0.091230005,
-            "fcf": 484752736,
-            "trailing_pe": 22.67164,
+            "revenue_acceleration": -0.07822368339179953,
+            "operating_margin": 0.08922,
+            "fcf": 474257632,
+            "trailing_pe": 20.522388,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 25994362880,
+            "market_cap": 25504020480,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 1073.5,
+            "trailing_pe": 1053.25,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 278122,
+            "market_cap": 213940,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 34.22179,
+            "trailing_pe": 33.583996,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6592926208,
+            "market_cap": 5985299968,
             "revenue_growth": 0.581,
             "revenue_acceleration": 0.14591467119700136,
             "operating_margin": -0.11995,
@@ -501,7 +501,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2376298752,
+            "market_cap": 2302490624,
             "revenue_growth": 3.098,
             "revenue_acceleration": -0.9265669483626229,
             "operating_margin": -0.18099001,
@@ -529,7 +529,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2632422144,
+            "market_cap": 2654921472,
             "revenue_growth": 0.896,
             "revenue_acceleration": 0.0013243934111020206,
             "operating_margin": -0.18858999,
@@ -557,12 +557,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5003388928,
+            "market_cap": 5012927488,
             "revenue_growth": 0.038,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.15099,
             "fcf": 239205376,
-            "trailing_pe": 54.264366,
+            "trailing_pe": 54.367813,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 24249026560,
+            "market_cap": 23295565824,
             "revenue_growth": 26.266,
             "revenue_acceleration": -3.4294689497038955,
             "operating_margin": -5.44626,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 41088552960,
+            "market_cap": 40250925056,
             "revenue_growth": 0.62,
             "revenue_acceleration": 0.05267029650776832,
             "operating_margin": -0.24572,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5394483200,
+            "market_cap": 5000944128,
             "revenue_growth": 10.414,
             "revenue_acceleration": null,
             "operating_margin": -11.27551,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 496063520,
+            "market_cap": 414666080,
             "revenue_growth": 2.323,
             "revenue_acceleration": 2.365735644086145,
             "operating_margin": -1.6730901,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 671094400,
+            "market_cap": 567709632,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -720,34 +720,6 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "NTLA",
-          "name": "Intellia Therapeutics",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1785213952,
-            "revenue_growth": -0.462,
-            "revenue_acceleration": -0.5881460154751182,
-            "operating_margin": -14.72255,
-            "fcf": -249825376,
-            "trailing_pe": null,
-            "employees": 377
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
-          "website": "https://www.intelliatx.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "BEAM",
           "name": "Beam Therapeutics",
           "score": 35,
@@ -759,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3063512064,
+            "market_cap": 2477871104,
             "revenue_growth": -0.942,
             "revenue_acceleration": -4.381194861195988,
             "operating_margin": -258.27142,
@@ -771,6 +743,34 @@
           "industry": "Biotechnology",
           "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
           "website": "https://beamtx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "NTLA",
+          "name": "Intellia Therapeutics",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1645087232,
+            "revenue_growth": -0.462,
+            "revenue_acceleration": -0.5881460154751182,
+            "operating_margin": -14.72255,
+            "fcf": -249825376,
+            "trailing_pe": null,
+            "employees": 377
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
+          "website": "https://www.intelliatx.com"
         }
       ]
     },
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4067687680,
+            "market_cap": 3730560768,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 665250560,
+            "market_cap": 636072832,
             "revenue_growth": null,
             "revenue_acceleration": -3.1,
             "operating_margin": -3184.9355,
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1924162176,
+            "market_cap": 1846080128,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 728569088,
+            "market_cap": 680290432,
             "revenue_growth": 0.208,
             "revenue_acceleration": 0.1358878857657073,
             "operating_margin": -4.7978697,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3370995200,
+            "market_cap": 3247966208,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 573875776,
+            "market_cap": 577298496,
             "revenue_growth": null,
             "revenue_acceleration": -1.1775141261624293,
             "operating_margin": 29.78269,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 53620964,
+            "market_cap": 45438228,
             "revenue_growth": -0.123,
             "revenue_acceleration": 0.212317662728815,
             "operating_margin": -0.24115999,
@@ -1029,12 +1029,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 2632237312,
+            "market_cap": 2600162048,
             "revenue_growth": 0.522,
             "revenue_acceleration": 0.013215421425928617,
             "operating_margin": 0.00195,
             "fcf": 112160872,
-            "trailing_pe": 24.46154,
+            "trailing_pe": 24.163462,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 8210619904,
+            "market_cap": 8434835456,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1085,7 +1085,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 419621536,
+            "market_cap": 404079968,
             "revenue_growth": -0.019,
             "revenue_acceleration": 0.0622565979507478,
             "operating_margin": -1.14364,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 468014944,
+            "market_cap": 454546880,
             "revenue_growth": -0.485,
             "revenue_acceleration": 0.22320903402887088,
             "operating_margin": -2.84987,
@@ -1147,12 +1147,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 74477133824,
+            "market_cap": 81215922176,
             "revenue_growth": 1.655,
             "revenue_acceleration": 0.16594349345922565,
             "operating_margin": 0.17106001,
             "fcf": 531637504,
-            "trailing_pe": 332.7237,
+            "trailing_pe": 358.11688,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1175,7 +1175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2813840128,
+            "market_cap": 3092532480,
             "revenue_growth": 0.337,
             "revenue_acceleration": 0.9186560267229597,
             "operating_margin": -0.06403,
@@ -1203,12 +1203,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 10338919424,
+            "market_cap": 10054236160,
             "revenue_growth": 0.28,
             "revenue_acceleration": -0.203206313902418,
             "operating_margin": 0.09004,
             "fcf": -73737504,
-            "trailing_pe": 72.36431,
+            "trailing_pe": 70.37175,
             "employees": 13000
           },
           "sector": "Consumer Cyclical",
@@ -1231,12 +1231,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 93875912704,
+            "market_cap": 97810407424,
             "revenue_growth": 0.411,
             "revenue_acceleration": 0.16078149192372454,
             "operating_margin": 0.07217,
             "fcf": 1955491328,
-            "trailing_pe": 71.44279,
+            "trailing_pe": 74.607796,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1250,21 +1250,21 @@
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "VRT",
           "name": "Vertiv Holdings",
-          "score": 48,
+          "score": 56,
           "breakdown": {
-            "cap": 0,
+            "cap": 8,
             "revenue_growth": 8,
             "acceleration": 15,
             "margin": 15,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 108000731136,
+            "market_cap": 98965053440,
             "revenue_growth": 0.241,
             "revenue_acceleration": 0.23229491503866428,
             "operating_margin": 0.20362,
             "fcf": 2696537600,
-            "trailing_pe": 63.325058,
+            "trailing_pe": 58.15837,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6919216128,
+            "market_cap": 6873970176,
             "revenue_growth": 0.206,
             "revenue_acceleration": 0.00983886597653491,
             "operating_margin": -0.22719,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 371889568,
+            "market_cap": 348918336,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
