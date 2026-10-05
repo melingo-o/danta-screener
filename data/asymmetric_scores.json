@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-28T10:00:33+09:00",
-  "started_at": "2026-09-28T10:00:30+09:00",
+  "updated_at": "2026-10-05T10:06:04+09:00",
+  "started_at": "2026-10-05T10:06:00+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5560587264,
+            "market_cap": 5089973248,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -63,7 +63,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2028067968,
+            "market_cap": 1851517440,
             "revenue_growth": 90.0,
             "revenue_acceleration": -6.980111894874307,
             "operating_margin": -2.8126502,
@@ -91,7 +91,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 428099328,
+            "market_cap": 371419808,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -119,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 18425569280,
+            "market_cap": 17732788224,
             "revenue_growth": 2.868,
             "revenue_acceleration": -0.2700685615780638,
             "operating_margin": -4.08174,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6609299456,
+            "market_cap": 5986712064,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -166,16 +166,16 @@
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QSI",
           "name": "Quantum-Si",
-          "score": 20,
+          "score": 35,
           "breakdown": {
-            "cap": 5,
+            "cap": 20,
             "revenue_growth": 0,
             "acceleration": 15,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 182614832,
+            "market_cap": 339270048,
             "revenue_growth": -0.418,
             "revenue_acceleration": 0.5589662593170944,
             "operating_margin": -74.50291,
@@ -209,12 +209,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3008038656,
+            "market_cap": 2848504320,
             "revenue_growth": 0.14,
             "revenue_acceleration": 1.308841825150707,
             "operating_margin": 0.053379998,
             "fcf": -127300000,
-            "trailing_pe": 79.92935,
+            "trailing_pe": 65.07944,
             "employees": 467
           },
           "sector": "Energy",
@@ -237,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 448429920,
+            "market_cap": 446130304,
             "revenue_growth": 3.276,
             "revenue_acceleration": -1.3542355023179513,
             "operating_margin": -6.6748,
@@ -254,34 +254,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "OKLO",
-          "name": "Oklo",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 7076111360,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": -60.4876,
-            "fcf": -239324880,
-            "trailing_pe": null,
-            "employees": 215
-          },
-          "sector": "Utilities",
-          "industry": "Utilities - Independent Power Producers",
-          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
-          "website": "https://www.oklo.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
           "score": 35,
@@ -293,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3455479808,
+            "market_cap": 3180518912,
             "revenue_growth": -0.991,
             "revenue_acceleration": -0.38565886067560307,
             "operating_margin": -853.37335,
@@ -310,6 +282,34 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "OKLO",
+          "name": "Oklo",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 6672452608,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": -60.4876,
+            "fcf": -239324880,
+            "trailing_pe": null,
+            "employees": 215
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
+          "website": "https://www.oklo.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "NNE",
           "name": "Nano Nuclear Energy",
           "score": 20,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 912331456,
+            "market_cap": 838764992,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -73.782745,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6493596672,
+            "market_cap": 6837559296,
             "revenue_growth": 0.134,
             "revenue_acceleration": -0.07822368339179953,
             "operating_margin": 0.08922,
             "fcf": 474257632,
-            "trailing_pe": 18.597015,
+            "trailing_pe": 19.582088,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 26315208704,
+            "market_cap": 26200186880,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 1086.75,
+            "trailing_pe": 541.0,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 713135,
+            "market_cap": 392224,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 33.69823,
+            "trailing_pe": 34.297943,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6341870592,
+            "market_cap": 6367340032,
             "revenue_growth": 0.581,
             "revenue_acceleration": 0.14591467119700136,
             "operating_margin": -0.11995,
@@ -501,7 +501,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2504660480,
+            "market_cap": 2374384640,
             "revenue_growth": 3.098,
             "revenue_acceleration": -0.9265669483626229,
             "operating_margin": -0.18099001,
@@ -529,7 +529,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2904914176,
+            "market_cap": 2719919616,
             "revenue_growth": 0.896,
             "revenue_acceleration": 0.0013243934111020206,
             "operating_margin": -0.18858999,
@@ -557,12 +557,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 5166600704,
+            "market_cap": 5188856832,
             "revenue_growth": 0.038,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.15099,
             "fcf": 239205376,
-            "trailing_pe": 56.03448,
+            "trailing_pe": 55.636364,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 24054441984,
+            "market_cap": 22746839040,
             "revenue_growth": 26.266,
             "revenue_acceleration": -3.4294689497038955,
             "operating_margin": -5.44626,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 47284441088,
+            "market_cap": 47265259520,
             "revenue_growth": 0.62,
             "revenue_acceleration": 0.05267029650776832,
             "operating_margin": -0.24572,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5243642880,
+            "market_cap": 5359673856,
             "revenue_growth": 10.414,
             "revenue_acceleration": null,
             "operating_margin": -11.27551,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 396236480,
+            "market_cap": 402379680,
             "revenue_growth": 2.323,
             "revenue_acceleration": 2.365735644086145,
             "operating_margin": -1.6730901,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 525992928,
+            "market_cap": 540503040,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -731,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1646488576,
+            "market_cap": 1717953280,
             "revenue_growth": -0.462,
             "revenue_acceleration": -0.5881460154751182,
             "operating_margin": -14.72255,
@@ -759,7 +759,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2506791680,
+            "market_cap": 2530547712,
             "revenue_growth": -0.942,
             "revenue_acceleration": -4.381194861195988,
             "operating_margin": -258.27142,
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4427578368,
+            "market_cap": 3807327488,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 595224128,
+            "market_cap": 532005888,
             "revenue_growth": null,
             "revenue_acceleration": -3.1,
             "operating_margin": -3184.9355,
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1459388544,
+            "market_cap": 1481383808,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 629817280,
+            "market_cap": 614455872,
             "revenue_growth": 0.208,
             "revenue_acceleration": 0.1358878857657073,
             "operating_margin": -4.7978697,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3020362240,
+            "market_cap": 2829348864,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 545353152,
+            "market_cap": 531662208,
             "revenue_growth": null,
             "revenue_acceleration": -1.1775141261624293,
             "operating_margin": 29.78269,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 43127812,
+            "market_cap": 41009932,
             "revenue_growth": -0.123,
             "revenue_acceleration": 0.212317662728815,
             "operating_margin": -0.24115999,
@@ -1029,12 +1029,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 3294435328,
+            "market_cap": 3473953280,
             "revenue_growth": 0.522,
             "revenue_acceleration": 0.013215421425928617,
             "operating_margin": 0.00195,
             "fcf": 112160872,
-            "trailing_pe": 30.615385,
+            "trailing_pe": 32.283657,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 12121843712,
+            "market_cap": 12509042688,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1085,7 +1085,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 503545824,
+            "market_cap": 789510080,
             "revenue_growth": -0.019,
             "revenue_acceleration": 0.0622565979507478,
             "operating_margin": -1.14364,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 717847360,
+            "market_cap": 831652480,
             "revenue_growth": -0.485,
             "revenue_acceleration": 0.22320903402887088,
             "operating_margin": -2.84987,
@@ -1147,12 +1147,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 85030051840,
+            "market_cap": 85162582016,
             "revenue_growth": 1.655,
             "revenue_acceleration": 0.16594349345922565,
             "operating_margin": 0.17106001,
             "fcf": 531637504,
-            "trailing_pe": 370.12823,
+            "trailing_pe": 380.4605,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1175,7 +1175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3409329920,
+            "market_cap": 3501430016,
             "revenue_growth": 0.337,
             "revenue_acceleration": 0.9186560267229597,
             "operating_margin": -0.06403,
@@ -1203,46 +1203,18 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 10520034304,
+            "market_cap": 9464684544,
             "revenue_growth": 0.28,
             "revenue_acceleration": -0.203206313902418,
             "operating_margin": 0.09004,
             "fcf": -73737504,
-            "trailing_pe": 74.18352,
+            "trailing_pe": 66.99248,
             "employees": 13000
           },
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
           "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
           "website": "https://www.modine.com"
-        },
-        {
-          "theme": "ai_infra_picks",
-          "theme_label": "⚡ AI 인프라 picks-and-shovels",
-          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "PWR",
-          "name": "Quanta Services",
-          "score": 58,
-          "breakdown": {
-            "cap": 8,
-            "revenue_growth": 15,
-            "acceleration": 15,
-            "margin": 10,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 97592410112,
-            "revenue_growth": 0.411,
-            "revenue_acceleration": 0.16078149192372454,
-            "operating_margin": 0.07217,
-            "fcf": 1955491328,
-            "trailing_pe": 74.10159,
-            "employees": 69500
-          },
-          "sector": "Industrials",
-          "industry": "Engineering & Construction",
-          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
-          "website": "https://www.quantaservices.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1259,18 +1231,46 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 97509801984,
+            "market_cap": 97086308352,
             "revenue_growth": 0.241,
             "revenue_acceleration": 0.23229491503866428,
             "operating_margin": 0.20362,
             "fcf": 2696537600,
-            "trailing_pe": 57.173817,
+            "trailing_pe": 57.054295,
             "employees": 34000
           },
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
           "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
           "website": "https://www.vertiv.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "PWR",
+          "name": "Quanta Services",
+          "score": 50,
+          "breakdown": {
+            "cap": 0,
+            "revenue_growth": 15,
+            "acceleration": 15,
+            "margin": 10,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 101716328448,
+            "revenue_growth": 0.411,
+            "revenue_acceleration": 0.16078149192372454,
+            "operating_margin": 0.07217,
+            "fcf": 1955491328,
+            "trailing_pe": 77.49828,
+            "employees": 69500
+          },
+          "sector": "Industrials",
+          "industry": "Engineering & Construction",
+          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
+          "website": "https://www.quantaservices.com"
         }
       ]
     },
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7789339136,
+            "market_cap": 8722110464,
             "revenue_growth": 0.206,
             "revenue_acceleration": 0.00983886597653491,
             "operating_margin": -0.22719,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 428099328,
+            "market_cap": 371419808,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
