@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-26T09:31:26+09:00",
-  "started_at": "2026-10-26T09:31:24+09:00",
+  "updated_at": "2026-11-02T10:40:34+09:00",
+  "started_at": "2026-11-02T10:40:31+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 3845016064,
+            "market_cap": 3754898176,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -52,34 +52,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "score": 65,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 13427577856,
-            "revenue_growth": 2.868,
-            "revenue_acceleration": -0.2700685615780638,
-            "operating_margin": -4.08174,
-            "fcf": -87774752,
-            "trailing_pe": null,
-            "employees": 1132
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
-          "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QUBT",
           "name": "Quantum Computing Inc",
           "score": 65,
@@ -91,7 +63,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1484835456,
+            "market_cap": 1493889280,
             "revenue_growth": 90.0,
             "revenue_acceleration": -6.980111894874307,
             "operating_margin": -2.8126502,
@@ -108,6 +80,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 65,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 12899406848,
+            "revenue_growth": 2.868,
+            "revenue_acceleration": -0.2700685615780638,
+            "operating_margin": -4.08174,
+            "fcf": -87774752,
+            "trailing_pe": null,
+            "employees": 1132
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "ARQQ",
           "name": "Arqit Quantum",
           "score": 50,
@@ -119,7 +119,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 285573568,
+            "market_cap": 273739936,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4426446336,
+            "market_cap": 4043023360,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -175,7 +175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 306437472,
+            "market_cap": 319570496,
             "revenue_growth": -0.418,
             "revenue_acceleration": 0.5589662593170944,
             "operating_margin": -74.50291,
@@ -209,12 +209,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2095420800,
+            "market_cap": 2112601600,
             "revenue_growth": 0.14,
             "revenue_acceleration": 1.308841825150707,
             "operating_margin": 0.053379998,
             "fcf": -127300000,
-            "trailing_pe": 47.87383,
+            "trailing_pe": 48.266354,
             "employees": 467
           },
           "sector": "Energy",
@@ -237,7 +237,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 298186752,
+            "market_cap": 309684928,
             "revenue_growth": 3.276,
             "revenue_acceleration": -1.3542355023179513,
             "operating_margin": -6.6748,
@@ -265,7 +265,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4901564928,
+            "market_cap": 4696945664,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -60.4876,
@@ -293,7 +293,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2207895808,
+            "market_cap": 2306389248,
             "revenue_growth": -0.991,
             "revenue_acceleration": -0.38565886067560307,
             "operating_margin": -853.37335,
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 652969408,
+            "market_cap": 625583360,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -73.782745,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7363926016,
+            "market_cap": 7155463680,
             "revenue_growth": 0.134,
             "revenue_acceleration": -0.07822368339179953,
             "operating_margin": 0.08922,
             "fcf": 474257632,
-            "trailing_pe": 21.089552,
+            "trailing_pe": 20.492537,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 23778727936,
+            "market_cap": 22961487872,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 491.0,
+            "trailing_pe": 474.125,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 185415,
+            "market_cap": 57050,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 32.683266,
+            "trailing_pe": 31.891424,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4879201792,
+            "market_cap": 4901032448,
             "revenue_growth": 0.581,
             "revenue_acceleration": 0.14591467119700136,
             "operating_margin": -0.11995,
@@ -501,7 +501,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1698064384,
+            "market_cap": 1722276352,
             "revenue_growth": 3.098,
             "revenue_acceleration": -0.9265669483626229,
             "operating_margin": -0.18099001,
@@ -529,7 +529,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2089938176,
+            "market_cap": 2097438080,
             "revenue_growth": 0.896,
             "revenue_acceleration": 0.0013243934111020206,
             "operating_margin": -0.18858999,
@@ -557,12 +557,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4705581056,
+            "market_cap": 4759631360,
             "revenue_growth": 0.083,
             "revenue_acceleration": 0.02378070882771882,
             "operating_margin": 0.12866999,
             "fcf": 217969376,
-            "trailing_pe": 50.454548,
+            "trailing_pe": 29.162338,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -585,7 +585,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 15484975104,
+            "market_cap": 15944192000,
             "revenue_growth": 26.266,
             "revenue_acceleration": -3.4294689497038955,
             "operating_margin": -5.44626,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 33633017856,
+            "market_cap": 34994962432,
             "revenue_growth": 0.62,
             "revenue_acceleration": 0.05267029650776832,
             "operating_margin": -0.24572,
@@ -647,7 +647,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4775650304,
+            "market_cap": 4971936256,
             "revenue_growth": 10.414,
             "revenue_acceleration": null,
             "operating_margin": -11.27551,
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 368592096,
+            "market_cap": 410058688,
             "revenue_growth": 2.323,
             "revenue_acceleration": 2.365735644086145,
             "operating_margin": -1.6730901,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 665653120,
+            "market_cap": 856098752,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -720,34 +720,6 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "NTLA",
-          "name": "Intellia Therapeutics",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1570820224,
-            "revenue_growth": -0.462,
-            "revenue_acceleration": -0.5881460154751182,
-            "operating_margin": -14.72255,
-            "fcf": -249825376,
-            "trailing_pe": null,
-            "employees": 377
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
-          "website": "https://www.intelliatx.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "BEAM",
           "name": "Beam Therapeutics",
           "score": 35,
@@ -759,7 +731,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2484068352,
+            "market_cap": 2812523008,
             "revenue_growth": -0.942,
             "revenue_acceleration": -4.381194861195988,
             "operating_margin": -258.27142,
@@ -771,6 +743,34 @@
           "industry": "Biotechnology",
           "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
           "website": "https://beamtx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "NTLA",
+          "name": "Intellia Therapeutics",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1747379840,
+            "revenue_growth": -0.462,
+            "revenue_acceleration": -0.5881460154751182,
+            "operating_margin": -14.72255,
+            "fcf": -249825376,
+            "trailing_pe": null,
+            "employees": 377
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
+          "website": "https://www.intelliatx.com"
         }
       ]
     },
@@ -793,13 +793,13 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3102832128,
+            "market_cap": 3478805504,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
-            "fcf": -230792128,
+            "fcf": -237779504,
             "trailing_pe": null,
-            "employees": 65
+            "employees": 74
           },
           "sector": "Healthcare",
           "industry": "Biotechnology",
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 412377504,
+            "market_cap": 396816096,
             "revenue_growth": null,
             "revenue_acceleration": -3.1,
             "operating_margin": -3184.9355,
@@ -840,20 +840,20 @@
           "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
           "ticker": "STRC",
           "name": "Sutro Biopharma",
-          "score": 8,
+          "score": 20,
           "breakdown": {
             "cap": 5,
-            "revenue_growth": 3,
+            "revenue_growth": 0,
             "acceleration": 0,
-            "margin": 0,
+            "margin": 15,
             "fcf": 0
           },
           "metrics": {
             "market_cap": null,
-            "revenue_growth": 0.069,
+            "revenue_growth": -0.025,
             "revenue_acceleration": -0.045679348969149436,
-            "operating_margin": -68.081116,
-            "fcf": -22587523072,
+            "operating_margin": 166.70886,
+            "fcf": null,
             "trailing_pe": null,
             "employees": 1539
           },
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1088164992,
+            "market_cap": 1113471104,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -891,8 +891,8 @@
             "trailing_pe": null,
             "employees": 1670
           },
-          "sector": "Utilities",
-          "industry": "Utilities - Renewable",
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
           "summary": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. It sells energy storage products with integrated hardware, software, and digital intelligence. The company's energy storage products include Gridstack Pro, a large-scale front-of-the-meter a",
           "website": "https://fluenceenergy.com"
         },
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 612261376,
+            "market_cap": 691262912,
             "revenue_growth": 0.208,
             "revenue_acceleration": 0.1358878857657073,
             "operating_margin": -4.7978697,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2495027712,
+            "market_cap": 2513601024,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,7 +967,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 451798816,
+            "market_cap": 447235200,
             "revenue_growth": null,
             "revenue_acceleration": -1.1775141261624293,
             "operating_margin": 29.78269,
@@ -995,7 +995,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 28976500,
+            "market_cap": 21371372,
             "revenue_growth": -0.123,
             "revenue_acceleration": 0.212317662728815,
             "operating_margin": -0.24115999,
@@ -1020,21 +1020,21 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "CDNA",
           "name": "CareDx",
-          "score": 78,
+          "score": 75,
           "breakdown": {
             "cap": 35,
-            "revenue_growth": 22,
+            "revenue_growth": 15,
             "acceleration": 5,
-            "margin": 6,
+            "margin": 10,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 3580525568,
-            "revenue_growth": 0.522,
+            "market_cap": 4592764928,
+            "revenue_growth": 0.393,
             "revenue_acceleration": 0.013215421425928617,
-            "operating_margin": 0.00195,
-            "fcf": 112160872,
-            "trailing_pe": 33.27404,
+            "operating_margin": 0.084759995,
+            "fcf": 130446872,
+            "trailing_pe": 36.88186,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 9276860416,
+            "market_cap": 10129494016,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1085,7 +1085,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 655852864,
+            "market_cap": 809714112,
             "revenue_growth": -0.019,
             "revenue_acceleration": 0.0622565979507478,
             "operating_margin": -1.14364,
@@ -1113,7 +1113,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 672729408,
+            "market_cap": 754884544,
             "revenue_growth": -0.485,
             "revenue_acceleration": 0.22320903402887088,
             "operating_margin": -2.84987,
@@ -1136,6 +1136,34 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "VRT",
+          "name": "Vertiv Holdings",
+          "score": 70,
+          "breakdown": {
+            "cap": 8,
+            "revenue_growth": 22,
+            "acceleration": 15,
+            "margin": 15,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 89526550528,
+            "revenue_growth": 0.612,
+            "revenue_acceleration": 0.23980136723636347,
+            "operating_margin": 0.23771,
+            "fcf": 2962249984,
+            "trailing_pe": 43.457943,
+            "employees": 34000
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
+          "website": "https://www.vertiv.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "AEHR",
           "name": "Aehr Test Systems",
           "score": 68,
@@ -1147,7 +1175,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1806399488,
+            "market_cap": 1792682496,
             "revenue_growth": 0.337,
             "revenue_acceleration": 0.9186560267229597,
             "operating_margin": -0.06403,
@@ -1164,29 +1192,29 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "BE",
-          "name": "Bloom Energy",
-          "score": 63,
+          "ticker": "PWR",
+          "name": "Quanta Services",
+          "score": 65,
           "breakdown": {
             "cap": 8,
-            "revenue_growth": 30,
+            "revenue_growth": 22,
             "acceleration": 15,
             "margin": 10,
-            "fcf": 0
+            "fcf": 10
           },
           "metrics": {
-            "market_cap": 57127346176,
-            "revenue_growth": 1.381,
-            "revenue_acceleration": 0.16594349345922565,
-            "operating_margin": 0.18493,
-            "fcf": -1706500,
-            "trailing_pe": 254.34212,
-            "employees": 2214
+            "market_cap": 93529825280,
+            "revenue_growth": 0.574,
+            "revenue_acceleration": 0.17538254731053143,
+            "operating_margin": 0.086260006,
+            "fcf": 3082594816,
+            "trailing_pe": 56.17466,
+            "employees": 69500
           },
           "sector": "Industrials",
-          "industry": "Electrical Equipment & Parts",
-          "summary": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provide",
-          "website": "https://www.bloomenergy.com"
+          "industry": "Engineering & Construction",
+          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
+          "website": "https://www.quantaservices.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1203,16 +1231,16 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 7093277184,
+            "market_cap": 6902832128,
             "revenue_growth": 0.28,
             "revenue_acceleration": -0.203206313902418,
             "operating_margin": 0.09004,
             "fcf": -73737504,
-            "trailing_pe": 50.127815,
+            "trailing_pe": 48.78195,
             "employees": 13000
           },
-          "sector": "Consumer Cyclical",
-          "industry": "Auto Parts",
+          "sector": "Industrials",
+          "industry": "Building Products & Equipment",
           "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
           "website": "https://www.modine.com"
         },
@@ -1220,57 +1248,29 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "PWR",
-          "name": "Quanta Services",
-          "score": 58,
+          "ticker": "BE",
+          "name": "Bloom Energy",
+          "score": 48,
           "breakdown": {
             "cap": 8,
-            "revenue_growth": 15,
-            "acceleration": 15,
+            "revenue_growth": 30,
+            "acceleration": 0,
             "margin": 10,
-            "fcf": 10
+            "fcf": 0
           },
           "metrics": {
-            "market_cap": 82152136704,
-            "revenue_growth": 0.411,
-            "revenue_acceleration": 0.16078149192372454,
-            "operating_margin": 0.07217,
-            "fcf": 1955491328,
-            "trailing_pe": 62.592213,
-            "employees": 69500
-          },
-          "sector": "Industrials",
-          "industry": "Engineering & Construction",
-          "summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation ",
-          "website": "https://www.quantaservices.com"
-        },
-        {
-          "theme": "ai_infra_picks",
-          "theme_label": "⚡ AI 인프라 picks-and-shovels",
-          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "VRT",
-          "name": "Vertiv Holdings",
-          "score": 56,
-          "breakdown": {
-            "cap": 8,
-            "revenue_growth": 8,
-            "acceleration": 15,
-            "margin": 15,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 74810900480,
-            "revenue_growth": 0.241,
-            "revenue_acceleration": 0.23229491503866428,
-            "operating_margin": 0.20362,
-            "fcf": 2696537600,
-            "trailing_pe": 43.963802,
-            "employees": 34000
+            "market_cap": 60044296192,
+            "revenue_growth": 1.381,
+            "revenue_acceleration": -0.1341669016077542,
+            "operating_margin": 0.18493,
+            "fcf": -1706500,
+            "trailing_pe": 123.13333,
+            "employees": 2214
           },
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
-          "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
-          "website": "https://www.vertiv.com"
+          "summary": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, an energy server platform to convert fuel, such as natural gas, biogas, hydrogen, or a blend of these fuels, into electricity through a non-combustion electrochemical process. The company also provide",
+          "website": "https://www.bloomenergy.com"
         }
       ]
     },
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 8353178624,
+            "market_cap": 8753435648,
             "revenue_growth": 0.206,
             "revenue_acceleration": 0.00983886597653491,
             "operating_margin": -0.22719,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 285573568,
+            "market_cap": 273739936,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
