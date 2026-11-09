@@ -1,8 +1,11 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "KOSPI_crossed": [
-    -1.0,
-    -2.0
+    1.0,
+    2.0
   ],
-  "KOSDAQ_crossed": []
+  "KOSDAQ_crossed": [
+    1.0,
+    2.0
+  ]
 }
