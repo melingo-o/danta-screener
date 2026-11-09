@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-02T10:40:34+09:00",
-  "started_at": "2026-11-02T10:40:31+09:00",
+  "updated_at": "2026-11-09T10:48:53+09:00",
+  "started_at": "2026-11-09T10:48:50+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -35,7 +35,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 3754898176,
+            "market_cap": 3921782528,
             "revenue_growth": 1.853,
             "revenue_acceleration": -0.2975897992317296,
             "operating_margin": -5.4616604,
@@ -63,7 +63,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1493889280,
+            "market_cap": 1432775680,
             "revenue_growth": 90.0,
             "revenue_acceleration": -6.980111894874307,
             "operating_margin": -2.8126502,
@@ -80,34 +80,6 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "score": 65,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 12899406848,
-            "revenue_growth": 2.868,
-            "revenue_acceleration": -0.2700685615780638,
-            "operating_margin": -4.08174,
-            "fcf": -87774752,
-            "trailing_pe": null,
-            "employees": 1132
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
-          "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "ARQQ",
           "name": "Arqit Quantum",
           "score": 50,
@@ -119,7 +91,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 273739936,
+            "market_cap": 277742496,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
@@ -136,6 +108,34 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 50,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 30,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 15158380544,
+            "revenue_growth": 3.36,
+            "revenue_acceleration": -0.2700685615780638,
+            "operating_margin": -2.26527,
+            "fcf": -120702872,
+            "trailing_pe": 18.85549,
+            "employees": 1132
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QBTS",
           "name": "D-Wave Quantum",
           "score": 45,
@@ -147,7 +147,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4043023360,
+            "market_cap": 4054412544,
             "revenue_growth": -0.006,
             "revenue_acceleration": 0.08207022966453564,
             "operating_margin": -17.32055,
@@ -175,11 +175,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 319570496,
-            "revenue_growth": -0.418,
+            "market_cap": 292257408,
+            "revenue_growth": -0.616,
             "revenue_acceleration": 0.5589662593170944,
-            "operating_margin": -74.50291,
-            "fcf": -50126000,
+            "operating_margin": -112.15094,
+            "fcf": -59075000,
             "trailing_pe": null,
             "employees": 145
           },
@@ -198,34 +198,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "LEU",
-          "name": "Centrus Energy",
-          "score": 68,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 8,
-            "acceleration": 15,
-            "margin": 10,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 2112601600,
-            "revenue_growth": 0.14,
-            "revenue_acceleration": 1.308841825150707,
-            "operating_margin": 0.053379998,
-            "fcf": -127300000,
-            "trailing_pe": 48.266354,
-            "employees": 467
-          },
-          "sector": "Energy",
-          "industry": "Uranium",
-          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The company operates through two segments: Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and enri",
-          "website": "https://www.centrusenergy.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "ASPI",
           "name": "ASP Isotopes",
           "score": 50,
@@ -237,7 +209,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 309684928,
+            "market_cap": 318116960,
             "revenue_growth": 3.276,
             "revenue_acceleration": -1.3542355023179513,
             "operating_margin": -6.6748,
@@ -254,34 +226,6 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "OKLO",
-          "name": "Oklo",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 4696945664,
-            "revenue_growth": null,
-            "revenue_acceleration": null,
-            "operating_margin": -60.4876,
-            "fcf": -239324880,
-            "trailing_pe": null,
-            "employees": 215
-          },
-          "sector": "Utilities",
-          "industry": "Utilities - Independent Power Producers",
-          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
-          "website": "https://www.oklo.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
           "score": 35,
@@ -293,11 +237,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2306389248,
-            "revenue_growth": -0.991,
+            "market_cap": 2085550208,
+            "revenue_growth": -0.966,
             "revenue_acceleration": -0.38565886067560307,
-            "operating_margin": -853.37335,
-            "fcf": -204594000,
+            "operating_margin": -230.67615,
+            "fcf": -231772496,
             "trailing_pe": null,
             "employees": 428
           },
@@ -305,6 +249,62 @@
           "industry": "Specialty Industrial Machinery",
           "summary": "NuScale Power Corporation provides small modular reactor technology solutions. It offers NuScale Power Module (NPM), a light water nuclear reactor that can generate 77 megawatts of electricity (MWe). The company also provides design and nuclear regulatory licensing basis information to construct and operate the power plant; and licensing, design, development, construction, operation, and maintenan",
           "website": "https://www.nuscalepower.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "LEU",
+          "name": "Centrus Energy",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2156689920,
+            "revenue_growth": -0.259,
+            "revenue_acceleration": -1.275677492326766,
+            "operating_margin": -0.55315,
+            "fcf": -233300000,
+            "trailing_pe": 31.038576,
+            "employees": 467
+          },
+          "sector": "Energy",
+          "industry": "Uranium",
+          "summary": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The company operates through two segments: Low-Enriched Uranium (LEU) and Technical Solutions. The LEU segment sells separative work units (SWU) components of LEU; natural uranium hexafluoride, uranium concentrates, and uranium conversion; and enri",
+          "website": "https://www.centrusenergy.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "OKLO",
+          "name": "Oklo",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 4599069696,
+            "revenue_growth": null,
+            "revenue_acceleration": null,
+            "operating_margin": -44.30253,
+            "fcf": -552209152,
+            "trailing_pe": null,
+            "employees": 215
+          },
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "summary": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawatts of electricity. It is also commercializing nuclear fuel recycling and fuel fabrication technology that can convert used nuclear fuel into usable fuel for its reactors. The company was formerly know",
+          "website": "https://www.oklo.com"
         },
         {
           "theme": "smr_nuclear",
@@ -321,7 +321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 625583360,
+            "market_cap": 596586368,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": -73.782745,
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7155463680,
+            "market_cap": 6775020544,
             "revenue_growth": 0.134,
             "revenue_acceleration": -0.07822368339179953,
             "operating_margin": 0.08922,
             "fcf": 474257632,
-            "trailing_pe": 20.492537,
+            "trailing_pe": 19.402985,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 22961487872,
+            "market_cap": 22289530880,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
             "operating_margin": 0.045939997,
             "fcf": 547580608,
-            "trailing_pe": 474.125,
+            "trailing_pe": 460.25,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 57050,
+            "market_cap": 14262,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 31.891424,
+            "trailing_pe": 33.73966,
             "employees": null
           },
           "sector": "",
@@ -473,7 +473,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4901032448,
+            "market_cap": 4566292480,
             "revenue_growth": 0.581,
             "revenue_acceleration": 0.14591467119700136,
             "operating_margin": -0.11995,
@@ -501,7 +501,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1722276352,
+            "market_cap": 1689993728,
             "revenue_growth": 3.098,
             "revenue_acceleration": -0.9265669483626229,
             "operating_margin": -0.18099001,
@@ -518,74 +518,18 @@
           "theme": "space_economy",
           "theme_label": "🚀 우주경제",
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
-          "ticker": "RDW",
-          "name": "Redwire",
+          "ticker": "ASTS",
+          "name": "AST SpaceMobile",
           "score": 65,
           "breakdown": {
             "cap": 35,
-            "revenue_growth": 22,
-            "acceleration": 5,
-            "margin": 3,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 2097438080,
-            "revenue_growth": 0.896,
-            "revenue_acceleration": 0.0013243934111020206,
-            "operating_margin": -0.18858999,
-            "fcf": -25958376,
-            "trailing_pe": null,
-            "employees": 1410
-          },
-          "sector": "Industrials",
-          "industry": "Aerospace & Defense",
-          "summary": "Redwire Corporation provides critical space solutions and space infrastructure for government and commercial customers in the United States, Europe, and internationally. It operates in two segments Space and Defense Tech. The company offers sensors and avionics systems, including star trackers and sun sensors, which are critical for accurate navigation and control of spacecraft; camera systems; in",
-          "website": "https://www.rdw.com"
-        },
-        {
-          "theme": "space_economy",
-          "theme_label": "🚀 우주경제",
-          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
-          "ticker": "IRDM",
-          "name": "Iridium Communications",
-          "score": 63,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 3,
-            "acceleration": 5,
-            "margin": 10,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 4759631360,
-            "revenue_growth": 0.083,
-            "revenue_acceleration": 0.02378070882771882,
-            "operating_margin": 0.12866999,
-            "fcf": 217969376,
-            "trailing_pe": 29.162338,
-            "employees": 975
-          },
-          "sector": "Communication Services",
-          "industry": "Telecom Services",
-          "summary": "Iridium Communications Inc. provides mobile voice and data communications services and products to businesses, the United States and foreign governments, non-governmental organizations, and consumers in the United States, Canada, and internationally. The company offers mobile satellite communications services for land mobile end users and aviation sectors; broadband terminals, embedded devices, an",
-          "website": "https://www.iridium.com"
-        },
-        {
-          "theme": "space_economy",
-          "theme_label": "🚀 우주경제",
-          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
-          "ticker": "ASTS",
-          "name": "AST SpaceMobile",
-          "score": 50,
-          "breakdown": {
-            "cap": 20,
             "revenue_growth": 30,
             "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 15944192000,
+            "market_cap": 12581785600,
             "revenue_growth": 26.266,
             "revenue_acceleration": -3.4294689497038955,
             "operating_margin": -5.44626,
@@ -602,6 +546,62 @@
           "theme": "space_economy",
           "theme_label": "🚀 우주경제",
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "IRDM",
+          "name": "Iridium Communications",
+          "score": 63,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 5,
+            "margin": 10,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 4667427840,
+            "revenue_growth": 0.083,
+            "revenue_acceleration": 0.02378070882771882,
+            "operating_margin": 0.12866999,
+            "fcf": 217969376,
+            "trailing_pe": 28.597404,
+            "employees": 975
+          },
+          "sector": "Communication Services",
+          "industry": "Telecom Services",
+          "summary": "Iridium Communications Inc. provides mobile voice and data communications services and products to businesses, the United States and foreign governments, non-governmental organizations, and consumers in the United States, Canada, and internationally. The company offers mobile satellite communications services for land mobile end users and aviation sectors; broadband terminals, embedded devices, an",
+          "website": "https://www.iridium.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
+          "ticker": "RDW",
+          "name": "Redwire",
+          "score": 46,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 3,
+            "acceleration": 5,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1804081280,
+            "revenue_growth": 0.054,
+            "revenue_acceleration": 0.0013243934111020206,
+            "operating_margin": -0.23236,
+            "fcf": -67604248,
+            "trailing_pe": null,
+            "employees": 1400
+          },
+          "sector": "Industrials",
+          "industry": "Aerospace & Defense",
+          "summary": "Redwire Corporation provides critical space solutions and space infrastructure for government and commercial customers in the United States, Europe, and internationally. It operates in two segments Space and Defense Tech. The company offers sensors and avionics systems, including star trackers and sun sensors, which are critical for accurate navigation and control of spacecraft; camera systems; in",
+          "website": "https://www.rdw.com"
+        },
+        {
+          "theme": "space_economy",
+          "theme_label": "🚀 우주경제",
+          "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "RKLB",
           "name": "Rocket Lab",
           "score": 43,
@@ -613,7 +613,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 34994962432,
+            "market_cap": 33933541376,
             "revenue_growth": 0.62,
             "revenue_acceleration": 0.05267029650776832,
             "operating_margin": -0.24572,
@@ -647,11 +647,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4971936256,
-            "revenue_growth": 10.414,
-            "revenue_acceleration": null,
-            "operating_margin": -11.27551,
-            "fcf": -215845872,
+            "market_cap": 4856830976,
+            "revenue_growth": 13.251,
+            "revenue_acceleration": -8.7677,
+            "operating_margin": -9.34328,
+            "fcf": -215401248,
             "trailing_pe": null,
             "employees": null
           },
@@ -675,7 +675,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 410058688,
+            "market_cap": 394700672,
             "revenue_growth": 2.323,
             "revenue_acceleration": 2.365735644086145,
             "operating_margin": -1.6730901,
@@ -703,7 +703,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 856098752,
+            "market_cap": 843402432,
             "revenue_growth": 0.035,
             "revenue_acceleration": 0.41339215619580894,
             "operating_margin": -37.50867,
@@ -720,34 +720,6 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "BEAM",
-          "name": "Beam Therapeutics",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 2812523008,
-            "revenue_growth": -0.942,
-            "revenue_acceleration": -4.381194861195988,
-            "operating_margin": -258.27142,
-            "fcf": -241844000,
-            "trailing_pe": null,
-            "employees": 540
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
-          "website": "https://beamtx.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
           "ticker": "NTLA",
           "name": "Intellia Therapeutics",
           "score": 35,
@@ -759,11 +731,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1747379840,
-            "revenue_growth": -0.462,
+            "market_cap": 1593069184,
+            "revenue_growth": -0.48,
             "revenue_acceleration": -0.5881460154751182,
-            "operating_margin": -14.72255,
-            "fcf": -249825376,
+            "operating_margin": -17.07734,
+            "fcf": null,
             "trailing_pe": null,
             "employees": 377
           },
@@ -771,6 +743,34 @@
           "industry": "Biotechnology",
           "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
           "website": "https://www.intelliatx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "BEAM",
+          "name": "Beam Therapeutics",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2733319936,
+            "revenue_growth": -0.968,
+            "revenue_acceleration": -3.3934083671591346,
+            "operating_margin": -460.33228,
+            "fcf": -262630256,
+            "trailing_pe": null,
+            "employees": 557
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
+          "website": "https://beamtx.com"
         }
       ]
     },
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3478805504,
+            "market_cap": 3422695680,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,7 +821,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 396816096,
+            "market_cap": 404596800,
             "revenue_growth": null,
             "revenue_acceleration": -3.1,
             "operating_margin": -3184.9355,
@@ -840,22 +840,22 @@
           "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
           "ticker": "STRC",
           "name": "Sutro Biopharma",
-          "score": 20,
+          "score": 18,
           "breakdown": {
             "cap": 5,
             "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 15,
+            "acceleration": 10,
+            "margin": 3,
             "fcf": 0
           },
           "metrics": {
             "market_cap": null,
             "revenue_growth": -0.025,
-            "revenue_acceleration": -0.045679348969149436,
-            "operating_margin": 166.70886,
-            "fcf": null,
+            "revenue_acceleration": 0.04139529455452705,
+            "operating_margin": -0.02073,
+            "fcf": -3240532992,
             "trailing_pe": null,
-            "employees": 1539
+            "employees": 1513
           },
           "sector": "Technology",
           "industry": "Software - Application",
@@ -883,7 +883,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1113471104,
+            "market_cap": 1025872896,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
             "operating_margin": -0.08851,
@@ -911,7 +911,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 691262912,
+            "market_cap": 605677952,
             "revenue_growth": 0.208,
             "revenue_acceleration": 0.1358878857657073,
             "operating_margin": -4.7978697,
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2513601024,
+            "market_cap": 2649806080,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -956,34 +956,6 @@
           "theme": "battery_energy_storage",
           "theme_label": "🔋 배터리·에너지저장",
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
-          "ticker": "SLDP",
-          "name": "Solid Power",
-          "score": 35,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 15,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 447235200,
-            "revenue_growth": null,
-            "revenue_acceleration": -1.1775141261624293,
-            "operating_margin": 29.78269,
-            "fcf": -44831876,
-            "trailing_pe": null,
-            "employees": 230
-          },
-          "sector": "Consumer Cyclical",
-          "industry": "Auto Parts",
-          "summary": "Solid Power, Inc., a research and development-stage company, develops solid-state battery technologies for the electric vehicles markets in the United States. It engages in the development of sulfide-based solid electrolytes. The company was founded in 2011 and is headquartered in Louisville, Colorado.",
-          "website": "https://www.solidpowerbattery.com"
-        },
-        {
-          "theme": "battery_energy_storage",
-          "theme_label": "🔋 배터리·에너지저장",
-          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "STEM",
           "name": "Stem Inc",
           "score": 33,
@@ -995,7 +967,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 21371372,
+            "market_cap": 24259394,
             "revenue_growth": -0.123,
             "revenue_acceleration": 0.212317662728815,
             "operating_margin": -0.24115999,
@@ -1007,6 +979,34 @@
           "industry": "Utilities - Renewable",
           "summary": "Stem, Inc. engages in the development, deployment, and operation of clean energy assets in the United States and internationally. The company offers OEM energy storage systems, and edge hardware devices and solutions. It also provides PowerTrack, an integrated suite of software and solutions for solar, storage, and hybrid assets, including software, energy management system, supervisory control an",
           "website": "https://www.stem.com"
+        },
+        {
+          "theme": "battery_energy_storage",
+          "theme_label": "🔋 배터리·에너지저장",
+          "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
+          "ticker": "SLDP",
+          "name": "Solid Power",
+          "score": 20,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 454938848,
+            "revenue_growth": -0.935,
+            "revenue_acceleration": -1.2369625526494203,
+            "operating_margin": -122.79835,
+            "fcf": -56154752,
+            "trailing_pe": null,
+            "employees": 230
+          },
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Parts",
+          "summary": "Solid Power, Inc., a research and development-stage company, develops solid-state battery technologies for the electric vehicles markets in the United States. It engages in the development of sulfide-based solid electrolytes. The company was founded in 2011 and is headquartered in Louisville, Colorado.",
+          "website": "https://www.solidpowerbattery.com"
         }
       ]
     },
@@ -1020,21 +1020,21 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "CDNA",
           "name": "CareDx",
-          "score": 75,
+          "score": 70,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 15,
-            "acceleration": 5,
+            "acceleration": 0,
             "margin": 10,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4592764928,
+            "market_cap": 4127760896,
             "revenue_growth": 0.393,
-            "revenue_acceleration": 0.013215421425928617,
+            "revenue_acceleration": -0.04056164443828783,
             "operating_margin": 0.084759995,
             "fcf": 130446872,
-            "trailing_pe": 36.88186,
+            "trailing_pe": 33.14768,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1057,7 +1057,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 10129494016,
+            "market_cap": 8008519168,
             "revenue_growth": 0.232,
             "revenue_acceleration": 0.02060943784724935,
             "operating_margin": -0.30648002,
@@ -1076,20 +1076,20 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "PACB",
           "name": "Pacific Biosciences",
-          "score": 40,
+          "score": 43,
           "breakdown": {
             "cap": 20,
-            "revenue_growth": 0,
+            "revenue_growth": 3,
             "acceleration": 10,
             "margin": 0,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 809714112,
-            "revenue_growth": -0.019,
+            "market_cap": 700923392,
+            "revenue_growth": 0.055,
             "revenue_acceleration": 0.0622565979507478,
-            "operating_margin": -1.14364,
-            "fcf": 291644736,
+            "operating_margin": -0.86781,
+            "fcf": 44061500,
             "trailing_pe": null,
             "employees": 485
           },
@@ -1113,11 +1113,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 754884544,
-            "revenue_growth": -0.485,
+            "market_cap": 760271744,
+            "revenue_growth": -0.286,
             "revenue_acceleration": 0.22320903402887088,
-            "operating_margin": -2.84987,
-            "fcf": -72398248,
+            "operating_margin": -1.5745701,
+            "fcf": -90588496,
             "trailing_pe": null,
             "employees": 485
           },
@@ -1147,12 +1147,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 89526550528,
+            "market_cap": 70412148736,
             "revenue_growth": 0.612,
             "revenue_acceleration": 0.23980136723636347,
             "operating_margin": 0.23771,
             "fcf": 2962249984,
-            "trailing_pe": 43.457943,
+            "trailing_pe": 34.17944,
             "employees": 34000
           },
           "sector": "Industrials",
@@ -1164,29 +1164,29 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "AEHR",
-          "name": "Aehr Test Systems",
-          "score": 68,
+          "ticker": "MOD",
+          "name": "Modine Manufacturing",
+          "score": 70,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 15,
-            "acceleration": 15,
-            "margin": 3,
+            "acceleration": 10,
+            "margin": 10,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1792682496,
-            "revenue_growth": 0.337,
-            "revenue_acceleration": 0.9186560267229597,
-            "operating_margin": -0.06403,
-            "fcf": -1955375,
-            "trailing_pe": null,
-            "employees": 138
+            "market_cap": 5139354624,
+            "revenue_growth": 0.346,
+            "revenue_acceleration": 0.07399036271327224,
+            "operating_margin": 0.115550004,
+            "fcf": -109000000,
+            "trailing_pe": 40.422592,
+            "employees": 13200
           },
-          "sector": "Technology",
-          "industry": "Semiconductor Equipment & Materials",
-          "summary": "Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United States, Asia, Europe, and the Middle East. The company offers FOX-XP and FOX-NP systems, which are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize a range of devices, including silicon",
-          "website": "https://www.aehr.com"
+          "sector": "Industrials",
+          "industry": "Building Products & Equipment",
+          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
+          "website": "https://www.modine.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1203,12 +1203,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 93529825280,
+            "market_cap": 81501274112,
             "revenue_growth": 0.574,
             "revenue_acceleration": 0.17538254731053143,
             "operating_margin": 0.086260006,
             "fcf": 3082594816,
-            "trailing_pe": 56.17466,
+            "trailing_pe": 48.950226,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1220,29 +1220,29 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "MOD",
-          "name": "Modine Manufacturing",
+          "ticker": "AEHR",
+          "name": "Aehr Test Systems",
           "score": 60,
           "breakdown": {
             "cap": 35,
-            "revenue_growth": 15,
-            "acceleration": 0,
+            "revenue_growth": 0,
+            "acceleration": 15,
             "margin": 10,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 6902832128,
-            "revenue_growth": 0.28,
-            "revenue_acceleration": -0.203206313902418,
-            "operating_margin": 0.09004,
-            "fcf": -73737504,
-            "trailing_pe": 48.78195,
-            "employees": 13000
+            "market_cap": 1749571840,
+            "revenue_growth": null,
+            "revenue_acceleration": 0.9186560267229597,
+            "operating_margin": 0.1832,
+            "fcf": -1955375,
+            "trailing_pe": null,
+            "employees": 138
           },
-          "sector": "Industrials",
-          "industry": "Building Products & Equipment",
-          "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
-          "website": "https://www.modine.com"
+          "sector": "Technology",
+          "industry": "Semiconductor Equipment & Materials",
+          "summary": "Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United States, Asia, Europe, and the Middle East. The company offers FOX-XP and FOX-NP systems, which are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize a range of devices, including silicon",
+          "website": "https://www.aehr.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1259,12 +1259,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 60044296192,
+            "market_cap": 51198869504,
             "revenue_growth": 1.381,
             "revenue_acceleration": -0.1341669016077542,
             "operating_margin": 0.18493,
             "fcf": -1706500,
-            "trailing_pe": 123.13333,
+            "trailing_pe": 104.99394,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1293,7 +1293,7 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 8753435648,
+            "market_cap": 7577029632,
             "revenue_growth": 0.206,
             "revenue_acceleration": 0.00983886597653491,
             "operating_margin": -0.22719,
@@ -1321,7 +1321,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 273739936,
+            "market_cap": 277742496,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
             "operating_margin": -49.31621,
