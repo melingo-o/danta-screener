@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-09T10:48:53+09:00",
-  "started_at": "2026-11-09T10:48:50+09:00",
+  "updated_at": "2026-11-16T11:18:24+09:00",
+  "started_at": "2026-11-16T11:18:22+09:00",
   "n_themes": 10,
   "n_tickers": 45,
   "theme_order": [
@@ -24,29 +24,29 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "RGTI",
-          "name": "Rigetti Computing",
-          "score": 75,
+          "ticker": "IONQ",
+          "name": "IonQ",
+          "score": 80,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 30,
-            "acceleration": 0,
+            "acceleration": 15,
             "margin": 0,
-            "fcf": 10
+            "fcf": 0
           },
           "metrics": {
-            "market_cap": 3921782528,
-            "revenue_growth": 1.853,
-            "revenue_acceleration": -0.2975897992317296,
-            "operating_margin": -5.4616604,
-            "fcf": 26453624,
-            "trailing_pe": null,
-            "employees": 162
+            "market_cap": 13420418048,
+            "revenue_growth": 3.36,
+            "revenue_acceleration": 0.8931310025236843,
+            "operating_margin": -3.06345,
+            "fcf": -120702872,
+            "trailing_pe": 16.693642,
+            "employees": 1132
           },
           "sector": "Technology",
           "industry": "Computer Hardware",
-          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
-          "website": "https://www.rigetti.com"
+          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
+          "website": "https://www.ionq.com"
         },
         {
           "theme": "quantum",
@@ -63,11 +63,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1432775680,
-            "revenue_growth": 90.0,
-            "revenue_acceleration": -6.980111894874307,
-            "operating_margin": -2.8126502,
-            "fcf": -53905876,
+            "market_cap": 1261740544,
+            "revenue_growth": 23.74,
+            "revenue_acceleration": -5.175585854613138,
+            "operating_margin": -4.54403,
+            "fcf": -62389624,
             "trailing_pe": null,
             "employees": 72
           },
@@ -75,6 +75,34 @@
           "industry": "Computer Hardware",
           "summary": "Quantum Computing Inc., an integrated photonics company, provides quantum machines to commercial and government markets in the United States. The company develops thin-film lithium niobate chips for optical devices, such as electro-optical modulators, periodically poled devices for frequency conversion, and micro-ring resonator cavities markets. It is also developing the entropy quantum computer (",
           "website": "https://www.quantumcomputinginc.com"
+        },
+        {
+          "theme": "quantum",
+          "theme_label": "⚛️ 양자컴퓨팅",
+          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
+          "ticker": "QBTS",
+          "name": "D-Wave Quantum",
+          "score": 53,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 8,
+            "acceleration": 10,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 3629230592,
+            "revenue_growth": 0.207,
+            "revenue_acceleration": 0.08207022966453564,
+            "operating_margin": -14.8743105,
+            "fcf": -86332248,
+            "trailing_pe": null,
+            "employees": 382
+          },
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "summary": "D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage 2 quantum computers; Ocean, a suite of open-source tools; and Leap quantum cloud service, a cloud-based service that provides real-time access to quantum computers and quantum hybrid solvers; and secure access and data protection services, ",
+          "website": "https://www.dwavequantum.com"
         },
         {
           "theme": "quantum",
@@ -91,10 +119,10 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 277742496,
+            "market_cap": 256859600,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
-            "operating_margin": -49.31621,
+            "operating_margin": -46.17127,
             "fcf": -19702876,
             "trailing_pe": null,
             "employees": 87
@@ -108,57 +136,29 @@
           "theme": "quantum",
           "theme_label": "⚛️ 양자컴퓨팅",
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "IONQ",
-          "name": "IonQ",
-          "score": 50,
+          "ticker": "RGTI",
+          "name": "Rigetti Computing",
+          "score": 35,
           "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
+            "cap": 35,
+            "revenue_growth": 0,
             "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 15158380544,
-            "revenue_growth": 3.36,
-            "revenue_acceleration": -0.2700685615780638,
-            "operating_margin": -2.26527,
-            "fcf": -120702872,
-            "trailing_pe": 18.85549,
-            "employees": 1132
-          },
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "summary": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capacities. The company also makes access to its quantum computers through cloud platforms, such as Amazon Web Services (AWS), Braket, Microsoft's Azure Quantum, and Google's Cloud Marketplace, as well as through its cloud service. The company ",
-          "website": "https://www.ionq.com"
-        },
-        {
-          "theme": "quantum",
-          "theme_label": "⚛️ 양자컴퓨팅",
-          "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
-          "ticker": "QBTS",
-          "name": "D-Wave Quantum",
-          "score": 45,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 10,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 4054412544,
-            "revenue_growth": -0.006,
-            "revenue_acceleration": 0.08207022966453564,
-            "operating_margin": -17.32055,
-            "fcf": -73379872,
+            "market_cap": 3297572608,
+            "revenue_growth": -0.275,
+            "revenue_acceleration": -1.2195836631741024,
+            "operating_margin": -8.56644,
+            "fcf": -27094500,
             "trailing_pe": null,
-            "employees": 382
+            "employees": 162
           },
           "sector": "Technology",
           "industry": "Computer Hardware",
-          "summary": "D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage 2 quantum computers; Ocean, a suite of open-source tools; and Leap quantum cloud service, a cloud-based service that provides real-time access to quantum computers and quantum hybrid solvers; and secure access and data protection services, ",
-          "website": "https://www.dwavequantum.com"
+          "summary": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the United Kingdom, rest of Europe, Asia, and internationally. The company offers quantum processing units (QPUs) and quantum computing systems to provide access to quantum computing systems through the cloud in the form of quantum computing as a se",
+          "website": "https://www.rigetti.com"
         },
         {
           "theme": "quantum",
@@ -166,20 +166,20 @@
           "theme_thesis": "양자우월성 달성 시 IT 패러다임 전환. 첫 상업적 활용 사례가 나오는 종목이 10-100x 가능. 90%는 hype로 끝남.",
           "ticker": "QSI",
           "name": "Quantum-Si",
-          "score": 35,
+          "score": 20,
           "breakdown": {
             "cap": 20,
             "revenue_growth": 0,
-            "acceleration": 15,
+            "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 292257408,
+            "market_cap": 252703776,
             "revenue_growth": -0.616,
-            "revenue_acceleration": 0.5589662593170944,
-            "operating_margin": -112.15094,
-            "fcf": -59075000,
+            "revenue_acceleration": -0.29119573126515347,
+            "operating_margin": -72.33992,
+            "fcf": -48917752,
             "trailing_pe": null,
             "employees": 145
           },
@@ -198,49 +198,21 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "ASPI",
-          "name": "ASP Isotopes",
-          "score": 50,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 30,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 318116960,
-            "revenue_growth": 3.276,
-            "revenue_acceleration": -1.3542355023179513,
-            "operating_margin": -6.6748,
-            "fcf": -28586018,
-            "trailing_pe": null,
-            "employees": 271
-          },
-          "sector": "Basic Materials",
-          "industry": "Specialty Chemicals",
-          "summary": "ASP Isotopes Inc., a development stage advanced materials company, engages in the production, distribution, marketing, and sale of isotopes in South Africa,Hong Kong, and United States. It operates in two segments, Nuclear Fuels, and Specialist Isotopes and Related Services. The Nuclear Fuels segment focuses on the research and development of technologies and methods used to produce high-assay low",
-          "website": "https://aspisotopes.com"
-        },
-        {
-          "theme": "smr_nuclear",
-          "theme_label": "☢️ SMR·소형원전",
-          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
           "ticker": "SMR",
           "name": "NuScale Power",
-          "score": 35,
+          "score": 65,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
+            "acceleration": 15,
+            "margin": 15,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2085550208,
+            "market_cap": 1913122688,
             "revenue_growth": -0.966,
-            "revenue_acceleration": -0.38565886067560307,
-            "operating_margin": -230.67615,
+            "revenue_acceleration": 3.5251308017285377,
+            "operating_margin": 90.9945,
             "fcf": -231772496,
             "trailing_pe": null,
             "employees": 428
@@ -254,23 +226,51 @@
           "theme": "smr_nuclear",
           "theme_label": "☢️ SMR·소형원전",
           "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
-          "ticker": "LEU",
-          "name": "Centrus Energy",
-          "score": 35,
+          "ticker": "ASPI",
+          "name": "ASP Isotopes",
+          "score": 50,
           "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
+            "cap": 20,
+            "revenue_growth": 30,
             "acceleration": 0,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2156689920,
+            "market_cap": 266758320,
+            "revenue_growth": 3.276,
+            "revenue_acceleration": -1.3542355023179513,
+            "operating_margin": -3.1231,
+            "fcf": -28586018,
+            "trailing_pe": null,
+            "employees": 271
+          },
+          "sector": "Basic Materials",
+          "industry": "Specialty Chemicals",
+          "summary": "ASP Isotopes Inc., a development stage advanced materials company, engages in the production, distribution, marketing, and sale of isotopes in South Africa,Hong Kong, and United States. It operates in two segments, Nuclear Fuels, and Specialist Isotopes and Related Services. The Nuclear Fuels segment focuses on the research and development of technologies and methods used to produce high-assay low",
+          "website": "https://aspisotopes.com"
+        },
+        {
+          "theme": "smr_nuclear",
+          "theme_label": "☢️ SMR·소형원전",
+          "theme_thesis": "AI 데이터센터 전력 폭증 + 탄소중립 → 30년 stagnant 원전 산업 재개. SMR 첫 상업운전 + 후속 수주 시 30-50x.",
+          "ticker": "LEU",
+          "name": "Centrus Energy",
+          "score": 38,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 3,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 2139782656,
             "revenue_growth": -0.259,
             "revenue_acceleration": -1.275677492326766,
-            "operating_margin": -0.55315,
+            "operating_margin": -0.02772,
             "fcf": -233300000,
-            "trailing_pe": 31.038576,
+            "trailing_pe": 30.795254,
             "employees": 467
           },
           "sector": "Energy",
@@ -293,10 +293,10 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4599069696,
+            "market_cap": 4671327232,
             "revenue_growth": null,
             "revenue_acceleration": null,
-            "operating_margin": -44.30253,
+            "operating_margin": -85.870735,
             "fcf": -552209152,
             "trailing_pe": null,
             "employees": 215
@@ -324,7 +324,7 @@
             "market_cap": 596586368,
             "revenue_growth": null,
             "revenue_acceleration": null,
-            "operating_margin": -73.782745,
+            "operating_margin": -245.4537,
             "fcf": -35458040,
             "trailing_pe": null,
             "employees": 36
@@ -355,12 +355,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 6775020544,
+            "market_cap": 6915732480,
             "revenue_growth": 0.134,
             "revenue_acceleration": -0.07822368339179953,
-            "operating_margin": 0.08922,
+            "operating_margin": 0.09368,
             "fcf": 474257632,
-            "trailing_pe": 19.402985,
+            "trailing_pe": 19.805971,
             "employees": 3981
           },
           "sector": "Technology",
@@ -383,12 +383,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 22289530880,
+            "market_cap": 21084856320,
             "revenue_growth": 0.217,
             "revenue_acceleration": 0.019931557358383388,
-            "operating_margin": 0.045939997,
+            "operating_margin": 0.0052,
             "fcf": 547580608,
-            "trailing_pe": 460.25,
+            "trailing_pe": 435.37503,
             "employees": 2000
           },
           "sector": "Industrials",
@@ -411,7 +411,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 14262,
+            "market_cap": 21394,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -444,7 +444,7 @@
             "revenue_acceleration": null,
             "operating_margin": null,
             "fcf": null,
-            "trailing_pe": 33.73966,
+            "trailing_pe": 33.935253,
             "employees": null
           },
           "sector": "",
@@ -473,10 +473,10 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4566292480,
+            "market_cap": 5024740864,
             "revenue_growth": 0.581,
             "revenue_acceleration": 0.14591467119700136,
-            "operating_margin": -0.11995,
+            "operating_margin": -0.22708,
             "fcf": 51749876,
             "trailing_pe": null,
             "employees": 945
@@ -492,20 +492,20 @@
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "LUNR",
           "name": "Intuitive Machines",
-          "score": 68,
+          "score": 78,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 30,
             "acceleration": 0,
             "margin": 3,
-            "fcf": 0
+            "fcf": 10
           },
           "metrics": {
-            "market_cap": 1689993728,
-            "revenue_growth": 3.098,
+            "market_cap": 2306129920,
+            "revenue_growth": 4.137,
             "revenue_acceleration": -0.9265669483626229,
-            "operating_margin": -0.18099001,
-            "fcf": -79995872,
+            "operating_margin": -0.15867,
+            "fcf": 1074375,
             "trailing_pe": null,
             "employees": 525
           },
@@ -529,11 +529,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 12581785600,
-            "revenue_growth": 26.266,
-            "revenue_acceleration": -3.4294689497038955,
-            "operating_margin": -5.44626,
-            "fcf": -1799572992,
+            "market_cap": 12717574144,
+            "revenue_growth": 1.871,
+            "revenue_acceleration": -0.6889636744720359,
+            "operating_margin": -3.93346,
+            "fcf": -1892670592,
             "trailing_pe": null,
             "employees": 1126
           },
@@ -557,12 +557,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4667427840,
+            "market_cap": 4861373440,
             "revenue_growth": 0.083,
             "revenue_acceleration": 0.02378070882771882,
-            "operating_margin": 0.12866999,
+            "operating_margin": 0.19003001,
             "fcf": 217969376,
-            "trailing_pe": 28.597404,
+            "trailing_pe": 29.785715,
             "employees": 975
           },
           "sector": "Communication Services",
@@ -576,19 +576,19 @@
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "RDW",
           "name": "Redwire",
-          "score": 46,
+          "score": 38,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 3,
-            "acceleration": 5,
-            "margin": 3,
+            "acceleration": 0,
+            "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1804081280,
+            "market_cap": 1934195328,
             "revenue_growth": 0.054,
-            "revenue_acceleration": 0.0013243934111020206,
-            "operating_margin": -0.23236,
+            "revenue_acceleration": -0.11882386992063057,
+            "operating_margin": -0.3795,
             "fcf": -67604248,
             "trailing_pe": null,
             "employees": 1400
@@ -604,20 +604,20 @@
           "theme_thesis": "Starlink·Kuiper·6G 통신 인프라 재편. 위성 인터넷·우주제조·달자원 단계별. 첫 흑자 종목 10-30x.",
           "ticker": "RKLB",
           "name": "Rocket Lab",
-          "score": 43,
+          "score": 33,
           "breakdown": {
             "cap": 8,
             "revenue_growth": 22,
-            "acceleration": 10,
+            "acceleration": 0,
             "margin": 3,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 33933541376,
-            "revenue_growth": 0.62,
-            "revenue_acceleration": 0.05267029650776832,
-            "operating_margin": -0.24572,
-            "fcf": -251963632,
+            "market_cap": 41407975424,
+            "revenue_growth": 0.727,
+            "revenue_acceleration": -0.003047969954803109,
+            "operating_margin": -0.27635,
+            "fcf": -221815376,
             "trailing_pe": null,
             "employees": 2600
           },
@@ -647,10 +647,10 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 4856830976,
+            "market_cap": 4097314560,
             "revenue_growth": 13.251,
             "revenue_acceleration": -8.7677,
-            "operating_margin": -9.34328,
+            "operating_margin": -20.585491,
             "fcf": -215401248,
             "trailing_pe": null,
             "employees": null
@@ -664,8 +664,8 @@
           "theme": "gene_therapy_crispr",
           "theme_label": "🧬 유전자치료·CRISPR",
           "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "EDIT",
-          "name": "Editas Medicine",
+          "ticker": "PRME",
+          "name": "Prime Medicine",
           "score": 65,
           "breakdown": {
             "cap": 20,
@@ -675,39 +675,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 394700672,
-            "revenue_growth": 2.323,
-            "revenue_acceleration": 2.365735644086145,
-            "operating_margin": -1.6730901,
-            "fcf": -44316000,
-            "trailing_pe": null,
-            "employees": 87
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
-          "website": "https://www.editasmedicine.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "PRME",
-          "name": "Prime Medicine",
-          "score": 38,
-          "breakdown": {
-            "cap": 20,
-            "revenue_growth": 3,
-            "acceleration": 15,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 843402432,
-            "revenue_growth": 0.035,
+            "market_cap": 949854208,
+            "revenue_growth": 2.439,
             "revenue_acceleration": 0.41339215619580894,
-            "operating_margin": -37.50867,
-            "fcf": -75780000,
+            "operating_margin": -25.842371,
+            "fcf": -74296624,
             "trailing_pe": null,
             "employees": 146
           },
@@ -715,34 +687,6 @@
           "industry": "Biotechnology",
           "summary": "Prime Medicine, Inc., a biotechnology company, engages in delivering genetic medicines to address the spectrum of diseases by deploying gene editing technology in the United States. Its lead therapeutic product candidate is PM359 for Chronic Granulomatous Disease, which is in Phase 1/2 clinical trial; PM577 for Wilson Disease, that is in preclinical studies; and PM647 to treat genetic disorder cau",
           "website": "https://primemedicine.com"
-        },
-        {
-          "theme": "gene_therapy_crispr",
-          "theme_label": "🧬 유전자치료·CRISPR",
-          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
-          "ticker": "NTLA",
-          "name": "Intellia Therapeutics",
-          "score": 35,
-          "breakdown": {
-            "cap": 35,
-            "revenue_growth": 0,
-            "acceleration": 0,
-            "margin": 0,
-            "fcf": 0
-          },
-          "metrics": {
-            "market_cap": 1593069184,
-            "revenue_growth": -0.48,
-            "revenue_acceleration": -0.5881460154751182,
-            "operating_margin": -17.07734,
-            "fcf": null,
-            "trailing_pe": null,
-            "employees": 377
-          },
-          "sector": "Healthcare",
-          "industry": "Biotechnology",
-          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
-          "website": "https://www.intelliatx.com"
         },
         {
           "theme": "gene_therapy_crispr",
@@ -759,10 +703,10 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2733319936,
+            "market_cap": 2362805760,
             "revenue_growth": -0.968,
             "revenue_acceleration": -3.3934083671591346,
-            "operating_margin": -460.33228,
+            "operating_margin": -2.6767898,
             "fcf": -262630256,
             "trailing_pe": null,
             "employees": 557
@@ -771,6 +715,62 @@
           "industry": "Biotechnology",
           "summary": "Beam Therapeutics Inc., a biotechnology company, engages in the development of precision genetic medicines for patients suffering from serious diseases in the United States. Its programs in hematology and genetic disease portfolio include Ristoglogene autogetemcel, a patient-specific, autologous hematopoietic stem cell (HSC) therapy for the treatment of sickle cell disease; BEAM-302, a liver-targe",
           "website": "https://beamtx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "NTLA",
+          "name": "Intellia Therapeutics",
+          "score": 35,
+          "breakdown": {
+            "cap": 35,
+            "revenue_growth": 0,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 1361477504,
+            "revenue_growth": -0.48,
+            "revenue_acceleration": -0.009035694717200192,
+            "operating_margin": -8.26003,
+            "fcf": -167191872,
+            "trailing_pe": null,
+            "employees": 377
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (CRISPR)/CRISPR associated 9 (Cas9) technology for genome editing. The company provides a modular platform, to advance in vivo and ex vivo thera",
+          "website": "https://www.intelliatx.com"
+        },
+        {
+          "theme": "gene_therapy_crispr",
+          "theme_label": "🧬 유전자치료·CRISPR",
+          "theme_thesis": "단발 치료로 난치병 정복. 단일 약물 승인 시 20-100x. 임상 실패 시 -80%. 분산 필수.",
+          "ticker": "EDIT",
+          "name": "Editas Medicine",
+          "score": 35,
+          "breakdown": {
+            "cap": 20,
+            "revenue_growth": 15,
+            "acceleration": 0,
+            "margin": 0,
+            "fcf": 0
+          },
+          "metrics": {
+            "market_cap": 334917248,
+            "revenue_growth": 0.374,
+            "revenue_acceleration": -1.6597088739754224,
+            "operating_margin": -1.6696601,
+            "fcf": -34032624,
+            "trailing_pe": null,
+            "employees": 87
+          },
+          "sector": "Healthcare",
+          "industry": "Biotechnology",
+          "summary": "Editas Medicine, Inc., a clinical stage genome editing company, focuses on developing transformative genomic medicines to treat a range of serious diseases. The company develops a proprietary gene editing platform based on CRISPR technology. Its lead program is EDIT-401, a one-time therapy designed to reduce LDL cholesterol through the upregulation of the LDL receptor to treat hyperlipidemia. The ",
+          "website": "https://www.editasmedicine.com"
         }
       ]
     },
@@ -793,7 +793,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 3422695680,
+            "market_cap": 3726198272,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -821,11 +821,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 404596800,
+            "market_cap": 320099648,
             "revenue_growth": null,
             "revenue_acceleration": -3.1,
-            "operating_margin": -3184.9355,
-            "fcf": -48786124,
+            "operating_margin": -4368.4233,
+            "fcf": -65109124,
             "trailing_pe": null,
             "employees": 57
           },
@@ -840,19 +840,19 @@
           "theme_thesis": "Lilly/NVO는 이미 큼. 차세대(경구·다중작용·근손실 방지) 개발 중인 소형주가 인수/승인 시 큰 비대칭.",
           "ticker": "STRC",
           "name": "Sutro Biopharma",
-          "score": 18,
+          "score": 15,
           "breakdown": {
             "cap": 5,
             "revenue_growth": 0,
             "acceleration": 10,
-            "margin": 3,
+            "margin": 0,
             "fcf": 0
           },
           "metrics": {
             "market_cap": null,
             "revenue_growth": -0.025,
             "revenue_acceleration": 0.04139529455452705,
-            "operating_margin": -0.02073,
+            "operating_margin": -11.00134,
             "fcf": -3240532992,
             "trailing_pe": null,
             "employees": 1513
@@ -874,19 +874,19 @@
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "FLNC",
           "name": "Fluence Energy",
-          "score": 66,
+          "score": 51,
           "breakdown": {
-            "cap": 35,
+            "cap": 20,
             "revenue_growth": 3,
             "acceleration": 15,
             "margin": 3,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 1025872896,
+            "market_cap": 911021824,
             "revenue_growth": 0.079,
             "revenue_acceleration": 0.3433344651279541,
-            "operating_margin": -0.08851,
+            "operating_margin": -0.0421,
             "fcf": 2418875,
             "trailing_pe": null,
             "employees": 1670
@@ -902,20 +902,20 @@
           "theme_thesis": "그리드 수준 ESS + 차세대 배터리 화학. 양산 진입 + 단가 하락 시 비대칭. 90%는 capex 못 견디고 사라짐.",
           "ticker": "ENVX",
           "name": "Enovix",
-          "score": 43,
+          "score": 50,
           "breakdown": {
             "cap": 20,
-            "revenue_growth": 8,
+            "revenue_growth": 15,
             "acceleration": 15,
             "margin": 0,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 605677952,
-            "revenue_growth": 0.208,
+            "market_cap": 339530208,
+            "revenue_growth": 0.382,
             "revenue_acceleration": 0.1358878857657073,
-            "operating_margin": -4.7978697,
-            "fcf": -69503624,
+            "operating_margin": -4.36121,
+            "fcf": -76440000,
             "trailing_pe": null,
             "employees": 664
           },
@@ -939,7 +939,7 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 2649806080,
+            "market_cap": 2278337792,
             "revenue_growth": null,
             "revenue_acceleration": null,
             "operating_margin": 0.0,
@@ -967,10 +967,10 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 24259394,
+            "market_cap": 21563906,
             "revenue_growth": -0.123,
             "revenue_acceleration": 0.212317662728815,
-            "operating_margin": -0.24115999,
+            "operating_margin": -0.18872999,
             "fcf": 16712750,
             "trailing_pe": null,
             "employees": 423
@@ -995,10 +995,10 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 454938848,
+            "market_cap": 403371456,
             "revenue_growth": -0.935,
             "revenue_acceleration": -1.2369625526494203,
-            "operating_margin": -122.79835,
+            "operating_margin": -28.95566,
             "fcf": -56154752,
             "trailing_pe": null,
             "employees": 230
@@ -1020,21 +1020,21 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "CDNA",
           "name": "CareDx",
-          "score": 70,
+          "score": 66,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 15,
             "acceleration": 0,
-            "margin": 10,
+            "margin": 6,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 4127760896,
+            "market_cap": 4092032000,
             "revenue_growth": 0.393,
             "revenue_acceleration": -0.04056164443828783,
-            "operating_margin": 0.084759995,
+            "operating_margin": 0.01574,
             "fcf": 130446872,
-            "trailing_pe": 33.14768,
+            "trailing_pe": 32.86076,
             "employees": 761
           },
           "sector": "Healthcare",
@@ -1048,22 +1048,22 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "TWST",
           "name": "Twist Bioscience",
-          "score": 48,
+          "score": 58,
           "breakdown": {
             "cap": 35,
-            "revenue_growth": 8,
+            "revenue_growth": 15,
             "acceleration": 5,
-            "margin": 0,
+            "margin": 3,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 8008519168,
-            "revenue_growth": 0.232,
+            "market_cap": 7399211008,
+            "revenue_growth": 0.279,
             "revenue_acceleration": 0.02060943784724935,
-            "operating_margin": -0.30648002,
-            "fcf": -64822500,
+            "operating_margin": -0.28785,
+            "fcf": null,
             "trailing_pe": null,
-            "employees": 979
+            "employees": null
           },
           "sector": "Healthcare",
           "industry": "Biotechnology",
@@ -1076,19 +1076,19 @@
           "theme_thesis": "DNA를 소프트웨어처럼 디자인. 의약·재료·식품 다 재편 가능. 아직 'iPhone moment' 전 단계.",
           "ticker": "PACB",
           "name": "Pacific Biosciences",
-          "score": 43,
+          "score": 38,
           "breakdown": {
             "cap": 20,
             "revenue_growth": 3,
-            "acceleration": 10,
+            "acceleration": 5,
             "margin": 0,
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 700923392,
+            "market_cap": 611984192,
             "revenue_growth": 0.055,
-            "revenue_acceleration": 0.0622565979507478,
-            "operating_margin": -0.86781,
+            "revenue_acceleration": 0.02547152205374916,
+            "operating_margin": -3.32992,
             "fcf": 44061500,
             "trailing_pe": null,
             "employees": 485
@@ -1113,11 +1113,11 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 760271744,
-            "revenue_growth": -0.286,
-            "revenue_acceleration": 0.22320903402887088,
-            "operating_margin": -1.5745701,
-            "fcf": -90588496,
+            "market_cap": 622968320,
+            "revenue_growth": -0.057,
+            "revenue_acceleration": 0.45654755174798445,
+            "operating_margin": -2.02481,
+            "fcf": -88832496,
             "trailing_pe": null,
             "employees": 485
           },
@@ -1136,34 +1136,6 @@
           "theme": "ai_infra_picks",
           "theme_label": "⚡ AI 인프라 picks-and-shovels",
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
-          "ticker": "VRT",
-          "name": "Vertiv Holdings",
-          "score": 70,
-          "breakdown": {
-            "cap": 8,
-            "revenue_growth": 22,
-            "acceleration": 15,
-            "margin": 15,
-            "fcf": 10
-          },
-          "metrics": {
-            "market_cap": 70412148736,
-            "revenue_growth": 0.612,
-            "revenue_acceleration": 0.23980136723636347,
-            "operating_margin": 0.23771,
-            "fcf": 2962249984,
-            "trailing_pe": 34.17944,
-            "employees": 34000
-          },
-          "sector": "Industrials",
-          "industry": "Electrical Equipment & Parts",
-          "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
-          "website": "https://www.vertiv.com"
-        },
-        {
-          "theme": "ai_infra_picks",
-          "theme_label": "⚡ AI 인프라 picks-and-shovels",
-          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "MOD",
           "name": "Modine Manufacturing",
           "score": 70,
@@ -1175,18 +1147,46 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 5139354624,
+            "market_cap": 7216694272,
             "revenue_growth": 0.346,
             "revenue_acceleration": 0.07399036271327224,
-            "operating_margin": 0.115550004,
+            "operating_margin": 0.11323,
             "fcf": -109000000,
-            "trailing_pe": 40.422592,
+            "trailing_pe": 56.761505,
             "employees": 13200
           },
           "sector": "Industrials",
           "industry": "Building Products & Equipment",
           "summary": "Modine Manufacturing Company designs, engineers, tests, manufactures, and sells mission-critical thermal solutions in the United States, Canada, Italy, Hungary, the United Kingdom, China, and internationally. It offers heat transfer products, including round tube plate fin construction; gas-fired, hydronic, electric, and oil fired unit heaters; roof-mounted direct- and indirect-fired makeup air un",
           "website": "https://www.modine.com"
+        },
+        {
+          "theme": "ai_infra_picks",
+          "theme_label": "⚡ AI 인프라 picks-and-shovels",
+          "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
+          "ticker": "VRT",
+          "name": "Vertiv Holdings",
+          "score": 70,
+          "breakdown": {
+            "cap": 8,
+            "revenue_growth": 22,
+            "acceleration": 15,
+            "margin": 15,
+            "fcf": 10
+          },
+          "metrics": {
+            "market_cap": 77809164288,
+            "revenue_growth": 0.612,
+            "revenue_acceleration": 0.23980136723636347,
+            "operating_margin": 0.21107,
+            "fcf": 2962249984,
+            "trailing_pe": 39.160854,
+            "employees": 34000
+          },
+          "sector": "Industrials",
+          "industry": "Electrical Equipment & Parts",
+          "summary": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial environments in the Americas, the Asia Pacific, Europe, the Middle East, and Africa. The company offers AC and DC power management products, low/medium voltage switchgear, busbar, thermal management produ",
+          "website": "https://www.vertiv.com"
         },
         {
           "theme": "ai_infra_picks",
@@ -1203,12 +1203,12 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 81501274112,
+            "market_cap": 90709155840,
             "revenue_growth": 0.574,
             "revenue_acceleration": 0.17538254731053143,
-            "operating_margin": 0.086260006,
-            "fcf": 3082594816,
-            "trailing_pe": 48.950226,
+            "operating_margin": 0.07066,
+            "fcf": 3141412864,
+            "trailing_pe": 54.48054,
             "employees": 69500
           },
           "sector": "Industrials",
@@ -1222,19 +1222,19 @@
           "theme_thesis": "NVDA는 이미 큼. 데이터센터 전력·냉각·전송에서 시총 작은 second-derivative 후보.",
           "ticker": "AEHR",
           "name": "Aehr Test Systems",
-          "score": 60,
+          "score": 53,
           "breakdown": {
             "cap": 35,
             "revenue_growth": 0,
             "acceleration": 15,
-            "margin": 10,
+            "margin": 3,
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 1749571840,
+            "market_cap": 1868647296,
             "revenue_growth": null,
-            "revenue_acceleration": 0.9186560267229597,
-            "operating_margin": 0.1832,
+            "revenue_acceleration": 0.49548763900321285,
+            "operating_margin": -0.28285,
             "fcf": -1955375,
             "trailing_pe": null,
             "employees": 138
@@ -1259,12 +1259,12 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 51198869504,
+            "market_cap": 56763133952,
             "revenue_growth": 1.381,
             "revenue_acceleration": -0.1341669016077542,
-            "operating_margin": 0.18493,
+            "operating_margin": 0.14333999,
             "fcf": -1706500,
-            "trailing_pe": 104.99394,
+            "trailing_pe": 122.28662,
             "employees": 2214
           },
           "sector": "Industrials",
@@ -1293,10 +1293,10 @@
             "fcf": 10
           },
           "metrics": {
-            "market_cap": 7577029632,
+            "market_cap": 7726690816,
             "revenue_growth": 0.206,
             "revenue_acceleration": 0.00983886597653491,
-            "operating_margin": -0.22719,
+            "operating_margin": -0.26049998,
             "fcf": 296880640,
             "trailing_pe": null,
             "employees": 2800
@@ -1321,10 +1321,10 @@
             "fcf": 0
           },
           "metrics": {
-            "market_cap": 277742496,
+            "market_cap": 256859600,
             "revenue_growth": 8.299,
             "revenue_acceleration": null,
-            "operating_margin": -49.31621,
+            "operating_margin": -46.17127,
             "fcf": -19702876,
             "trailing_pe": null,
             "employees": 87
